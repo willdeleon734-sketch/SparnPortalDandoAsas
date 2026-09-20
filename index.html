@@ -1,468 +1,365 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Instituto TECA — Tecnologia, Educação, Cultura e Arte</title>
-<meta content="Cursos originais e uma biblioteca global de conhecimento para transformar planos em novos caminhos." name="description"/>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050713'/%3E%3Cpath d='M9 35c12-1 17-8 23-22 6 14 11 21 23 22-9 2-15 8-23 17-8-9-14-15-23-17Z' fill='%2343e7ff'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta name="description" content="Instituto TECA — conhecimento, tecnologia, cultura e oportunidades para construir futuros.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
-    :root{--bg:#050713;--card:#0e1428;--white:#f7fbff;--muted:#9da9c2;--cyan:#43e7ff;--purple:#9c6cff;--pink:#ff5fc7;--line:rgba(255,255,255,.1)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--white);font-family:"DM Sans",sans-serif;background:radial-gradient(circle at 12% 0,rgba(67,231,255,.12),transparent 28%),radial-gradient(circle at 88% 14%,rgba(156,108,255,.16),transparent 30%),var(--bg);line-height:1.6}
-    body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    .wrap{width:min(1160px,calc(100% - 34px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{text-decoration:none;color:#fff;display:flex;align-items:center;gap:12px}.wing{width:42px;height:42px;border:1px solid rgba(67,231,255,.32);border-radius:14px;display:grid;place-items:center;color:var(--cyan);font-size:1.4rem;box-shadow:0 0 24px rgba(67,231,255,.12)}.brand strong{font-family:"Space Grotesk";font-size:1.3rem;letter-spacing:.2em}.brand small{display:block;color:var(--muted);font-size:.62rem;letter-spacing:.13em}.menu{display:flex;gap:24px;align-items:center}.menu a{color:#dfe9f8;text-decoration:none;font-size:.88rem;font-weight:700}.menu .access{padding:10px 15px;border:1px solid rgba(67,231,255,.35);border-radius:999px;color:var(--cyan)}
-    .hero{padding:64px 0 48px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;gap:9px;align-items:center;color:#baf7ff;border:1px solid rgba(67,231,255,.25);background:rgba(67,231,255,.07);padding:7px 11px;border-radius:999px;font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px var(--cyan)}h1,h2,h3{font-family:"Space Grotesk",sans-serif}h1{font-size:clamp(3.2rem,7vw,6.4rem);line-height:.96;letter-spacing:-.055em;margin:18px 0}.gradient{background:linear-gradient(100deg,var(--cyan),#fff 48%,var(--pink));color:transparent;background-clip:text}.lead{max-width:640px;color:var(--muted);font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:12px}.primary{background:var(--cyan);color:#04101b;box-shadow:0 12px 38px rgba(67,231,255,.17)}.secondary{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#e8effc}.micro{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px;color:#c5d1e4;font-size:.83rem}.micro b{color:#fff}
-    .course-visual{position:relative;border:1px solid rgba(67,231,255,.18);border-radius:30px;min-height:465px;padding:36px;background:radial-gradient(circle at 50% 42%,rgba(255,188,61,.11),transparent 34%),linear-gradient(145deg,rgba(17,26,52,.96),rgba(8,13,29,.95));box-shadow:0 35px 90px rgba(0,0,0,.45),0 0 55px rgba(67,231,255,.08);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.course-visual:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;right:-100px;top:-95px;background:radial-gradient(circle,rgba(156,108,255,.32),transparent 68%)}.official-logo{display:block;width:min(320px,82%);aspect-ratio:1;object-fit:cover;border-radius:26px;box-shadow:0 25px 70px rgba(0,0,0,.55),0 0 36px rgba(218,169,76,.12);position:relative}.course-visual h3{font-size:1.35rem;line-height:1.15;margin:22px 0 5px;position:relative}.course-visual p{margin:0;color:var(--muted);font-size:.87rem;position:relative}
-    section{padding:70px 0}.section-head{max-width:760px;margin-bottom:30px}.section-head h2{font-size:clamp(2.2rem,5vw,4.3rem);line-height:1.04;margin:10px 0 13px;letter-spacing:-.04em}.section-head p{color:var(--muted);font-size:1rem}.course-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}.course-card{border:1px solid rgba(67,231,255,.2);border-radius:24px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));box-shadow:0 0 35px rgba(67,231,255,.06);transition:.25s ease}.course-card[open]{grid-column:1/-1;display:grid;grid-template-columns:.78fr 1.22fr;box-shadow:0 24px 70px rgba(0,0,0,.35),0 0 45px rgba(67,231,255,.1)}.course-cover{list-style:none;padding:24px;background:#080d1d;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1;cursor:pointer;min-width:0}.course-cover::-webkit-details-marker{display:none}.course-card[open] .course-cover{aspect-ratio:auto;min-height:390px}.course-cover.visual{background-size:cover;background-position:center;isolation:isolate;position:relative}.course-cover.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,19,.04),rgba(5,7,19,.2) 48%,rgba(5,7,19,.94));z-index:-1}.cover-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.plus{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:rgba(5,7,19,.78);border:1px solid rgba(255,255,255,.35);font:700 1.65rem/1 "Space Grotesk";box-shadow:0 8px 25px rgba(0,0,0,.35);transition:.25s}.course-card[open] .plus{transform:rotate(45deg);background:var(--pink)}.course-cover .number{font-family:"Space Grotesk";font-size:3.1rem;font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.75);filter:drop-shadow(0 4px 14px #050713)}.course-cover strong{font-size:1.35rem;line-height:1.08;text-shadow:0 2px 18px #050713}.cover-meta{color:#d5deed;font-size:.78rem;text-shadow:0 2px 12px #050713}.course-info{padding:40px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.chip{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;padding:7px 10px;border-radius:999px;background:rgba(67,231,255,.07);border:1px solid rgba(67,231,255,.18);color:#baf7ff}.new{background:rgba(255,95,199,.08);border-color:rgba(255,95,199,.23);color:#ffb9e6}.course-info h3{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:0 0 12px}.course-info>p{color:var(--muted);margin-bottom:24px}.modules{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:25px}.module{padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);font-size:.82rem;color:#d7e2f2}.open{display:inline-flex;text-decoration:none;background:linear-gradient(100deg,var(--cyan),#8cefff);color:#04101b;padding:13px 18px;border-radius:11px;font-weight:900}
-    .news{background:linear-gradient(180deg,transparent,#080c19 18%,#080c19 82%,transparent)}.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.news-card{padding:26px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015))}.icon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:rgba(67,231,255,.08);border:1px solid rgba(67,231,255,.2);font-size:1.25rem}.news-card h3{font-size:1.2rem;margin:17px 0 8px}.news-card p{color:var(--muted);font-size:.9rem;margin:0}.library{display:grid;grid-template-columns:1fr auto;align-items:center;gap:35px;padding:37px;border-radius:25px;border:1px solid rgba(156,108,255,.23);background:radial-gradient(circle at 90% 20%,rgba(156,108,255,.2),transparent 32%),var(--card)}.library h2{font-size:clamp(2rem,4vw,3.2rem);margin:0 0 8px}.library p{color:var(--muted);margin:0;max-width:690px}.coming{color:#d8ccff;border:1px solid rgba(156,108,255,.3);padding:12px 16px;border-radius:999px;font-weight:800;white-space:nowrap}
-    footer{padding:32px 0;border-top:1px solid var(--line);color:#8491a9}.foot{display:flex;justify-content:space-between;gap:20px;font-size:.85rem}
-    @media(max-width:850px){.menu a:not(.access){display:none}.hero{grid-template-columns:1fr;padding-top:46px}.course-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.course-card[open]{grid-template-columns:1fr}.course-card[open] .course-cover{min-height:300px}.course-visual{min-height:410px}.news-grid{grid-template-columns:1fr}.library{grid-template-columns:1fr}.coming{justify-self:start}.modules{grid-template-columns:1fr}.foot{display:block}.course-info{padding:27px}.course-cover{padding:18px}.course-cover .number{font-size:2.3rem}.course-cover strong{font-size:1rem}.cover-meta{font-size:.68rem}.plus{width:36px;height:36px;flex-basis:36px}}@media(max-width:420px){.course-grid{grid-template-columns:1fr 1fr}.course-cover{padding:14px}.course-cover strong{font-size:.92rem}}
-  </style>
-<style>
-.course-area{grid-column:1/-1;margin:24px 0 2px}
-.course-area:first-child{margin-top:0}
-.course-area-head{display:flex;align-items:end;justify-content:space-between;gap:18px;padding:18px 2px 13px;border-bottom:1px solid rgba(255,255,255,.1)}
-.course-area-head h3{margin:0;font-size:clamp(1.35rem,3vw,2rem);letter-spacing:-.025em}
-.course-area-head span{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800}
-.course-area-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;margin-top:20px}
-.course-area-grid .course-card[open]{grid-column:1/-1}
-@media(max-width:850px){.course-area-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
-@media(max-width:420px){.course-area-grid{grid-template-columns:1fr 1fr}}
-</style><style>
-/* TECA — imagens sempre inteiras, sem crop */
-.hero img,
-.wide,
-.official-logo {
-  object-fit: contain !important;
-  object-position: center !important;
-  height: auto !important;
-  max-height: none !important;
-  aspect-ratio: auto !important;
-  background: transparent !important;
-}
-.hero img,
-.wide {
-  display: block !important;
-  width: 100% !important;
-}
-.course-cover.visual {
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-color: #080d1d !important;
-}
-/* Quando o card abre, continua exibindo a arte completa */
-.course-card[open] .course-cover.visual {
-  background-size: contain !important;
-}
-</style><style>
-/* CORREÇÃO DEFINITIVA: capa mostra a imagem INTEIRA.
-   O summary não usa mais a arte como background recortável. */
-.course-cover.visual{
-  background-image:none !important;
-  position:relative !important;
-  aspect-ratio:auto !important;
-  min-height:0 !important;
-  padding:0 !important;
-  overflow:hidden !important;
-  display:block !important;
-}
-.course-cover.visual > .cover-full-image{
-  display:block !important;
-  width:100% !important;
-  height:auto !important;
-  max-width:100% !important;
-  object-fit:contain !important;
-  object-position:center !important;
-}
-.course-cover.visual > .cover-overlay{
-  position:absolute !important;
-  inset:0 !important;
-  z-index:2 !important;
-  display:flex !important;
-  flex-direction:column !important;
-  justify-content:space-between !important;
-  padding:18px !important;
-  pointer-events:none !important;
-}
-.course-cover.visual:after{display:none !important}
-.course-card[open] .course-cover{min-height:0 !important;aspect-ratio:auto !important}
-.course-card[open] .course-cover.visual{min-height:0 !important}
-</style><style data-sparn-rule="editor-elastico">
-/* TECA — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
-.course-cover.visual,
-.sparn-img-editor{
-  position:relative!important;
-  height:auto!important;
-  min-height:0!important;
-  max-height:none!important;
-  aspect-ratio:auto!important;
-  overflow:visible!important;
-}
-.course-cover.visual{
-  display:block!important;
-  padding:0!important;
-  background:none!important;
-  background-image:none!important;
-}
-.course-card[open] .course-cover,
-.course-card[open] .course-cover.visual{
-  height:auto!important;
-  min-height:0!important;
-  max-height:none!important;
-  aspect-ratio:auto!important;
-}
-.course-cover.visual > img.cover-full-image,
-.sparn-img-editor > img{
-  position:relative!important;
-  inset:auto!important;
-  display:block!important;
-  width:100%!important;
-  height:auto!important;
-  min-height:0!important;
-  max-height:none!important;
-  aspect-ratio:auto!important;
-  object-fit:initial!important;
-  object-position:initial!important;
-  transform-origin:center center!important;
-  clip-path:none!important;
-  mask:none!important;
-}
-/* PRISTINE: asset puro, sem transformação */
-.sparn-img-editor:not([data-editor-state="edited"]) > img{
-  transform:none!important;
-}
-/* EDITADO: libera o transform inline do editor */
-.sparn-img-editor[data-editor-state="edited"] > img{
-  transform-origin:center center!important;
-}
-/* Não cortar a imagem quando ela for movida/transformada */
-.course-card,
-.course-area-grid,
-.course-grid{
-  overflow:visible!important;
-}
-.course-cover.visual > .cover-overlay{
-  position:absolute!important;
-  inset:0!important;
-  z-index:5!important;
-  width:100%!important;
-  height:100%!important;
-  display:flex!important;
-  flex-direction:column!important;
-  justify-content:space-between!important;
-  padding:18px!important;
-  pointer-events:none!important;
-}
-.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
-.sparn-edit-image{
-  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
-  width:38px!important;height:38px!important;border-radius:50%!important;
-  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
-  cursor:pointer!important;font-size:20px!important;
-}
-.sparn-img-panel{
-  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
-  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
-  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
-  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
-}
-.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
-.sparn-img-panel button{
-  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
-  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
-}
-.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
-</style><style data-sparn-rule="replace-image-db">
-/* TECA — substituir imagem */
-.sparn-replace-image{
- position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
- border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
- border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
-}
-.sparn-replace-save{
- position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
- border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
- border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
- display:none!important;
-}
-.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
-.sparn-img-editor > img{
- width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
- object-fit:initial!important;object-position:initial!important;
-}
-</style><style data-sparn-rule="developer-mode-fix-v2">
-/* TECA DEV FIX v2 */
-.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
-body:not(.sparn-dev-mode) .sparn-edit-image,
-body:not(.sparn-dev-mode) .sparn-replace-image,
-body:not(.sparn-dev-mode) .sparn-replace-save,
-body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
-body.sparn-dev-mode .sparn-edit-image,
-body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
-body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
-body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
-</style>
-<style data-sparn-rule="courses-header-menu">
-.menu{overflow:visible!important}.courses-menu{position:relative;display:inline-flex;align-items:center}.courses-trigger{appearance:none;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer;padding:10px 12px;border-radius:12px}.courses-trigger:hover,.courses-menu.open .courses-trigger{background:rgba(255,255,255,.08)}.courses-panel{display:none;position:absolute;z-index:9999;top:calc(100% + 8px);left:0;width:min(430px,88vw);max-height:72vh;overflow:auto;padding:10px;background:#071726;border:1px solid rgba(255,255,255,.14);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.45)}.courses-menu.open .courses-panel{display:block}.course-category{border-bottom:1px solid rgba(255,255,255,.09)}.course-category:last-child{border-bottom:0}.course-category>summary{cursor:pointer;list-style:none;padding:13px 12px;font-weight:800;color:#fff}.course-category>summary::-webkit-details-marker{display:none}.course-category>summary:after{content:'+';float:right;color:#56b7ff}.course-category[open]>summary:after{content:'−'}.course-category-links{display:grid;padding:0 7px 10px}.course-category-links a{display:block;padding:9px 10px!important;border-radius:9px;color:#dcecff!important;text-decoration:none!important;font-size:14px;line-height:1.25}.course-category-links a:hover{background:#0d6efd;color:white!important}@media(max-width:760px){.courses-panel{position:fixed;top:70px;left:4vw;right:4vw;width:auto;max-height:76vh}}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js?v=teca-20260920"></script><script src="sparn-auth.js?v=teca-20260920"></script><style>.sparn-lock{position:relative}.sparn-lock:after{content:"🔒";position:absolute;top:12px;right:12px;background:#07111fcc;border:1px solid #ffffff33;border-radius:99px;padding:7px;z-index:5}body.sparn-paid .sparn-lock:after{content:"✓";color:#65e6a5}.sparn-account{display:inline-flex;gap:10px;align-items:center}</style>
-<style id="sparn-header-logo-fix">
-.brand .sparn-header-logo, .brand.sparn-logo-link .sparn-header-logo {
-  display:block !important; width:48px !important; height:48px !important;
-  object-fit:cover !important; object-position:center !important; border-radius:12px !important;
-  box-shadow:0 0 0 1px rgba(218,169,76,.28),0 8px 24px rgba(0,0,0,.28) !important;
-  flex:0 0 48px !important;
-}
-.brand.sparn-logo-link { display:inline-flex !important; align-items:center !important; text-decoration:none !important; }
-@media (max-width:700px){.brand .sparn-header-logo,.brand.sparn-logo-link .sparn-header-logo{width:42px !important;height:42px !important;flex-basis:42px !important;border-radius:10px !important}}
-</style>
+:root{--bg:#030914;--panel:#071321;--panel2:#091a2c;--text:#f4f8ff;--muted:#8fa4ba;--cyan:#2ee9f2;--line:rgba(69,222,240,.18)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 50% -10%,#0b2941 0,#030914 38%,#020711 100%);color:var(--text);font-family:Inter,Arial,sans-serif}
+a{color:inherit} .wrap{width:min(1240px,calc(100% - 36px));margin:auto}
+.nav{height:68px;display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;background:rgba(3,9,20,.88);backdrop-filter:blur(18px)}
+.brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none;padding:7px 0} .brand img{width:66px;height:42px;object-fit:contain;display:block;border-radius:7px} 
+.menu{display:flex;align-items:center;gap:22px;margin-left:auto;font-size:.88rem;font-weight:700} .menu a{text-decoration:none;color:#dce8f4} .menu a:hover{color:var(--cyan)}
+.search{margin-left:auto;max-width:300px;flex:1} .search input{width:100%;background:#091727;border:1px solid var(--line);border-radius:999px;padding:11px 16px;color:white;outline:none}
+.pill{border:1px solid rgba(255,255,255,.25);padding:10px 15px;border-radius:999px} .beta{background:var(--cyan);color:#001018!important;border-color:transparent}
+.hero{margin-top:22px;min-height:500px;border-radius:26px;overflow:hidden;position:relative;display:flex;align-items:flex-end;background:linear-gradient(90deg,rgba(1,7,16,.96),rgba(1,7,16,.72) 43%,rgba(1,7,16,.12)),url("Assets/teca-banner-principal.png") center/cover no-repeat;border:1px solid var(--line);box-shadow:0 30px 90px rgba(0,0,0,.35)}
+.hero-copy{padding:54px;max-width:650px} .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-weight:800} .hero h1{font-family:"Space Grotesk";font-size:clamp(2.8rem,6vw,5.7rem);line-height:.92;letter-spacing:-.055em;margin:14px 0 20px} .hero h1 em{font-style:normal;color:var(--cyan)} .hero p{font-size:1.05rem;line-height:1.65;color:#c3d0dd;max-width:520px} .cta{display:inline-flex;margin-top:16px;background:var(--cyan);color:#001018;text-decoration:none;padding:14px 20px;border-radius:999px;font-weight:900}
+main{padding:34px 0 80px} .course-section{padding:32px 0;border-bottom:1px solid var(--line)} .section-title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px} .section-title h2{font-family:"Space Grotesk";font-size:clamp(1.35rem,2.4vw,2rem);margin:0;display:flex;gap:11px;align-items:center} .count{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:15px;align-items:stretch}
+.course-card{min-width:0;text-decoration:none;border:1px solid var(--line);background:linear-gradient(145deg,#081827,#06111e);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
+.course-card:hover{transform:translateY(-4px);border-color:rgba(46,233,242,.58);box-shadow:0 15px 35px rgba(0,0,0,.32)}
+.thumb{width:100%;background:#07111d;overflow:hidden} .thumb img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;margin:0 auto}
+.card-copy{padding:14px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;min-height:88px} .num{font-family:"Space Grotesk";font-size:1.55rem;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.5);line-height:1} .card-copy strong{display:block;font-size:.94rem;line-height:1.18} .card-copy small{display:block;color:var(--muted);font-size:.68rem;margin-top:7px;line-height:1.3} .arrow{color:var(--cyan)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:32px 0} .feature{border:1px solid var(--line);border-radius:16px;padding:18px;background:rgba(255,255,255,.02)} .feature b{display:block;font-size:.86rem} .feature span{display:block;color:var(--muted);font-size:.72rem;margin-top:5px}
+footer{border-top:1px solid var(--line);padding:35px 0 55px;color:var(--muted)} .foot{display:flex;align-items:center;justify-content:space-between;gap:30px} .foot img{width:84px;height:54px;object-fit:contain}
+.dev{position:fixed;right:15px;bottom:15px;z-index:70;border:1px solid #9fb3c8;background:#f8fbff;color:#0b1622;border-radius:7px;padding:8px 11px;font-size:.72rem;cursor:pointer}
+@media(max-width:900px){.search{display:none}.menu a:not(.beta):not(.pill){display:none}.hero{min-height:430px}.hero-copy{padding:34px}.features{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.wrap{width:min(100% - 22px,1240px)}.nav{gap:10px}.brand img{width:52px;height:34px}.menu{gap:7px}.pill{padding:8px 10px;font-size:.74rem}.hero{min-height:390px;background-position:center}.hero-copy{padding:25px}.course-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card-copy{grid-template-columns:1fr;min-height:102px}.num,.arrow{display:none}.features{grid-template-columns:1fr}}
 
-<style data-teca-brand="v1">
-.sparn-header-logo{width:72px!important;height:54px!important;object-fit:contain!important;border-radius:12px!important;background:#050b14!important}
-.hero{position:relative;overflow:hidden;border-radius:28px;margin-top:22px;padding:64px 48px!important;min-height:620px;background:linear-gradient(90deg,rgba(3,10,22,.96) 0%,rgba(3,10,22,.82) 45%,rgba(3,10,22,.30) 100%),url("Assets/teca-banner-principal.png") center/cover no-repeat!important}
-.hero>div:first-child{position:relative;z-index:2;max-width:680px}
-.hero .course-visual{display:none!important}
-@media(max-width:850px){.hero{padding:42px 24px!important;min-height:560px;background-position:center!important}}
+/* === TECA CMS / editor online === */
+.teca-edit-wrap{position:relative}
+.teca-edit-btn{display:none;position:absolute;z-index:40;right:6px;top:6px;border:1px solid rgba(46,233,242,.55);background:#061522;color:#dffcff;border-radius:999px;padding:5px 9px;font:700 11px/1 Inter,Arial;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+body.dev-on .teca-edit-wrap:hover>.teca-edit-btn{display:block}
+body.dev-on .teca-editable{outline:1px dashed rgba(46,233,242,.28);outline-offset:3px}
+.teca-editor-panel{position:fixed;z-index:9999;inset:auto 18px 18px auto;width:min(520px,calc(100vw - 36px));background:#06111e;border:1px solid rgba(46,233,242,.38);border-radius:18px;padding:18px;box-shadow:0 25px 80px rgba(0,0,0,.55);display:none}
+.teca-editor-panel.open{display:block}.teca-editor-panel h3{margin:0 0 5px;font:700 18px "Space Grotesk",Inter}.teca-editor-key{color:#6f8ca5;font-size:11px;margin-bottom:12px;word-break:break-all}
+.teca-editor-panel textarea{width:100%;min-height:130px;resize:vertical;background:#020914;color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px;font:14px/1.5 Inter;outline:none}
+.teca-editor-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}.teca-editor-actions button{border:0;border-radius:999px;padding:9px 14px;font-weight:800;cursor:pointer}
+.teca-save{background:#2ee9f2;color:#001018}.teca-cancel{background:#172638;color:#dce8f4}.teca-status{font-size:12px;color:#8fa4ba;margin-top:10px;min-height:16px}
+
 </style>
 </head>
-<body>
-<header class="wrap nav"><a class="brand sparn-logo-link" href="#topo"><img alt="Instituto TECA" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></a><nav class="menu"><div class="courses-menu"><button aria-expanded="false" class="courses-trigger" type="button">Cursos ▾</button><div class="courses-panel"><details class="course-category"><summary>Cultura, Arte &amp; Produção</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-editais-sem-misterio.html" href="#">Editais sem Mistério</a><a class="sparn-course-link" data-course-href="curso-da-ideia-ao-projeto.html" href="#">Da Ideia ao Projeto</a><a class="sparn-course-link" data-course-href="curso-ia-para-artistas.html" href="#">IA para Artistas</a><a class="sparn-course-link" data-course-href="curso-artista-visivel.html" href="#">Artista Visível</a><a class="sparn-course-link" data-course-href="curso-viver-de-arte.html" href="#">Viver de Arte</a><a class="sparn-course-link" data-course-href="curso-producao-cultural.html" href="#">Produção Cultural na Prática</a></div></details><details class="course-category"><summary>Futuro, Tecnologia &amp; Carreira</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-profissoes-do-futuro.html" href="#">Profissões do Futuro</a><a class="sparn-course-link" data-course-href="curso-agentes-de-ia.html" href="#">Trabalhando com Agentes de IA</a><a class="sparn-course-link" data-course-href="curso-criador-aumentado.html" href="#">Criador Aumentado</a><a class="sparn-course-link" data-course-href="curso-robos-chegaram.html" href="#">Robôs Chegaram</a><a class="sparn-course-link" data-course-href="curso-humano-premium.html" href="#">Humano Premium</a><a class="sparn-course-link" data-course-href="curso-trabalho-do-futuro.html" href="#">Construa Seu Trabalho do Futuro</a></div></details><details class="course-category"><summary>Educação Financeira &amp; Economia</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-dinheiro-sem-misterio.html" href="#">Dinheiro sem Mistério</a><a class="sparn-course-link" data-course-href="curso-mente-milionaria.html" href="#">Mente Milionária de Verdade</a><a class="sparn-course-link" data-course-href="curso-reserva-de-emergencia.html" href="#">Reserva de Emergência</a><a class="sparn-course-link" data-course-href="curso-banco-sem-armadilhas.html" href="#">Banco sem Armadilhas</a><a class="sparn-course-link" data-course-href="curso-economia-de-verdade.html" href="#">Economia de Verdade</a></div></details><details class="course-category"><summary>Agroeconomia, Terra &amp; Regeneração</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-da-terra-ao-prato.html" href="#">Da Terra ao Prato</a><a class="sparn-course-link" data-course-href="curso-horta-do-zero.html" href="#">Horta do Zero</a><a class="sparn-course-link" data-course-href="curso-agroeconomia.html" href="#">Agroeconomia</a><a class="sparn-course-link" data-course-href="curso-agrofloresta.html" href="#">Agrofloresta</a><a class="sparn-course-link" data-course-href="curso-juventude-que-refloresta.html" href="#">Juventude que Refloresta</a><a class="sparn-course-link" data-course-href="curso-guardioes-das-nascentes.html" href="#">Guardiões das Nascentes</a><a class="sparn-course-link" data-course-href="curso-solo-vivo.html" href="#">Solo Vivo</a><a class="sparn-course-link" data-course-href="curso-sementes-do-futuro.html" href="#">Sementes do Futuro</a></div></details><details class="course-category"><summary>Mobilidade &amp; Novos Caminhos</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-home-office.html" href="#">Home Office</a><a class="sparn-course-link" data-course-href="curso-nomade-digital.html" href="#">Nômade Digital</a><a class="sparn-course-link" data-course-href="curso-rotas-pelo-brasil.html" href="#">Rotas pelo Brasil</a><a class="sparn-course-link" data-course-href="curso-mochilao-do-zero.html" href="#">Mochilão do Zero</a><a class="sparn-course-link" data-course-href="curso-saude-na-estrada.html" href="#">Saúde na Estrada</a><a class="sparn-course-link" data-course-href="curso-viajar-com-pouco-dinheiro.html" href="#">Viajar com Pouco Dinheiro</a><a class="sparn-course-link" data-course-href="curso-id-jovem-na-estrada.html" href="#">ID Jovem na Estrada</a><a class="sparn-course-link" data-course-href="curso-rota-europa.html" href="#">Rota Europa</a></div></details></div></div><a href="#novidades">Novidades</a><a href="#biblioteca">Biblioteca</a><a class="access" href="#curso">R$ 11,11</a><span class="sparn-account"><a href="login.html">Entrar</a><a href="perfil-aluno.html">Meu perfil</a><a class="access" href="pagamento.html">Acesso Beta</a></span></nav></header>
-<main id="topo">
-<section class="wrap hero"><div><span class="eyebrow"><span class="dot"></span> Tecnologia • Educação • Cultura • Arte</span><h1>Da periferia para o mundo: <span class="gradient">mais futuro, mais possibilidades.</span></h1><p class="lead">Cursos do Instituto TECA, ferramentas práticas e uma biblioteca global para aprender, criar, trabalhar e acessar novas possibilidades.</p><div class="actions"><a class="btn primary" href="#curso">Explorar cursos →</a><a class="btn secondary" href="#novidades">Ver novidades</a></div><div class="micro"><span><b>R$ 11,11</b> Acesso Beta</span><span>Conteúdo original</span><span>Novos cursos em expansão</span></div></div>
-<div class="course-visual"><img alt="Instituto TECA" class="official-logo" src="Assets/teca-logo-high-tech.png"/><h3>Dando asas às suas ideias</h3><p>Cursos, oportunidades e caminhos para avançar.</p></div>
-</section>
-<section class="wrap" id="curso"><div class="section-head"><span class="eyebrow">Cursos originais</span><h2>Conhecimento para transformar <span class="gradient">planos em ação.</span></h2><p>Formações do Instituto TECA organizadas por área, com conteúdo aplicado, exercícios, projetos e ferramentas para construir novos caminhos.</p></div>
-<div class="course-grid">
-<section class="course-area"><div class="course-area-head"><h3>🎭 Cultura, Arte &amp; Produção</h3><span>25 cursos</span></div><div class="course-area-grid"><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/editais-sem-misterio.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">01</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Editais sem Mistério</strong><br/><span class="cover-meta">Cultura · 8 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Projeto aplicado</span></div><h3>Como inscrever projetos vencedores</h3><p>Da leitura estratégica do edital à escrita, orçamento, inscrição, execução e prestação de contas de um projeto cultural.</p><div class="modules"><span class="module">📑 Leitura de editais</span><span class="module">✍️ Escrita de projetos</span><span class="module">💰 Orçamento e cronograma</span><span class="module">✅ Avaliação final</span></div><a class="open sparn-course-link" data-course-href="curso-editais-sem-misterio.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/da-ideia-ao-projeto.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">02</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Da Ideia ao Projeto</strong><br/><span class="cover-meta">Cultura · 8 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Caderno de projeto</span></div><h3>Escrita cultural profissional</h3><p>Transforme uma intuição criativa em conceito, objetivos, experiência, impacto, comunicação e dossiê profissional.</p><div class="modules"><span class="module">💡 Concepção e pesquisa</span><span class="module">✍️ Escrita profissional</span><span class="module">👥 Público e experiência</span><span class="module">🎤 Pitch e dossiê</span></div><a class="open sparn-course-link" data-course-href="curso-da-ideia-ao-projeto.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/ia-para-artistas.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">03</span><span aria-hidden="true" class="plus">+</span></span><span><strong>IA para Artistas</strong><br/><span class="cover-meta">Cultura + Tecnologia · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Laboratório de prompts</span></div><h3>Inteligência artificial para artistas e produtores</h3><p>Criação, pesquisa, projetos, produção, comunicação e automação com direção humana, ética e proteção de direitos.</p><div class="modules"><span class="module">🤖 Fundamentos e prompts</span><span class="module">🎨 Criação autoral</span><span class="module">⚙️ Produção e automação</span><span class="module">⚖️ Ética e direitos</span></div><a class="open sparn-course-link" data-course-href="curso-ia-para-artistas.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/artista-visivel.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">04</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Artista Visível</strong><br/><span class="cover-meta">Cultura + Comunicação · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Plano de comunicação</span></div><h3>Marketing digital para projetos culturais</h3><p>Posicione seu trabalho, crie conteúdo com identidade, forme comunidade e transforme atenção em presença, público e oportunidades reais.</p><div class="modules"><span class="module">🎯 Posicionamento e público</span><span class="module">✦ Narrativa e conteúdo</span><span class="module">🚀 Campanhas e lançamentos</span><span class="module">📊 Métricas e estratégia</span></div><a class="open sparn-course-link" data-course-href="curso-artista-visivel.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/viver-de-arte.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">05</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Viver de Arte</strong><br/><span class="cover-meta">Cultura + Economia · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Plano de sustentabilidade</span></div><h3>Economia criativa e renda cultural</h3><p>Transforme talento e repertório em uma atividade sustentável com receitas diversificadas, preços justos, organização financeira e relações profissionais.</p><div class="modules"><span class="module">💎 Proposta de valor</span><span class="module">💰 Preço e receitas</span><span class="module">🤝 Vendas e parcerias</span><span class="module">📈 Gestão sustentável</span></div><a class="open sparn-course-link" data-course-href="curso-viver-de-arte.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/producao-cultural.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">06</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Produção Cultural na Prática</strong><br/><span class="cover-meta">Cultura + Gestão · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Plano executivo</span></div><h3>Do planejamento à entrega</h3><p>Planeje equipes, orçamento, infraestrutura, acessibilidade, segurança e operação para realizar eventos e ações culturais com qualidade.</p><div class="modules"><span class="module">🗓️ Pré-produção</span><span class="module">👥 Equipe e fornecedores</span><span class="module">♿ Acessibilidade e segurança</span><span class="module">🎬 Operação e pós-produção</span></div><a class="open sparn-course-link" data-course-href="curso-producao-cultural.html" href="#">Abrir curso completo →</a></div></details></div></section><section class="course-area"><div class="course-area-head"><h3>🤖 Futuro, Tecnologia &amp; Carreira</h3><span>25 cursos</span></div><div class="course-area-grid"><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/profissoes-do-futuro.png.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">07</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Profissões do Futuro</strong><br/><span class="cover-meta">Carreira + Tecnologia · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova trilha</span><span class="chip">Projeto de carreira</span></div><h3>O novo mapa do trabalho</h3><p>Entenda as forças que estão transformando as profissões, descubra áreas em crescimento e crie um plano pessoal de carreira para os próximos 90 dias.</p><div class="modules"><span class="module">🧭 Mudanças no trabalho</span><span class="module">🚀 Áreas em crescimento</span><span class="module">🧠 Competências humanas</span><span class="module">🗺️ Mapa de carreira</span></div><a class="open sparn-course-link" data-course-href="curso-profissoes-do-futuro.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/agentes-de-ia.png.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">08</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Trabalhando com Agentes de IA</strong><br/><span class="cover-meta">Carreira + IA · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova profissão</span><span class="chip">Projeto aplicado</span></div><h3>A profissão que ainda está nascendo</h3><p>Aprenda a desenhar, coordenar e supervisionar equipes de agentes que pesquisam, analisam, produzem e verificam tarefas.</p><div class="modules"><span class="module">🤖 Fundamentos de agentes</span><span class="module">🧩 Equipes multiagentes</span><span class="module">🛡️ Segurança e governança</span><span class="module">🚀 Portfólio profissional</span></div><a class="open sparn-course-link" data-course-href="curso-agentes-de-ia.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/criador-aumentado.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">09</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Criador Aumentado</strong><br/><span class="cover-meta">Arte + Tecnologia · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Profissão do futuro</span><span class="chip">Projeto autoral</span></div><h3>Arte, vídeo, música e design na era generativa</h3><p>Use ferramentas generativas como instrumentos criativos, desenvolva linguagem própria e construa uma obra multimídia com autoria, método e responsabilidade.</p><div class="modules"><span class="module">🎨 Direção criativa</span><span class="module">🎬 Fluxo multimídia</span><span class="module">✦ Identidade autoral</span><span class="module">⚖️ Ética e direitos</span></div><a class="open sparn-course-link" data-course-href="curso-criador-aumentado.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/robos-chegaram.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">10</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Robôs Chegaram</strong><br/><span class="cover-meta">Robótica + Carreira · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Profissão do futuro</span><span class="chip">Projeto aplicado</span></div><h3>Trabalhando no mundo físico da IA</h3><p>Entenda como robôs percebem, decidem e agem, conheça as profissões da robótica e planeje sua entrada segura nesse mercado.</p><div class="modules"><span class="module">👁️ Sensores e percepção</span><span class="module">🦾 Movimento e controle</span><span class="module">🛡️ Segurança humana</span><span class="module">🔧 Carreiras e manutenção</span></div><a class="open sparn-course-link" data-course-href="curso-robos-chegaram.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/humano-premium.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">11</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Humano Premium</strong><br/><span class="cover-meta">Carreira + Humanidade · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Profissão do futuro</span><span class="chip">Projeto de valor</span></div><h3>As habilidades que a máquina não resolve sozinha</h3><p>Fortaleça pensamento crítico, criatividade, empatia, comunicação, ética e adaptabilidade para gerar valor em um mundo com IA.</p><div class="modules"><span class="module">🧠 Pensamento crítico</span><span class="module">💡 Criatividade</span><span class="module">🤝 Inteligência relacional</span><span class="module">⚖️ Julgamento e confiança</span></div><a class="open sparn-course-link" data-course-href="curso-humano-premium.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/trabalho-do-futuro.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">12</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Construa Seu Trabalho do Futuro</strong><br/><span class="cover-meta">Carreira 2030 · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Profissão do futuro</span><span class="chip">Plano de 90 dias</span></div><h3>Plano de Carreira 2030</h3><p>Transforme autoconhecimento e tendências em hipóteses de carreira, experimentos reais, portfólio, rede e um plano executável.</p><div class="modules"><span class="module">🧭 Direção profissional</span><span class="module">🧪 Experimentos reais</span><span class="module">📁 Portfólio e rede</span><span class="module">🚀 Sprint de 90 dias</span></div><a class="open sparn-course-link" data-course-href="curso-trabalho-do-futuro.html" href="#">Abrir curso completo →</a></div></details></div></section><section class="course-area"><div class="course-area-head"><h3>💰 Educação Financeira &amp; Economia</h3><span>25 cursos</span></div><div class="course-area-grid"><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/dinheiro-sem-misterio.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">13</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Dinheiro sem Mistério</strong><br/><span class="cover-meta">Educação Financeira · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova trilha</span><span class="chip">Plano pessoal</span></div><h3>O manual que todo jovem deveria receber</h3><p>Entenda renda, gastos, escolhas, orçamento, metas e hábitos para começar a vida adulta com autonomia e responsabilidade.</p><div class="modules"><span class="module">💵 Como o dinheiro funciona</span><span class="module">🧠 Escolhas e hábitos</span><span class="module">📊 Orçamento simples</span><span class="module">🎯 Plano de 30 dias</span></div><a class="open sparn-course-link" data-course-href="curso-dinheiro-sem-misterio.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/mente-milionaria.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">14</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Mente Milionária de Verdade</strong><br/><span class="cover-meta">Hábitos Financeiros · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Educação financeira</span><span class="chip">Desafio de hábitos</span></div><h3>Hábitos antes da riqueza</h3><p>Desenvolva disciplina, paciência, responsabilidade e visão de longo prazo para construir estabilidade, patrimônio e liberdade.</p><div class="modules"><span class="module">🧠 Crenças e decisões</span><span class="module">🔁 Hábitos consistentes</span><span class="module">🌱 Longo prazo</span><span class="module">🛡️ Antídoto contra atalhos</span></div><span class="open">Curso em preparação</span></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/reserva-de-emergencia.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">16</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Reserva de Emergência</strong><br/><span class="cover-meta">Educação Financeira · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Projeto prático</span></div><h3>Seu Primeiro Escudo Financeiro</h3><p>Quanto guardar, onde deixar, quando usar e como começar mesmo ganhando pouco.</p><div class="modules"><span class="module">🛡️ Proteção</span><span class="module">🧮 Meta</span><span class="module">⚡ Segurança</span><span class="module">🎯 Plano de 30 dias</span></div><a class="open sparn-course-link" data-course-href="curso-reserva-de-emergencia.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/banco-sem-armadilhas.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">17</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Banco sem Armadilhas</strong><br/><span class="cover-meta">Educação Financeira · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Novo</span><span class="chip">Segurança financeira</span></div><h3>Conta, Cartão, Pix e Segurança</h3><p>Entenda sua vida bancária, use crédito com consciência e reconheça golpes antes de confirmar.</p><div class="modules"><span class="module">🏦 Conta</span><span class="module">💳 Cartão</span><span class="module">⚡ Pix</span><span class="module">🛡️ Segurança</span></div><a class="open sparn-course-link" data-course-href="curso-banco-sem-armadilhas.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/economia-de-verdade.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">18</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Economia de Verdade</strong><br/><span class="cover-meta">Economia Avançada · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso avançado</span><span class="chip new">Novo</span><span class="chip">Avaliação final</span></div><h3>Como o Sistema Funciona</h3><p>Aprenda a interpretar escolhas, mercados, preços, produção, indicadores, crescimento e evidências com raciocínio econômico.</p><div class="modules"><span class="module">⚖️ Escolhas</span><span class="module">📈 Mercados</span><span class="module">🏭 Produção</span><span class="module">🌍 Macroeconomia</span></div><a class="open sparn-course-link" data-course-href="curso-economia-de-verdade.html" href="#">Abrir curso completo →</a></div></details></div></section><section class="course-area"><div class="course-area-head"><h3>🌱 Agroeconomia, Terra &amp; Regeneração</h3><span>25 cursos</span></div><div class="course-area-grid"><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/da-terra-ao-prato.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">19</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Da Terra ao Prato</strong><br/><span class="cover-meta">Agroeconomia + Regeneração · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Projeto de cultivo</span></div><h3>Por que precisamos voltar a cultivar</h3><p>Reconecte alimento, solo, água, território e economia local e transforme conhecimento em um primeiro ciclo de cultivo possível.</p><div class="modules"><span class="module">🌱 Solo vivo</span><span class="module">💧 Água e resiliência</span><span class="module">🥕 Cultivo e colheita</span><span class="module">🗺️ Plano de 30 dias</span></div><a class="open sparn-course-link" data-course-href="curso-da-terra-ao-prato.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Horta do Zero" class="cover-full-image" src="Assets/horta-do-zero.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">20</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Horta do Zero</strong><br/><span class="cover-meta">Agroecologia + Cultivo · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Horta de 30 dias</span></div><h3>Cultive comida onde você mora</h3><p>Aprenda a começar uma horta possível em vasos, canteiros ou pequenos espaços, cuidando de solo, água, plantio, manutenção e colheita.</p><div class="modules"><span class="module">🌱 Espaço e solo</span><span class="module">💧 Água e luz</span><span class="module">🥕 Plantio e colheita</span><span class="module">🗺️ Horta de 30 dias</span></div><a class="open sparn-course-link" data-course-href="curso-horta-do-zero.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Agroeconomia" class="cover-full-image" src="Assets/agroeconomia.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">21</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Agroeconomia</strong><br/><span class="cover-meta">Agroeconomia + Gestão Rural · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Microplano econômico</span></div><h3>Como a terra gera renda</h3><p>Entenda custos, preço, mercado, comercialização, caixa e reinvestimento para transformar produção agrícola em renda sustentável.</p><div class="modules"><span class="module">🌱 Custos e recursos</span><span class="module">💧 Preço e margem</span><span class="module">🥕 Mercado e vendas</span><span class="module">🗺️ Microplano econômico</span></div><a class="open sparn-course-link" data-course-href="curso-agroeconomia.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Agrofloresta" class="cover-full-image" src="Assets/agrofloresta.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">22</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Agrofloresta</strong><br/><span class="cover-meta">Agrofloresta + Gestão Rural · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Projeto de 12 meses</span></div><h3>Produzir alimentos enquanto a floresta cresce</h3><p>Aprenda sucessão, estratos, solo vivo, biomassa, desenho e manejo para produzir alimentos enquanto recupera funções ecológicas.</p><div class="modules"><span class="module">🌱 Sucessão e estratos</span><span class="module">💧 Solo e biomassa</span><span class="module">🥕 Manejo e produção</span><span class="module">🗺️ Projeto de 12 meses</span></div><a class="open sparn-course-link" data-course-href="curso-agrofloresta.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Juventude que Refloresta" class="cover-full-image" src="Assets/juventude-que-refloresta.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">23</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Juventude que Refloresta</strong><br/><span class="cover-meta">Juventude que Refloresta + Gestão Rural · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Mutirão Refloresta</span></div><h3>Uma geração para recuperar o Brasil</h3><p>Aprenda a diagnosticar áreas, escolher métodos e espécies, organizar mutirões e acompanhar a recuperação ecológica com participação jovem.</p><div class="modules"><span class="module">🌱 Diagnóstico e espécies</span><span class="module">💧 Plantio e manutenção</span><span class="module">🥕 Comunidade e monitoramento</span><span class="module">🗺️ Mutirão Refloresta</span></div><a class="open sparn-course-link" data-course-href="curso-juventude-que-refloresta.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Guardiões das Nascentes" class="cover-full-image" src="Assets/guardioes-das-nascentes.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">24</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Guardiões das Nascentes</strong><br/><span class="cover-meta">Guardiões das Nascentes + Gestão Rural · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Plano da nascente</span></div><h3>Água, florestas e comunidades</h3><p>Aprenda a compreender nascentes, diagnosticar riscos, recuperar vegetação e organizar monitoramento comunitário da água.</p><div class="modules"><span class="module">🌱 Água e território</span><span class="module">💧 Proteção e recuperação</span><span class="module">🥕 Monitoramento comunitário</span><span class="module">🗺️ Plano da nascente</span></div><a class="open sparn-course-link" data-course-href="curso-guardioes-das-nascentes.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Solo Vivo" class="cover-full-image" src="Assets/solo-vivo.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">25</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Solo Vivo</strong><br/><span class="cover-meta">Solo Vivo + Gestão Rural · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Plano Solo Vivo</span></div><h3>A riqueza debaixo dos nossos pés</h3><p>Entenda biologia, matéria orgânica, água, estrutura e diagnóstico para construir fertilidade e regenerar a base da produção.</p><div class="modules"><span class="module">🌱 Vida e estrutura</span><span class="module">💧 Matéria orgânica e água</span><span class="module">🥕 Diagnóstico e regeneração</span><span class="module">🗺️ Plano Solo Vivo</span></div><a class="open sparn-course-link" data-course-href="curso-solo-vivo.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Sementes do Futuro" class="cover-full-image" src="Assets/sementes-do-futuro.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">26</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Sementes do Futuro</strong><br/><span class="cover-meta">Sementes do Futuro + Gestão Rural · 6 módulos · 24 aulas</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Nova área</span><span class="chip">Projeto de sementes</span></div><h3>Biodiversidade, sementes e autonomia</h3><p>Aprenda reprodução, seleção, conservação, agrobiodiversidade e redes comunitárias para manter sementes e conhecimento vivos.</p><div class="modules"><span class="module">🌱 Sementes e genética</span><span class="module">💧 Conservação e diversidade</span><span class="module">🥕 Redes e autonomia</span><span class="module">🗺️ Projeto de sementes</span></div><a class="open sparn-course-link" data-course-href="curso-sementes-do-futuro.html" href="#">Abrir curso completo →</a></div></details></div></section><section class="course-area"><div class="course-area-head"><h3>🌍 Mobilidade &amp; Novos Caminhos</h3><span>25 cursos</span></div><div class="course-area-grid"><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Home Office" class="cover-full-image" src="Assets/home-office.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">27</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Home Office</strong><br/><span class="cover-meta">Trabalhe de Onde Estiver</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Carreira remota</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-home-office.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Nômade Digital" class="cover-full-image" src="Assets/nomade-digital.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">28</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Nômade Digital</strong><br/><span class="cover-meta">Trabalho, Liberdade e Movimento</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Vida nômade</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-nomade-digital.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Rotas pelo Brasil" class="cover-full-image" src="Assets/rotas-pelo-brasil.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">29</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Rotas pelo Brasil</strong><br/><span class="cover-meta">Viaje Mais Gastando Menos</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Rotas brasileiras</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-rotas-pelo-brasil.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Mochilão do Zero" class="cover-full-image" src="Assets/mochilao-do-zero.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">30</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Mochilão do Zero</strong><br/><span class="cover-meta">Sua Primeira Grande Viagem</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Mochilão e autonomia</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-mochilao-do-zero.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Saúde na Estrada" class="cover-full-image" src="Assets/saude-na-estrada.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">31</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Saúde na Estrada</strong><br/><span class="cover-meta">Corpo e Mente em Movimento</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Saúde e viagem</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-saude-na-estrada.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="Viajar com Pouco Dinheiro" class="cover-full-image" src="Assets/viajar-com-pouco-dinheiro.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">32</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Viajar com Pouco Dinheiro</strong><br/><span class="cover-meta">A Matemática da Liberdade</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Economia de viagem</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-viajar-com-pouco-dinheiro.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="ID Jovem na Estrada" class="cover-full-image" src="Assets/id-jovem-na-estrada.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">33</span><span aria-hidden="true" class="plus">+</span></span><span><strong>ID Jovem na Estrada</strong><br/><span class="cover-meta">Direitos, Apoios e Mochilão Possível</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Direitos e apoio na estrada</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-id-jovem-na-estrada.html" href="#">Abrir curso completo →</a></div></details><details class="course-card sparn-lock" name="courses"><summary class="course-cover visual" style=""><img alt="" class="cover-full-image" src="Assets/rota-europa.png"/><span class="cover-overlay"><span class="cover-top"><span class="number">15</span><span aria-hidden="true" class="plus">+</span></span><span><strong>Rota Europa</strong><br/><span class="cover-meta">Guia completo e atualizado</span></span></span></summary><div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Conteúdo ampliado</span><span class="chip">Guia prático</span></div><h3>Viagens, Trabalhos Remotos, Novo mercado job+lifestyle</h3><p>Planeje a busca por emprego, escolha cidades, encontre voluntariados confiáveis e construa renda remota em euro ou dólar.</p><div class="modules"><span class="module">🇪🇸 Empregos na Espanha</span><span class="module">🎒 Voluntariado na Europa</span><span class="module">💻 Home office internacional</span><span class="module">🗺️ Rota europeia de 6–8 meses</span></div><a class="open sparn-course-link" data-course-href="curso-rota-europa.html" href="#">Abrir curso completo →</a></div></details></div></section></div>
-</section>
-<section class="news" id="novidades"><div class="wrap"><div class="section-head"><span class="eyebrow">O que chegou agora</span><h2>Mais caminhos dentro do <span class="gradient">mesmo mapa.</span></h2></div><div class="news-grid">
-<article class="news-card"><span class="icon">🌱</span><h3>Mente Milionária de Verdade</h3><p>Troque a fantasia do enriquecimento rápido por hábitos consistentes, decisões conscientes e construção paciente de liberdade.</p></article>
-<article class="news-card"><span class="icon">🧠</span><h3>Competências para o futuro</h3><p>Desenvolva pensamento crítico, criatividade, comunicação e colaboração com inteligência artificial.</p></article>
-<article class="news-card"><span class="icon">🚀</span><h3>Plano de carreira em 90 dias</h3><p>Crie três caminhos profissionais, identifique suas lacunas e desenvolva um projeto real de portfólio.</p></article>
-</div></div></section>
-<section class="wrap" id="biblioteca"><div class="library"><div><h2>A biblioteca gratuita está crescendo.</h2><p>Estamos organizando cursos de universidades, governos e instituições do mundo inteiro por área, idioma, duração e tipo de certificado.</p></div><span class="coming">Em construção</span></div></section>
-</main>
-<footer><div class="wrap foot"><span>© 2026 TECA</span><span>Dando asas às suas ideias.</span></div></footer>
+<body id="topo">
+<header class="nav">
+  <div class="wrap" style="display:flex;align-items:center;gap:26px;width:min(1240px,calc(100% - 36px))">
+    <a class="brand" href="#topo" aria-label="Instituto TECA"><img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA"></a>
+    <nav class="menu">
+      <a href="#cursos">Cursos</a><a href="#novidades">Novidades</a><a href="#biblioteca">Biblioteca</a>
+    </nav>
+    <div class="search"><input id="search" type="search" placeholder="Buscar cursos..."></div>
+    <nav class="menu" style="margin-left:0">
+      <a class="pill" href="login.html">Entrar</a><a class="pill" href="perfil-aluno.html">Meu perfil</a><a class="pill beta" href="pagamento.html">Acesso Beta</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow teca-editable" data-content-key="home.hero.eyebrow">Tecnologia • Educação • Cultura • Arte</div>
+      <h1 class="teca-editable" data-content-key="home.hero.title">Conhecimento<br>também <em>liberta.</em></h1>
+      <p class="teca-editable" data-content-key="home.hero.description">Cursos, oportunidades e ferramentas para jovens construírem caminhos no presente e no futuro.</p>
+      <a class="cta teca-editable" data-content-key="home.hero.cta" href="#cursos">Explorar cursos →</a>
+    </div>
+  </section>
+
+  <main id="cursos">
+    <section class="course-section">
+      <div class="section-title"><h2><span>🎨</span><span class="teca-editable" data-content-key="home.section.1.title">Cultura, Arte & Produção</span></h2><span class="count">6 cursos</span></div>
+      <div class="course-grid">
+        <a class="course-card sparn-course-link" data-course-href="curso-editais-sem-misterio.html" href="curso-editais-sem-misterio.html">
+          <div class="thumb"><img src="Assets/editais-sem-misterio.png" alt="Editais sem Mistério" loading="lazy"></div>
+          <div class="card-copy"><span class="num">01</span><div><strong class="teca-editable" data-content-key="course.editais-sem-misterio.title">Editais sem Mistério</strong><small class="teca-editable" data-content-key="course.editais-sem-misterio.meta">Cultura + Projetos · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-da-ideia-ao-projeto.html" href="curso-da-ideia-ao-projeto.html">
+          <div class="thumb"><img src="Assets/da-ideia-ao-projeto.png" alt="Da Ideia ao Projeto" loading="lazy"></div>
+          <div class="card-copy"><span class="num">02</span><div><strong class="teca-editable" data-content-key="course.da-ideia-ao-projeto.title">Da Ideia ao Projeto</strong><small class="teca-editable" data-content-key="course.da-ideia-ao-projeto.meta">Projetos · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-ia-para-artistas.html" href="curso-ia-para-artistas.html">
+          <div class="thumb"><img src="Assets/ia-para-artistas.png" alt="IA para Artistas" loading="lazy"></div>
+          <div class="card-copy"><span class="num">03</span><div><strong class="teca-editable" data-content-key="course.ia-para-artistas.title">IA para Artistas</strong><small class="teca-editable" data-content-key="course.ia-para-artistas.meta">Arte + IA · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-artista-visivel.html" href="curso-artista-visivel.html">
+          <div class="thumb"><img src="Assets/artista-visivel.png" alt="Artista Visível" loading="lazy"></div>
+          <div class="card-copy"><span class="num">04</span><div><strong class="teca-editable" data-content-key="course.artista-visivel.title">Artista Visível</strong><small class="teca-editable" data-content-key="course.artista-visivel.meta">Comunicação · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-viver-de-arte.html" href="curso-viver-de-arte.html">
+          <div class="thumb"><img src="Assets/viver-de-arte.png" alt="Viver de Arte" loading="lazy"></div>
+          <div class="card-copy"><span class="num">05</span><div><strong class="teca-editable" data-content-key="course.viver-de-arte.title">Viver de Arte</strong><small class="teca-editable" data-content-key="course.viver-de-arte.meta">Cultura + Economia · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-producao-cultural.html" href="curso-producao-cultural.html">
+          <div class="thumb"><img src="Assets/producao-cultural.png" alt="Produção Cultural na Prática" loading="lazy"></div>
+          <div class="card-copy"><span class="num">06</span><div><strong class="teca-editable" data-content-key="course.producao-cultural.title">Produção Cultural na Prática</strong><small class="teca-editable" data-content-key="course.producao-cultural.meta">Cultura + Gestão · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a></div>
+    </section>
+    <section class="course-section">
+      <div class="section-title"><h2><span>🤖</span><span class="teca-editable" data-content-key="home.section.2.title">Futuro, Tecnologia & Carreira</span></h2><span class="count">6 cursos</span></div>
+      <div class="course-grid">
+        <a class="course-card sparn-course-link" data-course-href="curso-profissoes-do-futuro.html" href="curso-profissoes-do-futuro.html">
+          <div class="thumb"><img src="Assets/profissoes-do-futuro.png.png" alt="Profissões do Futuro" loading="lazy"></div>
+          <div class="card-copy"><span class="num">07</span><div><strong class="teca-editable" data-content-key="course.profissoes-do-futuro.title">Profissões do Futuro</strong><small class="teca-editable" data-content-key="course.profissoes-do-futuro.meta">Robótica + Carreira · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-agentes-de-ia.html" href="curso-agentes-de-ia.html">
+          <div class="thumb"><img src="Assets/agentes-de-ia.png.png" alt="Trabalhando com Agentes de IA" loading="lazy"></div>
+          <div class="card-copy"><span class="num">08</span><div><strong class="teca-editable" data-content-key="course.agentes-de-ia.title">Trabalhando com Agentes de IA</strong><small class="teca-editable" data-content-key="course.agentes-de-ia.meta">Carreira + IA · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-criador-aumentado.html" href="curso-criador-aumentado.html">
+          <div class="thumb"><img src="Assets/criador-aumentado.png" alt="Criador Aumentado" loading="lazy"></div>
+          <div class="card-copy"><span class="num">09</span><div><strong class="teca-editable" data-content-key="course.criador-aumentado.title">Criador Aumentado</strong><small class="teca-editable" data-content-key="course.criador-aumentado.meta">Tecnologia · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-robos-chegaram.html" href="curso-robos-chegaram.html">
+          <div class="thumb"><img src="Assets/robos-chegaram.png" alt="Robôs Chegaram" loading="lazy"></div>
+          <div class="card-copy"><span class="num">10</span><div><strong class="teca-editable" data-content-key="course.robos-chegaram.title">Robôs Chegaram</strong><small class="teca-editable" data-content-key="course.robos-chegaram.meta">Robótica · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-humano-premium.html" href="curso-humano-premium.html">
+          <div class="thumb"><img src="Assets/humano-premium.png" alt="Humano Premium" loading="lazy"></div>
+          <div class="card-copy"><span class="num">11</span><div><strong class="teca-editable" data-content-key="course.humano-premium.title">Humano Premium</strong><small class="teca-editable" data-content-key="course.humano-premium.meta">Competências humanas · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-trabalho-do-futuro.html" href="curso-trabalho-do-futuro.html">
+          <div class="thumb"><img src="Assets/trabalho-do-futuro.png" alt="Construa Seu Trabalho do Futuro" loading="lazy"></div>
+          <div class="card-copy"><span class="num">12</span><div><strong class="teca-editable" data-content-key="course.trabalho-do-futuro.title">Construa Seu Trabalho do Futuro</strong><small class="teca-editable" data-content-key="course.trabalho-do-futuro.meta">Carreira 2030 · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a></div>
+    </section>
+    <section class="course-section">
+      <div class="section-title"><h2><span>💰</span><span class="teca-editable" data-content-key="home.section.3.title">Educação Financeira & Economia</span></h2><span class="count">5 cursos</span></div>
+      <div class="course-grid">
+        <a class="course-card sparn-course-link" data-course-href="curso-dinheiro-sem-misterio.html" href="curso-dinheiro-sem-misterio.html">
+          <div class="thumb"><img src="Assets/dinheiro-sem-misterio.png" alt="Dinheiro sem Mistério" loading="lazy"></div>
+          <div class="card-copy"><span class="num">13</span><div><strong class="teca-editable" data-content-key="course.dinheiro-sem-misterio.title">Dinheiro sem Mistério</strong><small class="teca-editable" data-content-key="course.dinheiro-sem-misterio.meta">Educação Financeira · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-mente-milionaria.html" href="curso-mente-milionaria.html">
+          <div class="thumb"><img src="Assets/mente-milionaria.png" alt="Mente Milionária de Verdade" loading="lazy"></div>
+          <div class="card-copy"><span class="num">14</span><div><strong class="teca-editable" data-content-key="course.mente-milionaria.title">Mente Milionária de Verdade</strong><small class="teca-editable" data-content-key="course.mente-milionaria.meta">Hábitos financeiros · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-reserva-de-emergencia.html" href="curso-reserva-de-emergencia.html">
+          <div class="thumb"><img src="Assets/reserva-de-emergencia.png" alt="Reserva de Emergência" loading="lazy"></div>
+          <div class="card-copy"><span class="num">16</span><div><strong class="teca-editable" data-content-key="course.reserva-de-emergencia.title">Reserva de Emergência</strong><small class="teca-editable" data-content-key="course.reserva-de-emergencia.meta">Educação Financeira · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-banco-sem-armadilhas.html" href="curso-banco-sem-armadilhas.html">
+          <div class="thumb"><img src="Assets/banco-sem-armadilhas.png" alt="Banco sem Armadilhas" loading="lazy"></div>
+          <div class="card-copy"><span class="num">17</span><div><strong class="teca-editable" data-content-key="course.banco-sem-armadilhas.title">Banco sem Armadilhas</strong><small class="teca-editable" data-content-key="course.banco-sem-armadilhas.meta">Educação Financeira · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-economia-de-verdade.html" href="curso-economia-de-verdade.html">
+          <div class="thumb"><img src="Assets/economia-de-verdade.png" alt="Economia de Verdade" loading="lazy"></div>
+          <div class="card-copy"><span class="num">18</span><div><strong class="teca-editable" data-content-key="course.economia-de-verdade.title">Economia de Verdade</strong><small class="teca-editable" data-content-key="course.economia-de-verdade.meta">Economia Avançada · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a></div>
+    </section>
+    <section class="course-section">
+      <div class="section-title"><h2><span>🌱</span><span class="teca-editable" data-content-key="home.section.4.title">Agroeconomia, Terra & Regeneração</span></h2><span class="count">8 cursos</span></div>
+      <div class="course-grid">
+        <a class="course-card sparn-course-link" data-course-href="curso-da-terra-ao-prato.html" href="curso-da-terra-ao-prato.html">
+          <div class="thumb"><img src="Assets/da-terra-ao-prato.png" alt="Da Terra ao Prato" loading="lazy"></div>
+          <div class="card-copy"><span class="num">19</span><div><strong class="teca-editable" data-content-key="course.da-terra-ao-prato.title">Da Terra ao Prato</strong><small class="teca-editable" data-content-key="course.da-terra-ao-prato.meta">Alimentação + Terra · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-horta-do-zero.html" href="curso-horta-do-zero.html">
+          <div class="thumb"><img src="Assets/horta-do-zero.png" alt="Horta do Zero" loading="lazy"></div>
+          <div class="card-copy"><span class="num">20</span><div><strong class="teca-editable" data-content-key="course.horta-do-zero.title">Horta do Zero</strong><small class="teca-editable" data-content-key="course.horta-do-zero.meta">Cultivo · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-agroeconomia.html" href="curso-agroeconomia.html">
+          <div class="thumb"><img src="Assets/agroeconomia.png" alt="Agroeconomia" loading="lazy"></div>
+          <div class="card-copy"><span class="num">21</span><div><strong class="teca-editable" data-content-key="course.agroeconomia.title">Agroeconomia</strong><small class="teca-editable" data-content-key="course.agroeconomia.meta">Economia + Campo · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-agrofloresta.html" href="curso-agrofloresta.html">
+          <div class="thumb"><img src="Assets/agrofloresta.png" alt="Agrofloresta" loading="lazy"></div>
+          <div class="card-copy"><span class="num">22</span><div><strong class="teca-editable" data-content-key="course.agrofloresta.title">Agrofloresta</strong><small class="teca-editable" data-content-key="course.agrofloresta.meta">Regeneração · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-juventude-que-refloresta.html" href="curso-juventude-que-refloresta.html">
+          <div class="thumb"><img src="Assets/juventude-que-refloresta.png" alt="Juventude que Refloresta" loading="lazy"></div>
+          <div class="card-copy"><span class="num">23</span><div><strong class="teca-editable" data-content-key="course.juventude-que-refloresta.title">Juventude que Refloresta</strong><small class="teca-editable" data-content-key="course.juventude-que-refloresta.meta">Juventude + Natureza · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-guardioes-das-nascentes.html" href="curso-guardioes-das-nascentes.html">
+          <div class="thumb"><img src="Assets/guardioes-das-nascentes.png" alt="Guardiões das Nascentes" loading="lazy"></div>
+          <div class="card-copy"><span class="num">24</span><div><strong class="teca-editable" data-content-key="course.guardioes-das-nascentes.title">Guardiões das Nascentes</strong><small class="teca-editable" data-content-key="course.guardioes-das-nascentes.meta">Água + Território · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-solo-vivo.html" href="curso-solo-vivo.html">
+          <div class="thumb"><img src="Assets/solo-vivo.png" alt="Solo Vivo" loading="lazy"></div>
+          <div class="card-copy"><span class="num">25</span><div><strong class="teca-editable" data-content-key="course.solo-vivo.title">Solo Vivo</strong><small class="teca-editable" data-content-key="course.solo-vivo.meta">Solo + Regeneração · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-sementes-do-futuro.html" href="curso-sementes-do-futuro.html">
+          <div class="thumb"><img src="Assets/sementes-do-futuro.png" alt="Sementes do Futuro" loading="lazy"></div>
+          <div class="card-copy"><span class="num">26</span><div><strong class="teca-editable" data-content-key="course.sementes-do-futuro.title">Sementes do Futuro</strong><small class="teca-editable" data-content-key="course.sementes-do-futuro.meta">Sementes + Futuro · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a></div>
+    </section>
+    <section class="course-section">
+      <div class="section-title"><h2><span>✈️</span><span class="teca-editable" data-content-key="home.section.5.title">Mobilidade & Novos Caminhos</span></h2><span class="count">8 cursos</span></div>
+      <div class="course-grid">
+        <a class="course-card sparn-course-link" data-course-href="curso-home-office.html" href="curso-home-office.html">
+          <div class="thumb"><img src="Assets/home-office.png" alt="Home Office" loading="lazy"></div>
+          <div class="card-copy"><span class="num">27</span><div><strong class="teca-editable" data-content-key="course.home-office.title">Home Office</strong><small class="teca-editable" data-content-key="course.home-office.meta">Trabalho remoto · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-nomade-digital.html" href="curso-nomade-digital.html">
+          <div class="thumb"><img src="Assets/nomade-digital.png" alt="Nômade Digital" loading="lazy"></div>
+          <div class="card-copy"><span class="num">28</span><div><strong class="teca-editable" data-content-key="course.nomade-digital.title">Nômade Digital</strong><small class="teca-editable" data-content-key="course.nomade-digital.meta">Job + Lifestyle · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-rotas-pelo-brasil.html" href="curso-rotas-pelo-brasil.html">
+          <div class="thumb"><img src="Assets/rotas-pelo-brasil.png" alt="Rotas pelo Brasil" loading="lazy"></div>
+          <div class="card-copy"><span class="num">29</span><div><strong class="teca-editable" data-content-key="course.rotas-pelo-brasil.title">Rotas pelo Brasil</strong><small class="teca-editable" data-content-key="course.rotas-pelo-brasil.meta">Viagens · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-mochilao-do-zero.html" href="curso-mochilao-do-zero.html">
+          <div class="thumb"><img src="Assets/mochilao-do-zero.png" alt="Mochilão do Zero" loading="lazy"></div>
+          <div class="card-copy"><span class="num">30</span><div><strong class="teca-editable" data-content-key="course.mochilao-do-zero.title">Mochilão do Zero</strong><small class="teca-editable" data-content-key="course.mochilao-do-zero.meta">Viagens · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-saude-na-estrada.html" href="curso-saude-na-estrada.html">
+          <div class="thumb"><img src="Assets/saude-na-estrada.png" alt="Saúde na Estrada" loading="lazy"></div>
+          <div class="card-copy"><span class="num">31</span><div><strong class="teca-editable" data-content-key="course.saude-na-estrada.title">Saúde na Estrada</strong><small class="teca-editable" data-content-key="course.saude-na-estrada.meta">Bem-estar + Viagem · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-viajar-com-pouco-dinheiro.html" href="curso-viajar-com-pouco-dinheiro.html">
+          <div class="thumb"><img src="Assets/viajar-com-pouco-dinheiro.png" alt="Viajar com Pouco Dinheiro" loading="lazy"></div>
+          <div class="card-copy"><span class="num">32</span><div><strong class="teca-editable" data-content-key="course.viajar-com-pouco-dinheiro.title">Viajar com Pouco Dinheiro</strong><small class="teca-editable" data-content-key="course.viajar-com-pouco-dinheiro.meta">Mobilidade · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-id-jovem-na-estrada.html" href="curso-id-jovem-na-estrada.html">
+          <div class="thumb"><img src="Assets/id-jovem-na-estrada.png" alt="ID Jovem na Estrada" loading="lazy"></div>
+          <div class="card-copy"><span class="num">33</span><div><strong class="teca-editable" data-content-key="course.id-jovem-na-estrada.title">ID Jovem na Estrada</strong><small class="teca-editable" data-content-key="course.id-jovem-na-estrada.meta">Direitos + Mobilidade · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="course-card sparn-course-link" data-course-href="curso-rota-europa.html" href="curso-rota-europa.html">
+          <div class="thumb"><img src="Assets/rota-europa.png" alt="Rota Europa" loading="lazy"></div>
+          <div class="card-copy"><span class="num">15</span><div><strong class="teca-editable" data-content-key="course.rota-europa.title">Rota Europa</strong><small class="teca-editable" data-content-key="course.rota-europa.meta">Guia internacional · 24 aulas</small></div><span class="arrow">↗</span></div>
+        </a></div>
+    </section></main>
+
+  <section class="features" id="novidades">
+    <div class="feature"><b class="teca-editable" data-content-key="home.feature.1.title">◉ Aprenda no seu ritmo</b><span class="teca-editable" data-content-key="home.feature.1.text">Conteúdo online e prático.</span></div>
+    <div class="feature"><b class="teca-editable" data-content-key="home.feature.2.title">▣ Certificado de conclusão</b><span class="teca-editable" data-content-key="home.feature.2.text">Valorize sua trajetória.</span></div>
+    <div class="feature"><b class="teca-editable" data-content-key="home.feature.3.title">↗ Acesso Beta</b><span class="teca-editable" data-content-key="home.feature.3.text">Entrada por R$ 11,11.</span></div>
+    <div class="feature"><b class="teca-editable" data-content-key="home.feature.4.title">◎ Instituto TECA</b><span class="teca-editable" data-content-key="home.feature.4.text">Mais futuro, mais possibilidades.</span></div>
+  </section>
+
+  <section id="biblioteca" style="padding:30px 0 55px">
+    <div class="section-title"><h2 class="teca-editable" data-content-key="home.library.title">📚 Biblioteca TECA</h2><span class="count">em expansão</span></div>
+    <p class="teca-editable" data-content-key="home.library.text" style="color:var(--muted);max-width:720px;line-height:1.7">Um espaço para materiais, guias e ferramentas que complementam as trilhas de aprendizagem.</p>
+  </section>
+</div>
+
+<footer><div class="wrap foot"><div style="display:flex;align-items:center;gap:15px"><img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA"><div><b class="teca-editable" data-content-key="home.footer.name" style="color:white">Instituto TECA</b><br><small class="teca-editable" data-content-key="home.footer.subtitle">Tecnologia • Educação • Cultura • Arte</small></div></div><small class="teca-editable" data-content-key="home.footer.tagline">Mais futuro, mais possibilidades.</small></div></footer>
+
+<button class="dev" id="devBtn" type="button">🛠 Modo Desenvolvedor</button>
+
+
+<div class="teca-editor-panel" id="tecaEditorPanel" aria-hidden="true">
+  <h3>Editar conteúdo</h3>
+  <div class="teca-editor-key" id="tecaEditorKey"></div>
+  <textarea id="tecaEditorValue"></textarea>
+  <div class="teca-editor-actions">
+    <button class="teca-cancel" id="tecaEditorCancel" type="button">Cancelar</button>
+    <button class="teca-save" id="tecaEditorSave" type="button">Salvar online</button>
+  </div>
+  <div class="teca-status" id="tecaEditorStatus"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="sparn-config.js?v=20260920-4"></script>
+<script src="sparn-auth.js?v=20260920-4"></script>
 <script>
-(()=>{
- const STORE='sparn_image_editor_elastic_v1';
- let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
- const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
- const page=location.pathname.split('/').pop()||'index.html';
-
- function apply(img,wrap,s){
-   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
-   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
-   img.style.setProperty('width','100%','important');
-   img.style.setProperty('height','auto','important');
-   img.style.setProperty('max-height','none','important');
-   img.style.setProperty('aspect-ratio','auto','important');
-   if(edited){
-      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
-   }else{
-      img.style.removeProperty('transform');
-   }
- }
-
- document.querySelectorAll('img').forEach((img,i)=>{
-   if(img.closest('.sparn-img-editor')) return;
-   const src=img.getAttribute('src')||`img-${i}`;
-   const key=`${page}::${src}::${i}`;
-   const state=saved[key]||{dx:0,dy:0,zoom:1};
-
-   let wrap;
-   const summary=img.closest('summary.course-cover.visual');
-   if(summary && img.parentElement===summary){
-      wrap=summary; wrap.classList.add('sparn-img-editor');
-   }else{
-      wrap=document.createElement('div');
-      wrap.className='sparn-img-editor';
-      img.parentNode.insertBefore(wrap,img);
-      wrap.appendChild(img);
-   }
-
-   apply(img,wrap,state);
-
-   const edit=document.createElement('button');
-   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
-   edit.title='Mover e transformar esta imagem';
-
-   const panel=document.createElement('div');
-   panel.className='sparn-img-panel';
-   panel.innerHTML=
-    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
-    '<button data-a="left">←</button><button data-a="right">→</button>'+
-    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
-    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
-    '<small>imagem inteira • caixa elástica</small>';
-
-   wrap.append(panel,edit);
-
-   edit.addEventListener('click',e=>{
-      e.preventDefault();e.stopPropagation();
-      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
-      wrap.classList.toggle('editing');
-   });
-
-   panel.addEventListener('click',e=>{
-      const a=e.target.dataset.a;if(!a)return;
-      e.preventDefault();e.stopPropagation();
-      if(a==='up')state.dy-=3;
-      if(a==='down')state.dy+=3;
-      if(a==='left')state.dx-=3;
-      if(a==='right')state.dx+=3;
-      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
-      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
-      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
-      apply(img,wrap,state);
-      if(a==='save'){
-         saved[key]={...state};persist();wrap.classList.remove('editing');
-      }
-   });
- });
-})();
-</script><script>
-(()=>{
- const DB='sparn_academia_assets_db', STORE='images', VER=1;
- const page=location.pathname.split('/').pop()||'index.html';
- const openDB=()=>new Promise((res,rej)=>{
-   const r=indexedDB.open(DB,VER);
-   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
-   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
- });
- const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
- const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
-
- document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
-   const img=wrap.querySelector(':scope > img'); if(!img)return;
-   const original=img.getAttribute('src')||`img-${i}`;
-   const key=`${page}::${original}::${i}`;
-   const stored=await get(key).catch(()=>null);
-   if(stored && stored.blob){
-      img.src=URL.createObjectURL(stored.blob);
-      img.style.setProperty('width','100%','important');
-      img.style.setProperty('height','auto','important');
-      img.style.setProperty('max-height','none','important');
-      img.style.setProperty('aspect-ratio','auto','important');
-   }
-
-   const input=document.createElement('input');
-   input.type='file';input.accept='image/*';input.hidden=true;
-   const replace=document.createElement('button');
-   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
-   const save=document.createElement('button');
-   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
-   wrap.append(input,replace,save);
-
-   let pending=null, previewURL=null;
-   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
-   input.onchange=()=>{
-      const f=input.files&&input.files[0];if(!f)return;
-      if(previewURL)URL.revokeObjectURL(previewURL);
-      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
-      wrap.dataset.replacePending='1';
-      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
-      wrap.dataset.editorState='pristine';
-      img.style.removeProperty('transform');
-      img.style.setProperty('width','100%','important');
-      img.style.setProperty('height','auto','important');
-      img.style.setProperty('max-height','none','important');
-      img.style.setProperty('aspect-ratio','auto','important');
-      img.style.setProperty('object-fit','initial','important');
-   };
-   save.onclick=async e=>{
-      e.preventDefault();e.stopPropagation();if(!pending)return;
-      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
-      wrap.dataset.replacePending='0';
-      save.textContent='✓ Salvo no banco local';
-      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
-      pending=null;
-   };
- });
-})();
-</script><script>
-(()=>{
- const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
- const $all=s=>Array.from(document.querySelectorAll(s));
-
- function refreshControls(){
-   const on=document.body.classList.contains('sparn-dev-mode');
-   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
-     el.style.setProperty('display',on?'block':'none','important');
-     el.style.setProperty('visibility',on?'visible':'hidden','important');
-     el.style.setProperty('opacity',on?'1':'0','important');
-   });
-   if(!on){
-     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
-     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
-   }
- }
- function setMode(on){
-   document.body.classList.toggle('sparn-dev-mode',on);
-   sessionStorage.setItem(SESSION,on?'1':'0');
-   const b=document.querySelector('.sparn-dev-toggle');
-   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
-   refreshControls();
- }
- function boot(){
-   // Remove old dev button/dialog only; preserve editor and image replacement controls.
-   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
-
-   const btn=document.createElement('button');
-   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
-   document.body.appendChild(btn);
-
-   const dlg=document.createElement('dialog');
-   dlg.className='sparn-dev-dialog';
-   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
-    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
-    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
-    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
-   document.body.appendChild(dlg);
-   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
-   const login=()=>{
-     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
-     else{err.textContent='Senha incorreta.';inp.select()}
-   };
-   btn.onclick=()=>{
-     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
-     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
-   };
-   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
-   dlg.querySelector('[data-x="enter"]').onclick=login;
-   inp.onkeydown=e=>{if(e.key==='Enter')login()};
-
-   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
-   // Run after the document is complete, then explicitly reveal them.
-   setMode(sessionStorage.getItem(SESSION)==='1');
-
-   // Keep controls synchronized if another script creates them just after this one.
-   setTimeout(refreshControls,0);
-   setTimeout(refreshControls,150);
-   setTimeout(refreshControls,500);
-
-   // When clicking the edit button in dev mode, force the panel visible.
-   document.addEventListener('click',e=>{
-     if(!document.body.classList.contains('sparn-dev-mode'))return;
-     const edit=e.target.closest('.sparn-edit-image');
-     if(edit){
-       const wrap=edit.closest('.sparn-img-editor');
-       setTimeout(()=>{
-         if(wrap && wrap.classList.contains('editing')){
-           const panel=wrap.querySelector('.sparn-img-panel');
-           if(panel)panel.style.setProperty('display','flex','important');
-         }
-       },0);
-     }
-   },true);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
- else boot();
+(function(){
+  const q=document.getElementById('search');
+  if(q) q.addEventListener('input',function(){
+    const s=this.value.toLowerCase().trim();
+    document.querySelectorAll('.course-card').forEach(c=>{c.style.display=!s||c.innerText.toLowerCase().includes(s)?'flex':'none'});
+  });
+  document.querySelectorAll('.sparn-course-link').forEach(a=>{
+    a.addEventListener('click',async function(e){
+      if(!window.SparnAuth) return;
+      try{
+        const ok=await window.SparnAuth.access();
+        if(!ok){e.preventDefault();location.href='pagamento.html';}
+      }catch(_e){}
+    });
+  });
+  document.getElementById('devBtn').addEventListener('click',()=>{
+    const p=prompt('Senha do Modo Desenvolvedor:');
+    if(p==='spr7373') document.body.classList.toggle('dev-on');
+  });
 })();
 </script>
-<script data-sparn-rule="courses-header-menu-js">
-(()=>{const m=document.querySelector('.courses-menu'),b=m?.querySelector('.courses-trigger');if(!m||!b)return;b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});document.addEventListener('click',e=>{if(!m.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}})})();
+
+<script>
+/* TECA CMS — conteúdo editável com persistência online no Supabase.
+   Segurança real: RLS + site_admins. A senha local apenas revela a interface. */
+(async function(){
+  const cfg=window.SPARN_CONFIG||{};
+  if(!window.supabase || !cfg.supabaseUrl || !cfg.supabaseAnonKey) return;
+  const db=window.supabase.createClient(cfg.supabaseUrl,cfg.supabaseAnonKey);
+  window.TECA_CONTENT_DB=db;
+
+  const els=[...document.querySelectorAll('[data-content-key]')];
+  const defaults=new Map(els.map(el=>[el.dataset.contentKey,el.innerHTML]));
+
+  // Load online overrides
+  try{
+    const keys=[...defaults.keys()];
+    const {data,error}=await db.from('site_content').select('content_key,content_value').in('content_key',keys);
+    if(error) throw error;
+    (data||[]).forEach(row=>{
+      const el=document.querySelector('[data-content-key="'+CSS.escape(row.content_key)+'"]');
+      if(el && row.content_value!=null) el.innerHTML=row.content_value;
+    });
+  }catch(e){ console.warn('TECA CMS: usando conteúdo padrão do HTML.',e); }
+
+  // Add per-element edit buttons without changing the element itself.
+  els.forEach(el=>{
+    const parent=el.parentElement;
+    if(!parent) return;
+    const wrap=document.createElement('span');
+    wrap.className='teca-edit-wrap';
+    wrap.style.display = getComputedStyle(el).display==='block' ? 'block' : 'inline-block';
+    parent.insertBefore(wrap,el); wrap.appendChild(el);
+    const b=document.createElement('button');
+    b.type='button'; b.className='teca-edit-btn'; b.textContent='✏ Editar';
+    b.dataset.editKey=el.dataset.contentKey;
+    wrap.appendChild(b);
+  });
+
+  const panel=document.getElementById('tecaEditorPanel');
+  const keyBox=document.getElementById('tecaEditorKey');
+  const area=document.getElementById('tecaEditorValue');
+  const status=document.getElementById('tecaEditorStatus');
+  let current=null;
+
+  function openEditor(el){
+    current=el; keyBox.textContent=el.dataset.contentKey;
+    area.value=el.innerHTML; status.textContent='';
+    panel.classList.add('open'); panel.setAttribute('aria-hidden','false');
+    setTimeout(()=>area.focus(),30);
+  }
+  function closeEditor(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true');current=null;}
+
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('.teca-edit-btn');
+    if(b){e.preventDefault();e.stopPropagation();const el=b.parentElement.querySelector('[data-content-key]');if(el)openEditor(el);}
+  });
+  document.getElementById('tecaEditorCancel').addEventListener('click',closeEditor);
+
+  document.getElementById('tecaEditorSave').addEventListener('click',async()=>{
+    if(!current)return;
+    status.textContent='Salvando...';
+    const {data:{user}}=await db.auth.getUser();
+    if(!user){status.textContent='Entre com a conta administradora antes de salvar.';return;}
+    const payload={content_key:current.dataset.contentKey,content_value:area.value,updated_by:user.id};
+    const {error}=await db.from('site_content').upsert(payload,{onConflict:'content_key'});
+    if(error){status.textContent='Não foi possível salvar: '+error.message;return;}
+    current.innerHTML=area.value;
+    status.textContent='✓ Salvo online.';
+    setTimeout(closeEditor,650);
+  });
+
+  // Developer mode: password reveals UI; RLS decides whether save is allowed.
+  const dev=document.getElementById('devBtn');
+  if(dev){
+    const clone=dev.cloneNode(true); dev.replaceWith(clone);
+    clone.addEventListener('click',()=>{
+      if(document.body.classList.contains('dev-on')){document.body.classList.remove('dev-on');return;}
+      const p=prompt('Senha do Modo Desenvolvedor:');
+      if(p==='spr7373')document.body.classList.add('dev-on');
+      else if(p!==null)alert('Senha incorreta.');
+    });
+  }
+})();
 </script>
-<script>document.addEventListener("DOMContentLoaded",async()=>{let paid=false;try{paid=await SparnAuth.access()}catch(e){}if(paid)document.body.classList.add("sparn-paid");document.querySelectorAll(".sparn-course-link").forEach(a=>a.addEventListener("click",async e=>{e.preventDefault();const t=a.dataset.courseHref,u=await SparnAuth.user();if(!u){location.href="login.html?next="+encodeURIComponent(t);return}if(!(await SparnAuth.access())){location.href="pagamento.html";return}location.href=t}))});</script></body></html>
+
+</body>
+</html>
