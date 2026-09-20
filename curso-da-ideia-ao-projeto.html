@@ -116,7 +116,18 @@ body.sparn-dev-mode .sparn-edit-image,
 body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
-</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header><div class="wrap nav"><a class="brand" href="index.html">SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></div></header><main class="wrap">
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script>
+<style id="sparn-header-logo-fix">
+.brand .sparn-header-logo, .brand.sparn-logo-link .sparn-header-logo {
+  display:block !important; width:48px !important; height:48px !important;
+  object-fit:cover !important; object-position:center !important; border-radius:12px !important;
+  box-shadow:0 0 0 1px rgba(218,169,76,.28),0 8px 24px rgba(0,0,0,.28) !important;
+  flex:0 0 48px !important;
+}
+.brand.sparn-logo-link { display:inline-flex !important; align-items:center !important; text-decoration:none !important; }
+@media (max-width:700px){.brand .sparn-header-logo,.brand.sparn-logo-link .sparn-header-logo{width:42px !important;height:42px !important;flex-basis:42px !important;border-radius:10px !important}}
+</style>
+</head><body><header><div class="wrap nav"><a class="brand sparn-logo-link" href="index.html"><img alt="Sparn — Editais e Projetos Culturais" class="sparn-header-logo" src="assets/sparn-logo.jpeg"/></a><a class="back" href="index.html">← Voltar aos cursos</a></div></header><main class="wrap">
 <section class="hero"><div><div class="eyebrow">Curso original Sparn · Cultura</div><h1>Da Ideia ao <span class="gradient">Projeto</span></h1><p>Transforme uma intuição criativa em uma proposta cultural clara, coerente, humana e profissional — pronta para ser apresentada a parceiros, instituições, patrocinadores ou editais.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">8 horas</span><span class="stat">Caderno de projeto</span><span class="stat">Avaliação final</span></div></div><aside class="progress"><b>Seu progresso</b><div class="bar"><div class="fill" id="fill"></div></div><small id="pt">0 de 24 aulas concluídas</small></aside></section>
 <figure style="margin:0 0 36px;border:1px solid rgba(67,231,255,.22);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Ideia criativa se transformando em projeto cultural" src="assets/da-ideia-ao-projeto.png" style="display:block"/></figure>
 <div class="layout"><nav class="side"><b>Conteúdo</b><a href="#m1">1. Captura da ideia</a><a href="#m2">2. Pesquisa e contexto</a><a href="#m3">3. Conceito e identidade</a><a href="#m4">4. Arquitetura do projeto</a><a href="#m5">5. Escrita profissional</a><a href="#m6">6. Experiência e público</a><a href="#m7">7. Impacto e comunicação</a><a href="#m8">8. Apresentação final</a><a href="#kit">Caderno de projeto</a><a href="#final">Avaliação</a></nav><div>

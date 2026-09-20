@@ -1,14 +1,26 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Entrar — Sparn Academia</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"/><title>Entrar — Sparn Academia</title><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script>
 <style>
 :root{--bg:#07111f;--panel:#0e1b2c;--line:#233650;--txt:#f4f8ff;--muted:#9fb1c7;--cyan:#34d8ff;--ok:#65e6a5}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#12355b 0,#07111f 35%);color:var(--txt);font:16px/1.55 Inter,system-ui,sans-serif}.wrap{width:min(1080px,92%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-weight:900;letter-spacing:.12em}.brand span{color:var(--cyan)}a{color:inherit}.btn,button{border:0;border-radius:14px;padding:13px 18px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block;background:linear-gradient(135deg,var(--cyan),#7e9cff);color:#04101d}.btn.alt{background:#15253a;color:#fff;border:1px solid var(--line)}.card{background:rgba(14,27,44,.92);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 20px 60px #0005}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.hero{padding:48px 0}.eyebrow{color:var(--cyan);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem}h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:.98;margin:.25em 0}.muted{color:var(--muted)}label{display:block;font-weight:800;margin:16px 0 6px}input{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:#071421;color:#fff;font-size:1rem}.status{padding:12px 14px;border-radius:12px;background:#0a1625;margin:14px 0}.ok{color:var(--ok)}.price{font-size:3rem;font-weight:900}.price small{font-size:1rem;color:var(--muted)}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.kpi{padding:18px;border-radius:18px;background:#091827;border:1px solid var(--line)}.kpi b{display:block;font-size:1.5rem}@media(max-width:700px){.grid,.kpis{grid-template-columns:1fr}.top{gap:12px;flex-wrap:wrap}}
-</style></head><body><div class="wrap">
-<header class="top"><a class="brand" href="index.html"><span>✦</span> SPARN ACADEMIA</a><a href="index.html">← Voltar</a></header>
+</style>
+<style id="sparn-header-logo-fix">
+.brand .sparn-header-logo, .brand.sparn-logo-link .sparn-header-logo {
+  display:block !important; width:48px !important; height:48px !important;
+  object-fit:cover !important; object-position:center !important; border-radius:12px !important;
+  box-shadow:0 0 0 1px rgba(218,169,76,.28),0 8px 24px rgba(0,0,0,.28) !important;
+  flex:0 0 48px !important;
+}
+.brand.sparn-logo-link { display:inline-flex !important; align-items:center !important; text-decoration:none !important; }
+@media (max-width:700px){.brand .sparn-header-logo,.brand.sparn-logo-link .sparn-header-logo{width:42px !important;height:42px !important;flex-basis:42px !important;border-radius:10px !important}}
+</style>
+</head><body><div class="wrap">
+<header class="top"><a class="brand sparn-logo-link" href="index.html"><img alt="Sparn — Editais e Projetos Culturais" class="sparn-header-logo" src="assets/sparn-logo.jpeg"/></a><a href="index.html">← Voltar</a></header>
 <main class="hero grid"><section><span class="eyebrow">Sua jornada continua aqui</span><h1>Entre para aprender.</h1><p class="muted">Uma conta, todos os cursos, progresso e seu perfil Sparn.</p></section>
-<section class="card"><div id="setup" class="status" hidden>Conecte as chaves públicas do Supabase em <b>sparn-config.js</b>.</div>
-<div id="loginBox"><h2>Entrar</h2><label>E-mail</label><input id="email" type="email"><label>Senha</label><input id="pass" type="password"><p><button id="login">Entrar</button> <button class="btn alt" id="showSignup">Criar conta</button></p></div>
-<div id="signupBox" hidden><h2>Criar conta</h2><label>Nome</label><input id="name"><label>E-mail</label><input id="semail" type="email"><label>Senha</label><input id="spass" type="password"><p><button id="signup">Criar minha conta</button> <button class="btn alt" id="back">Já tenho conta</button></p></div><div id="msg" class="status">Use seu e-mail e senha.</div></section></main></div>
+<section class="card"><div class="status" hidden="" id="setup">Conecte as chaves públicas do Supabase em <b>sparn-config.js</b>.</div>
+<div id="loginBox"><h2>Entrar</h2><label>E-mail</label><input id="email" type="email"/><label>Senha</label><input id="pass" type="password"/><p><button id="login">Entrar</button> <button class="btn alt" id="showSignup">Criar conta</button></p></div>
+<div hidden="" id="signupBox"><h2>Criar conta</h2><label>Nome</label><input id="name"/><label>E-mail</label><input id="semail" type="email"/><label>Senha</label><input id="spass" type="password"/><p><button id="signup">Criar minha conta</button> <button class="btn alt" id="back">Já tenho conta</button></p></div><div class="status" id="msg">Use seu e-mail e senha.</div></section></main></div>
 <script>
 const q=new URLSearchParams(location.search);if(q.has("setup"))setup.hidden=false;
 showSignup.onclick=()=>{loginBox.hidden=true;signupBox.hidden=false};back.onclick=()=>{signupBox.hidden=true;loginBox.hidden=false};

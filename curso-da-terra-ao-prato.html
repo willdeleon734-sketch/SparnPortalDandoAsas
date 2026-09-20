@@ -153,8 +153,19 @@ body.sparn-dev-mode .sparn-edit-image,
 body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
-</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body>
-<header class="wrap"><span class="brand">SPARN</span><a class="back" href="index.html">← Voltar aos cursos</a></header>
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script>
+<style id="sparn-header-logo-fix">
+.brand .sparn-header-logo, .brand.sparn-logo-link .sparn-header-logo {
+  display:block !important; width:48px !important; height:48px !important;
+  object-fit:cover !important; object-position:center !important; border-radius:12px !important;
+  box-shadow:0 0 0 1px rgba(218,169,76,.28),0 8px 24px rgba(0,0,0,.28) !important;
+  flex:0 0 48px !important;
+}
+.brand.sparn-logo-link { display:inline-flex !important; align-items:center !important; text-decoration:none !important; }
+@media (max-width:700px){.brand .sparn-header-logo,.brand.sparn-logo-link .sparn-header-logo{width:42px !important;height:42px !important;flex-basis:42px !important;border-radius:10px !important}}
+</style>
+</head><body>
+<header class="wrap"><span class="brand sparn-logo-link"><img alt="Sparn — Editais e Projetos Culturais" class="sparn-header-logo" src="assets/sparn-logo.jpeg"/></span><a class="back" href="index.html">← Voltar aos cursos</a></header>
 <main><section class="wrap hero"><img src="assets/da-terra-ao-prato.png"/><div><span class="tag">Agroeconomia · Terra &amp; Regeneração</span><h1>Da Terra ao Prato</h1><p class="lead">Por que precisamos voltar a cultivar — alimento, solo, água, território e autonomia para uma nova geração.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Projeto de 30 dias</span></div></div></section>
 <div class="progressbar"><div class="wrap"><div class="track"><div id="fill"></div></div><span id="pct">0% concluído</span></div></div>
 <section class="wrap intro"><span class="tag">Comece pela raiz</span><h2>Produzir alimento também é compreender o mundo.</h2><p class="lead">Este curso apresenta cultivo como conhecimento prático: observar ecossistemas, planejar recursos, reduzir desperdícios e criar pequenas respostas locais sem romantizar a complexidade da produção de alimentos.</p><div class="objectives"><div class="objective">🌱 <b>Compreender</b><br/>solo, água, ciclos e alimento.</div><div class="objective">🧤 <b>Experimentar</b><br/>um cultivo possível no seu espaço.</div><div class="objective">🗺️ <b>Agir</b><br/>com um plano territorial de 30 dias.</div></div></section>

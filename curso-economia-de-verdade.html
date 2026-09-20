@@ -116,7 +116,18 @@ body.sparn-dev-mode .sparn-edit-image,
 body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
-</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header class="wrap top"><a class="brand" href="index.html">✦ SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script>
+<style id="sparn-header-logo-fix">
+.brand .sparn-header-logo, .brand.sparn-logo-link .sparn-header-logo {
+  display:block !important; width:48px !important; height:48px !important;
+  object-fit:cover !important; object-position:center !important; border-radius:12px !important;
+  box-shadow:0 0 0 1px rgba(218,169,76,.28),0 8px 24px rgba(0,0,0,.28) !important;
+  flex:0 0 48px !important;
+}
+.brand.sparn-logo-link { display:inline-flex !important; align-items:center !important; text-decoration:none !important; }
+@media (max-width:700px){.brand .sparn-header-logo,.brand.sparn-logo-link .sparn-header-logo{width:42px !important;height:42px !important;flex-basis:42px !important;border-radius:10px !important}}
+</style>
+</head><body><header class="wrap top"><a class="brand sparn-logo-link" href="index.html"><img alt="Sparn — Editais e Projetos Culturais" class="sparn-header-logo" src="assets/sparn-logo.jpeg"/></a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
 <section class="wrap hero"><div><span class="tag">Economia Avançada · Curso 18</span><h1>Economia de <span class="grad">Verdade.</span></h1><p>Como escolhas individuais, empresas, preços, produção, moeda e grandes indicadores se conectam. Uma introdução rigorosa, mas compreensível, ao raciocínio econômico.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Avaliação final</span><span>Projeto aplicado</span></div></div><img alt="Jovem observando a cidade e estudando economia" class="hero-img" src="assets/economia-de-verdade.png"/></section>
 <div class="progress-box"><div class="wrap progress-inner"><span class="progress-label"><b id="done">0</b>/24 aulas</span><span class="bar"><i id="progress"></i></span><span class="progress-label" id="percent">0%</span></div></div>
 <section class="wrap intro"><div class="intro-grid"><article class="card"><h2>Você vai aprender a pensar como economista</h2><ul><li>Escassez, escolhas, incentivos e custo de oportunidade.</li><li>Oferta, demanda, preços e elasticidade.</li><li>Empresas, custos, concorrência e estruturas de mercado.</li><li>PIB, inflação, desemprego, juros e ciclos.</li><li>Produtividade, desenvolvimento e leitura crítica de indicadores.</li></ul></article><article class="card"><h2>Agora existem avaliações</h2><p>Ao concluir os 6 módulos, você fará uma <strong>avaliação final interativa</strong> reunindo os principais conceitos do curso. Depois, constrói um <strong>Diagnóstico Econômico</strong> preenchível e exportável em PDF.</p></article></div></section>
