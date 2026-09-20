@@ -1,4 +1,16 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pintura Criativa — Instituto TECA</title>
+<!doctype html><html lang="pt-BR"><head>
+<script id="teca-theme-early">
+(function(){
+  try{
+    var k="teca_aparencia_v1", v=localStorage.getItem(k);
+    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
+    document.documentElement.setAttribute("data-teca-theme",v);
+  }catch(e){
+    document.documentElement.setAttribute("data-teca-theme","amarelo");
+  }
+})();
+</script>
+<link rel="stylesheet" href="teca-aparencia.css?v=2"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pintura Criativa — Instituto TECA</title>
 <style>
 *{box-sizing:border-box}:root{--ink:#10283a;--muted:#40596a;--cyan:#00aeca}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 4%,#fff 0,transparent 25%),linear-gradient(135deg,#fff7cf,#ffeaa1 46%,#f8dc79);background-attachment:fixed}header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 5%;background:#fff8cf99;backdrop-filter:blur(18px);border-bottom:1px solid #ffffffbb}.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink)}.brand img{width:36px;height:36px;object-fit:contain;border-radius:9px}.brand span{display:flex;flex-direction:column}.brand b{letter-spacing:.17em}.brand small{font-size:9px;color:#506474}.back{text-decoration:none;color:#15394d;background:#fffbe070;border:1px solid #fff;border-radius:999px;padding:8px 12px}main{max-width:1040px;margin:auto;padding:28px 18px 70px}.hero,.module,.project,.links,.notice{background:#fffce4a8;border:1px solid #ffffffd0;border-radius:25px;box-shadow:0 18px 48px #70500018;backdrop-filter:blur(15px);margin-bottom:22px}.hero{padding:38px}h1{font-size:clamp(2.3rem,6vw,4.8rem);margin:.2em 0}.tag,.stats span{display:inline-block;padding:8px 12px;border-radius:999px;background:#ffffff90;border:1px solid white}.stats{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.progress{height:10px;background:#ffffffaa;border-radius:999px;overflow:hidden;margin-top:16px}#bar{height:100%;width:0;background:linear-gradient(90deg,#00aeca,#27c7c1,#e1a528)}.notice{padding:18px}.module{overflow:hidden}.module-head{padding:20px 24px;background:linear-gradient(125deg,#fffadcba,#ffe58b88)}.module-head h2{margin:0}.module-head p{margin:5px 0;color:var(--muted)}.lesson{padding:0 24px;border-top:1px solid #ffffffc9;background:#fffbe1a3}summary{cursor:pointer;padding:18px 0;list-style:none}.content{padding:0 0 20px;color:var(--muted);line-height:1.7}.activity{padding:14px;border-radius:14px;background:#fff4b8aa;border-left:4px solid var(--cyan);color:#26485a}.project,.links{padding:26px}textarea{width:100%;min-height:100px;border:1px solid white;border-radius:14px;padding:13px;background:#fffef0cc;font:inherit}button{border:0;border-radius:999px;padding:11px 16px;background:#123f56;color:white;cursor:pointer}.links li{margin:14px 0}.links a{font-weight:700;color:#006e86}.links span{display:block;color:var(--muted);font-size:.92rem;margin-top:4px}footer{padding:24px;text-align:center;background:#fff3b88f;color:#355363}@media(max-width:620px){.brand small{display:none}.hero{padding:25px}}
 </style>
@@ -17,6 +29,9 @@ header{background:var(--teca-header)!important}
 #bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
 </style>
 
+<style id="teca-course-theme-slave">
+.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
+</style>
 </head><body><header><a class="brand" href="index.html"><img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA"><span><b>TECA</b><small>Tecnologia • Educação • Cultura • Arte</small></span></a><a class="back" href="index.html">← Cursos</a></header><main>
 <section class="hero"><span class="tag">🖌️ ARTES • PINTURA • COR</span><h1>Pintura<br>Criativa</h1><p><b>Cor, gesto e expressão.</b> Dos primeiros estudos à criação de uma série autoral: cor, luz, aquarela, guache, acrílica, composição, experimentação e portfólio.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Projeto final</span><span>Links úteis</span></div><div class="progress"><div id="bar"></div></div><p id="pt">0 de 24 aulas concluídas</p></section>
 <section class="notice"><b>🎨 Para começar:</b> não é necessário comprar um ateliê inteiro. Papel adequado, poucos pincéis e um conjunto básico da técnica escolhida já permitem realizar os estudos iniciais.</section>
@@ -63,4 +78,5 @@ const cs=[...document.querySelectorAll('.done')],bar=document.querySelector('#ba
 })();
 </script>
 
+<script src="teca-aparencia.js?v=2"></script>
 </body></html>

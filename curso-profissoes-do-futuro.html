@@ -2,6 +2,18 @@
 
 <html lang="pt-BR">
 <head>
+<script id="teca-theme-early">
+(function(){
+  try{
+    var k="teca_aparencia_v1", v=localStorage.getItem(k);
+    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
+    document.documentElement.setAttribute("data-teca-theme",v);
+  }catch(e){
+    document.documentElement.setAttribute("data-teca-theme","amarelo");
+  }
+})();
+</script>
+<link rel="stylesheet" href="teca-aparencia.css?v=2">
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Profissões do Futuro — O Novo Mapa do Trabalho | TECA</title>
@@ -177,6 +189,9 @@ header{background:var(--teca-header)!important}
 #bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
 </style>
 
+<style id="teca-course-theme-slave">
+.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
+</style>
 </head>
 <body>
 <header class="wrap top"><a class="brand sparn-logo-link" href="index.html"><img alt="TECA — Editais e Projetos Culturais" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></a><a class="back" href="index.html">← Voltar aos cursos</a></header>
@@ -488,5 +503,6 @@ header{background:var(--teca-header)!important}
 })();
 </script>
 
+<script src="teca-aparencia.js?v=2"></script>
 </body>
 </html>

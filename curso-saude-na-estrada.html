@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Saúde na Estrada — Corpo e Mente em Movimento | Instituto TECA</title>
+<html lang="pt-BR"><head>
+<script id="teca-theme-early">
+(function(){
+  try{
+    var k="teca_aparencia_v1", v=localStorage.getItem(k);
+    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
+    document.documentElement.setAttribute("data-teca-theme",v);
+  }catch(e){
+    document.documentElement.setAttribute("data-teca-theme","amarelo");
+  }
+})();
+</script>
+<link rel="stylesheet" href="teca-aparencia.css?v=2"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Saúde na Estrada — Corpo e Mente em Movimento | Instituto TECA</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#07100d;color:#edf7f1;font-family:'DM Sans',sans-serif}a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}header{padding:22px 0;border-bottom:1px solid #ffffff18}header .wrap{display:flex;justify-content:space-between;align-items:center}.brand{font:700 20px 'Space Grotesk'}.back{text-decoration:none;border:1px solid #ffffff25;padding:9px 13px;border-radius:10px}.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:38px;align-items:center;padding:50px 0}.editable-img{position:relative;overflow:visible}.editable-img img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;transform-origin:center}.hero h1{font:700 clamp(42px,6vw,76px)/.96 'Space Grotesk';margin:10px 0}.tag{color:#8df0a7;font-weight:700}.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.stats span,.pill{background:#ffffff0d;border:1px solid #ffffff18;border-radius:999px;padding:8px 11px}.progressbar{position:sticky;top:0;z-index:30;background:#07100de8;padding:12px 0;border-block:1px solid #ffffff14}.track{height:8px;background:#ffffff16;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:#71dc8b}.intro{padding:50px 0}.wide{margin:25px 0}.wide img{width:100%;height:auto;display:block;border-radius:20px}.module{padding:35px 0;border-top:1px solid #ffffff18}.module-head{display:flex;gap:18px;align-items:flex-start}.module-head>span{font:700 42px 'Space Grotesk';color:#71dc8b}h2{font-family:'Space Grotesk';font-size:30px;margin:4px 0}.lesson{background:#0c1813;border:1px solid #ffffff14;border-radius:16px;padding:20px;margin:14px 0}.lesson-top{display:flex;justify-content:space-between;gap:15px;color:#a8bcb0;font-size:13px}.lesson h3{font-size:20px;margin:12px 0 6px}.activity,.tool{background:#12251b;border-left:3px solid #71dc8b;padding:12px 14px;border-radius:8px;margin-top:12px}.project{padding:45px 0}textarea,input[type=text]{width:100%;background:#0b1712;color:#fff;border:1px solid #ffffff25;border-radius:10px;padding:12px;margin:7px 0 15px}textarea{min-height:90px}.actions button{padding:10px 14px;border:0;border-radius:9px;margin-right:8px;cursor:pointer;font-weight:700}footer{padding:35px 0;color:#91a399;border-top:1px solid #ffffff18}.devbtn{position:fixed;right:18px;bottom:18px;z-index:9999;background:#081710;color:#fff;border:1px solid #71dc8b;border-radius:99px;padding:11px 15px;cursor:pointer}.imgedit,.imgreplace,.imgpanel{display:none;position:absolute;z-index:20}body.dev .imgedit,body.dev .imgreplace{display:block}.imgedit{right:10px;top:10px}.imgreplace{right:85px;top:10px}.imgpanel{left:10px;bottom:10px;background:#07100de8;padding:8px;border-radius:10px;gap:5px;flex-wrap:wrap}body.dev .editable-img.editing .imgpanel{display:flex}.imgpanel button,.imgedit,.imgreplace{background:#10261a;color:#fff;border:1px solid #71dc8b;border-radius:7px;padding:7px;cursor:pointer}@media(max-width:760px){.hero{grid-template-columns:1fr}}@media print{body>*:not(.project){display:none!important}.project{display:block;color:#000;background:#fff}.devbtn{display:none}}
@@ -54,6 +66,9 @@ header{background:var(--teca-header)!important}
 #bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
 </style>
 
+<style id="teca-course-theme-slave">
+.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
+</style>
 </head><body><header><div class="wrap"><div class="brand sparn-logo-link"><img alt="TECA — Editais e Projetos Culturais" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></div><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
 <main class="wrap"><section class="hero"><div class="editable-img"><img alt="Saúde na Estrada" src="Assets/saude-na-estrada.png"/></div><div><div class="tag">VIAGENS + BEM-ESTAR</div><h1>Saúde na Estrada</h1><p>Corpo e Mente em Movimento — alimentação, sono, exercício, prevenção, saúde emocional e preparação para viajar com mais segurança e energia.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Projeto Minha Viagem Saudável</span></div></div></section></main>
 <div class="progressbar"><div class="wrap"><small id="ptxt">0 de 24 aulas concluídas</small><div class="track"><div class="fill" id="fill"></div></div></div></div>
@@ -133,4 +148,5 @@ setupDev();
 })();
 </script>
 
+<script src="teca-aparencia.js?v=2"></script>
 </body></html>

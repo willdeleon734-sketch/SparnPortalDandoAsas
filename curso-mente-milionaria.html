@@ -1,5 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="pt-BR"><head>
+<script id="teca-theme-early">
+(function(){
+  try{
+    var k="teca_aparencia_v1", v=localStorage.getItem(k);
+    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
+    document.documentElement.setAttribute("data-teca-theme",v);
+  }catch(e){
+    document.documentElement.setAttribute("data-teca-theme","amarelo");
+  }
+})();
+</script>
+<link rel="stylesheet" href="teca-aparencia.css?v=2"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mente Milionária de Verdade — Instituto TECA</title>
 <meta name="description" content="Curso de educação financeira sobre hábitos, disciplina, longo prazo, patrimônio e proteção contra atalhos.">
 <style>
@@ -30,6 +42,9 @@ header{background:var(--teca-header)!important}
 #bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
 </style>
 
+<style id="teca-course-theme-slave">
+.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
+</style>
 </head><body>
 <header><div class="wrap" style="display:flex;align-items:center;justify-content:space-between"><a class="brand" href="index.html"><img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA"><span><b>TECA</b><small>TECNOLOGIA • EDUCAÇÃO • CULTURA • ARTE</small></span></a><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
 <main>
@@ -92,4 +107,5 @@ document.getElementById('clear').onclick=()=>{if(confirm('Limpar todas as respos
 })();
 </script>
 
+<script src="teca-aparencia.js?v=2"></script>
 </body></html>

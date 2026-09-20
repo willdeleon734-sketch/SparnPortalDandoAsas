@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<html lang="pt-BR"><head>
+<script id="teca-theme-early">
+(function(){
+  try{
+    var k="teca_aparencia_v1", v=localStorage.getItem(k);
+    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
+    document.documentElement.setAttribute("data-teca-theme",v);
+  }catch(e){
+    document.documentElement.setAttribute("data-teca-theme","amarelo");
+  }
+})();
+</script>
+<link rel="stylesheet" href="teca-aparencia.css?v=2"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Robôs Chegaram | TECA</title><meta content="Curso completo sobre robótica, inteligência artificial física, segurança e profissões do futuro." name="description"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
@@ -177,6 +189,9 @@ header{background:var(--teca-header)!important}
 #bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
 </style>
 
+<style id="teca-course-theme-slave">
+.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
+</style>
 </head><body>
 <header class="wrap top"><a class="brand sparn-logo-link" href="index.html"><img alt="TECA — Editais e Projetos Culturais" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
 <section class="wrap hero"><div><span class="tag">Profissões do Futuro · Curso 04</span><h1>Robôs <span class="grad">Chegaram.</span></h1><p>Entenda como a inteligência artificial percebe e age no mundo físico, conheça as profissões da robótica e aprenda a trabalhar com máquinas de forma útil e segura.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Projeto aplicado</span><span>Nível introdutório</span></div></div><img alt="Jovem profissional brasileiro supervisionando robôs em ambiente de trabalho" class="hero-img" src="Assets/robos-chegaram.png"/></section>
@@ -470,4 +485,5 @@ header{background:var(--teca-header)!important}
 })();
 </script>
 
+<script src="teca-aparencia.js?v=2"></script>
 </body></html>

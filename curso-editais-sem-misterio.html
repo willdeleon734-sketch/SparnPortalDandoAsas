@@ -2,6 +2,18 @@
 
 <html lang="pt-BR">
 <head>
+<script id="teca-theme-early">
+(function(){
+  try{
+    var k="teca_aparencia_v1", v=localStorage.getItem(k);
+    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
+    document.documentElement.setAttribute("data-teca-theme",v);
+  }catch(e){
+    document.documentElement.setAttribute("data-teca-theme","amarelo");
+  }
+})();
+</script>
+<link rel="stylesheet" href="teca-aparencia.css?v=2">
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Editais sem Mistério — Instituto TECA</title>
 <meta content="Curso completo para transformar ideias culturais em projetos claros, viáveis e competitivos." name="description"/>
@@ -277,6 +289,9 @@ header{background:var(--teca-header)!important}
 #bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
 </style>
 
+<style id="teca-course-theme-slave">
+.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
+</style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand teca-brand" href="index.html" aria-label="Instituto TECA">
@@ -656,4 +671,5 @@ document.getElementById('grade').addEventListener('click',()=>{let score=0;docum
 })();
 </script>
 
+<script src="teca-aparencia.js?v=2"></script>
 </body></html>
