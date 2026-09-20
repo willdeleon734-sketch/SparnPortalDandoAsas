@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Editais sem Mistério — Sparn</title>
+<meta content="Curso completo para transformar ideias culturais em projetos claros, viáveis e competitivos." name="description"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--bg:#050713;--panel:#0e1428;--panel2:#111a31;--white:#f7fbff;--muted:#9da9c2;--cyan:#43e7ff;--purple:#9c6cff;--pink:#ff5fc7;--green:#54e2ae;--gold:#ffd36a;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 0,rgba(67,231,255,.11),transparent 26%),radial-gradient(circle at 92% 12%,rgba(156,108,255,.15),transparent 28%),var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.7}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(5,7,19,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{color:#fff;text-decoration:none;font-family:"Space Grotesk";font-weight:800;letter-spacing:.16em}.back{color:var(--cyan);text-decoration:none;font-size:.85rem;font-weight:800}
+.hero{padding:64px 0 46px;display:grid;grid-template-columns:1.25fr .75fr;gap:35px;align-items:center}.eyebrow{color:#baf7ff;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.72rem}.hero h1{font-family:"Space Grotesk";font-size:clamp(3rem,7vw,6rem);line-height:.96;letter-spacing:-.055em;margin:12px 0 18px}.gradient{background:linear-gradient(100deg,var(--cyan),#fff 48%,var(--pink));color:transparent;background-clip:text}.hero p{color:var(--muted);font-size:1.06rem;max-width:680px}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.stat{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);font-size:.78rem}.progress-card{padding:25px;border:1px solid rgba(67,231,255,.22);border-radius:24px;background:linear-gradient(145deg,rgba(17,26,52,.95),rgba(8,13,29,.95));box-shadow:0 25px 70px rgba(0,0,0,.4)}.progress-card strong{font-family:"Space Grotesk";font-size:1.1rem}.bar{height:10px;border-radius:999px;background:#050815;overflow:hidden;margin:13px 0}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));transition:.35s}.progress-card small{color:var(--muted)}
+.notice{padding:18px 20px;border-left:3px solid var(--gold);background:rgba(255,211,106,.055);border-radius:0 15px 15px 0;color:#e7dfc9;margin-bottom:42px}.layout{display:grid;grid-template-columns:270px 1fr;gap:30px;align-items:start}.sidebar{position:sticky;top:90px;padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(14,20,40,.85)}.sidebar b{font-family:"Space Grotesk";display:block;margin-bottom:10px}.sidebar a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}.sidebar a:hover{color:var(--cyan)}
+.module{margin-bottom:34px;scroll-margin-top:90px}.module-head{padding:24px;border:1px solid var(--line);border-radius:20px 20px 0 0;background:linear-gradient(135deg,rgba(67,231,255,.08),rgba(156,108,255,.1))}.module-head span{color:var(--cyan);font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}.module-head h2{font-family:"Space Grotesk";font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.1;margin:7px 0}.module-head p{color:var(--muted);margin:0}.lesson{border:1px solid var(--line);border-top:0;background:rgba(14,20,40,.72)}.lesson:last-child{border-radius:0 0 20px 20px}.lesson summary{list-style:none;cursor:pointer;padding:19px 22px;font-family:"Space Grotesk";font-weight:700;display:flex;justify-content:space-between;gap:15px}.lesson summary::-webkit-details-marker{display:none}.lesson summary:after{content:"+";color:var(--cyan);font-size:1.3rem}.lesson[open] summary:after{content:"−"}.content{padding:0 22px 24px;color:#dce5f3}.content h3{color:#fff;font-family:"Space Grotesk";margin-top:22px}.content li{margin:7px 0}.example,.exercise,.warning{padding:15px 17px;border-radius:13px;margin:18px 0}.example{background:rgba(67,231,255,.055);border:1px solid rgba(67,231,255,.15)}.exercise{background:rgba(84,226,174,.055);border:1px solid rgba(84,226,174,.17)}.warning{background:rgba(255,95,199,.055);border:1px solid rgba(255,95,199,.17)}.complete{display:inline-flex;align-items:center;gap:8px;margin-top:10px;color:#c8fbed;font-size:.84rem;font-weight:700}.complete input{width:18px;height:18px;accent-color:var(--green)}
+.toolkit,.final{margin:55px 0;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--panel)}.toolkit h2,.final h2{font-family:"Space Grotesk";font-size:2rem;margin-top:0}.templates{display:grid;grid-template-columns:1fr 1fr;gap:12px}.template{padding:16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025)}.template b{display:block;color:var(--cyan)}.template p{font-size:.86rem;color:var(--muted);margin:6px 0 0}.quiz-q{padding:17px 0;border-bottom:1px solid var(--line)}.quiz-q p{font-weight:800}.quiz-q label{display:block;margin:7px 0;color:#cad5e6}.quiz-q input{accent-color:var(--cyan)}button{border:0;border-radius:11px;background:var(--cyan);color:#04101b;padding:13px 18px;font-weight:900;cursor:pointer;margin-top:18px}.result{margin-top:16px;font-weight:800}.sources{padding:30px 0 70px;color:var(--muted);font-size:.86rem}.sources a{color:var(--cyan)}footer{border-top:1px solid var(--line);padding:25px 0;color:#7f8ca4;font-size:.82rem}
+@media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.sidebar{position:static}.templates{grid-template-columns:1fr}.nav{height:auto;padding:16px 0}.hero{padding-top:42px}}
+</style>
+<style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html">SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
+<main class="wrap">
+<section class="hero"><div><div class="eyebrow">Curso original Sparn · Cultura</div><h1>Editais sem <span class="gradient">Mistério</span></h1><p>Aprenda a ler um edital, estruturar uma proposta cultural, montar orçamento e cronograma, comprovar trajetória, realizar a inscrição e preparar a execução responsável do projeto.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">10 horas</span><span class="stat">Avaliação final</span><span class="stat">Projeto aplicado</span></div></div><aside class="progress-card"><strong>Seu progresso</strong><div class="bar"><div class="fill" id="fill"></div></div><small id="progressText">0 de 24 aulas concluídas</small></aside></section>
+<div class="notice"><b>Importante:</b> editais variam por órgão, território e modalidade. Este curso ensina método e raciocínio. O documento vigente, seus anexos e eventuais retificações sempre prevalecem.</div>
+<figure style="margin:0 0 36px;border:1px solid rgba(67,231,255,.22);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Jovem produtora cultural elaborando um projeto" src="assets/editais-sem-misterio.png" style="display:block"/></figure>
+<div class="layout">
+<nav class="sidebar"><b>Conteúdo</b><a href="#m1">1. O universo dos editais</a><a href="#m2">2. Leitura estratégica</a><a href="#m3">3. Ideia e coerência</a><a href="#m4">4. Escrita do projeto</a><a href="#m5">5. Plano de execução</a><a href="#m6">6. Orçamento</a><a href="#m7">7. Documentos e inscrição</a><a href="#m8">8. Seleção, execução e contas</a><a href="#kit">Kit de modelos</a><a href="#avaliacao">Avaliação final</a></nav>
+<div>
+<section class="module" id="m1"><div class="module-head"><span>Módulo 1</span><h2>O universo dos editais culturais</h2><p>Entenda quem financia, o que é selecionado e como as regras se conectam.</p></div>
+<details class="lesson"><summary>Aula 1 — O que é um edital cultural</summary><div class="content"><p>Edital é o documento público que estabelece uma oportunidade, seu objetivo, quem pode participar, recursos disponíveis, critérios, prazos e obrigações. Ele funciona simultaneamente como convite, regulamento e base da futura relação entre o agente cultural e a administração.</p><p>As oportunidades podem selecionar projetos, conceder prêmios por trajetória, apoiar manutenção de espaços, contratar serviços, reconhecer mestres e grupos ou formar redes. Antes de escrever, identifique a natureza da seleção: <b>fomento não é prêmio; prêmio não é contratação</b>.</p><div class="example"><b>Exemplo:</b> num edital de execução, você propõe atividades futuras e apresenta plano de trabalho. Num edital de premiação, geralmente demonstra uma contribuição cultural já realizada.</div><div class="exercise"><b>Prática:</b> escolha um edital real e escreva em uma frase: “Este edital seleciona ___ para ___”.</div><label class="complete"><input data-lesson="1" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 2 — Principais mecanismos de fomento</summary><div class="content"><p>No Brasil, o fomento pode ocorrer por programas federais, estaduais e municipais; fundos de cultura; políticas permanentes como a PNAB; incentivos fiscais; premiações; termos de execução cultural e outras formas previstas na legislação e no edital.</p><ul><li><b>Fomento direto:</b> o poder público transfere recursos após seleção.</li><li><b>Incentivo fiscal:</b> o projeto autorizado busca patrocinadores que direcionam parcela de imposto.</li><li><b>Premiação:</b> reconhece trajetória, obra ou contribuição.</li><li><b>Bolsa:</b> apoia pesquisa, formação ou desenvolvimento.</li></ul><div class="warning"><b>Atenção:</b> aprovação em mecanismo de incentivo fiscal pode apenas autorizar captação; não significa que o dinheiro já esteja garantido.</div><label class="complete"><input data-lesson="2" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 3 — Quem pode participar</summary><div class="content"><p>O edital pode admitir pessoa física, MEI, empresa, associação, cooperativa, coletivo sem CNPJ ou categorias específicas. Residência, sede, tempo de atuação e natureza cultural precisam ser comprovados conforme o texto.</p><p>Não basta “trabalhar com cultura”: a inscrição deve demonstrar enquadramento, regularidade e ausência de impedimentos. Leia também regras sobre servidores públicos, parentesco, membros de comissão, inadimplência e duplicidade de inscrições.</p><div class="exercise"><b>Checklist:</b> tipo de proponente; território; idade; tempo de atuação; cadastro cultural; regularidade fiscal; impedimentos; limite de propostas.</div><label class="complete"><input data-lesson="3" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m2"><div class="module-head"><span>Módulo 2</span><h2>Leitura estratégica do edital</h2><p>Transforme um documento longo numa lista objetiva de decisões e tarefas.</p></div>
+<details class="lesson"><summary>Aula 4 — A leitura em três camadas</summary><div class="content"><p>Faça três leituras. Na primeira, confirme se a oportunidade serve ao seu perfil. Na segunda, marque regras, prazos e critérios. Na terceira, converta tudo em checklist operacional.</p><ol><li><b>Triagem:</b> objeto, público, território e valor.</li><li><b>Análise:</b> categorias, cotas, critérios, documentos e contrapartidas.</li><li><b>Operação:</b> tarefas, responsáveis e datas internas.</li></ol><div class="example"><b>Regra prática:</b> estabeleça seu prazo interno pelo menos 48 horas antes do prazo oficial.</div><label class="complete"><input data-lesson="4" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 5 — Objeto, categorias e vedações</summary><div class="content"><p>O objeto revela a finalidade pública. Categorias distribuem propostas por linguagem, faixa de valor, território ou perfil. Vedações mostram o que não será aceito. Uma excelente ideia fora do objeto tende a ser eliminada.</p><p>Copie literalmente os verbos do edital: promover, realizar, circular, formar, preservar, premiar. Depois verifique se as ações do projeto respondem a esses verbos.</p><div class="exercise"><b>Prática:</b> faça uma tabela com três colunas: “o edital quer”, “meu projeto entrega”, “evidência na proposta”.</div><label class="complete"><input data-lesson="5" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 6 — Critérios e engenharia da pontuação</summary><div class="content"><p>Critérios são o mapa da avaliação. Relevância, qualidade, viabilidade, experiência da equipe, alcance, acessibilidade e democratização aparecem com frequência, mas os pesos mudam.</p><p>Monte uma matriz: critério, peso, trecho da proposta que responde e prova anexada. Dedique mais clareza aos itens de maior peso sem abandonar critérios eliminatórios.</p><div class="warning"><b>Erro frequente:</b> escrever uma narrativa bonita e deixar orçamento, cronograma ou acessibilidade sem evidências concretas.</div><label class="complete"><input data-lesson="6" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m3"><div class="module-head"><span>Módulo 3</span><h2>Da ideia à proposta coerente</h2><p>Defina problema, público, transformação e resultados antes de redigir.</p></div>
+<details class="lesson"><summary>Aula 7 — Diagnóstico cultural</summary><div class="content"><p>Um projeto forte nasce de uma necessidade verificável. Descreva o território, público, barreira cultural e oportunidade. Evite generalizações como “a cultura é importante”. Mostre o que está faltando, para quem e onde.</p><div class="example"><b>Fraco:</b> “Há pouco acesso à música.” <b>Melhor:</b> “No bairro X não há programação musical gratuita regular; jovens dependem de deslocamento e custo de ingresso.”</div><div class="exercise"><b>Prática:</b> redija o diagnóstico em até 120 palavras usando situação, público, evidência e consequência.</div><label class="complete"><input data-lesson="7" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 8 — Público e território</summary><div class="content"><p>“Público geral” raramente ajuda a planejar. Defina público principal, secundário, faixa etária, localização, quantidade estimada, formas de mobilização e barreiras de acesso.</p><p>Território não é apenas endereço: envolve redes locais, equipamentos, memória, deslocamento, linguagem e relações comunitárias.</p><div class="exercise"><b>Mapa de público:</b> quem participa; por que participaria; como ficará sabendo; o que pode impedir sua presença; como o projeto remove essa barreira.</div><label class="complete"><input data-lesson="8" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 9 — Teoria da mudança simplificada</summary><div class="content"><p>Organize a lógica: <b>problema → ações → produtos → resultados → impacto</b>. Oficinas são ações; 80 participantes formados são produto; aumento de repertório e autonomia é resultado.</p><div class="example"><b>Exemplo:</b> ausência de formação audiovisual → 6 oficinas → 120 vagas e 12 curtas → jovens dominam técnicas básicas e exibem obras localmente.</div><label class="complete"><input data-lesson="9" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m4"><div class="module-head"><span>Módulo 4</span><h2>Escrita do projeto</h2><p>Converta a lógica do projeto em texto claro, objetivo e avaliável.</p></div>
+<details class="lesson"><summary>Aula 10 — Resumo e apresentação</summary><div class="content"><p>O resumo responde rapidamente: o que será realizado, onde, para quem, como, por quem e com qual resultado. Escreva-o por último, embora apareça primeiro.</p><p>Use frases concretas. Informe quantidade, duração, formato, localidade e acesso. Evite adjetivos sem prova, como “inovador”, “único” ou “revolucionário”.</p><div class="exercise"><b>Fórmula:</b> “[Projeto] realizará [ações], durante [período], em [território], para [público], oferecendo [entregas e acesso].”</div><label class="complete"><input data-lesson="10" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 11 — Justificativa</summary><div class="content"><p>A justificativa liga diagnóstico, relevância cultural, público, território e política do edital. Ela explica por que o projeto merece recurso público agora.</p><ul><li>Apresente a necessidade.</li><li>Mostre a contribuição cultural.</li><li>Conecte ao objeto e aos critérios.</li><li>Demonstre diferencial e oportunidade.</li><li>Evite transformar justificativa em autobiografia.</li></ul><label class="complete"><input data-lesson="11" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 12 — Objetivos e metas</summary><div class="content"><p>Objetivo geral expressa a transformação central. Objetivos específicos descrevem caminhos. Metas tornam os objetivos mensuráveis.</p><div class="example"><b>Geral:</b> ampliar o acesso de jovens à produção audiovisual. <b>Específicos:</b> formar, produzir e difundir. <b>Metas:</b> 6 oficinas, 120 vagas, 12 curtas e 2 mostras.</div><div class="warning"><b>Teste de coerência:</b> cada meta deve aparecer no cronograma e no orçamento; cada despesa deve apoiar uma ação ou meta.</div><label class="complete"><input data-lesson="12" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m5"><div class="module-head"><span>Módulo 5</span><h2>Plano de execução e impacto</h2><p>Mostre como a proposta acontecerá na prática, do início à entrega.</p></div>
+<details class="lesson"><summary>Aula 13 — Metodologia e etapas</summary><div class="content"><p>Divida a execução em pré-produção, produção e pós-produção. Informe método, responsáveis, espaços, recursos e fluxo de trabalho. O avaliador precisa visualizar a realização.</p><div class="exercise"><b>Prática:</b> para cada ação, registre entrada necessária, responsável, duração, entrega e forma de comprovação.</div><label class="complete"><input data-lesson="13" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 14 — Cronograma realista</summary><div class="content"><p>O cronograma deve considerar contratação, pesquisa, divulgação, inscrições, realização, pagamentos, relatórios e margem para imprevistos. Não concentre tudo no último mês.</p><p>Use meses ou semanas conforme o formulário. Dependências importam: não se divulga uma atividade antes de confirmar local, equipe e identidade visual.</p><label class="complete"><input data-lesson="14" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 15 — Acessibilidade e democratização</summary><div class="content"><p>Acessibilidade envolve dimensões arquitetônica, comunicacional, atitudinal e de conteúdo. Planeje conforme público e linguagem: Libras, legendas, audiodescrição, materiais acessíveis, rota física, equipe orientada e comunicação clara.</p><p>Democratização pode incluir gratuidade, ingressos populares, distribuição territorial, ações formativas, reserva de vagas e circulação. Não trate esses itens como frases decorativas: indique quantidade, custo e execução.</p><label class="complete"><input data-lesson="15" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m6"><div class="module-head"><span>Módulo 6</span><h2>Orçamento que sustenta o projeto</h2><p>Traduza o plano de trabalho em números justificáveis e verificáveis.</p></div>
+<details class="lesson"><summary>Aula 16 — Estrutura da planilha</summary><div class="content"><p>Uma linha orçamentária deve indicar item, unidade, quantidade, valor unitário e total. Agrupe por etapa ou natureza quando o formulário permitir.</p><div class="example"><b>Exemplo:</b> oficineiro de fotografia | serviço/aula | 12 | R$ 250 | R$ 3.000.</div><p>Inclua impostos e encargos quando aplicáveis. Confirme se o edital aceita despesas administrativas, aquisição de equipamentos, remuneração do proponente e custos anteriores ou posteriores.</p><label class="complete"><input data-lesson="16" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 17 — Pesquisa de preços e memória de cálculo</summary><div class="content"><p>Valores devem ser compatíveis com mercado, território e complexidade. Use cotações, tabelas referenciais, histórico de contratação ou pesquisa documentada conforme exigência.</p><p>A memória de cálculo explica de onde vem o total. “Divulgação: R$ 5.000” é frágil; discrimine design, impulsionamento, impressão, assessoria e quantidades.</p><label class="complete"><input data-lesson="17" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 18 — Coerência e cortes inteligentes</summary><div class="content"><p>Revise o orçamento contra metas e cronograma. Procure itens duplicados, subestimados, sem função e custos essenciais esquecidos. Se precisar reduzir, preserve o núcleo que gera resultado e ajuste escala.</p><div class="warning"><b>Riscos:</b> cachês incompatíveis sem justificativa; orçamento redondo demais; quantidade divergente; acessibilidade sem verba; comunicação sem estratégia; ausência de reserva operacional quando permitida.</div><label class="complete"><input data-lesson="18" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m7"><div class="module-head"><span>Módulo 7</span><h2>Documentos, portfólio e inscrição</h2><p>Evite que uma boa proposta caia por falha documental ou operacional.</p></div>
+<details class="lesson"><summary>Aula 19 — Checklist documental</summary><div class="content"><p>Separe documentação do proponente, proposta e equipe. Nomeie arquivos com clareza, confira formato, tamanho, validade, assinatura e legibilidade. Nunca presuma que o sistema aceitará correção posterior.</p><ul><li>Identificação e endereço.</li><li>Regularidade ou certidões, quando exigidas.</li><li>Comprovante de residência/sede e atuação.</li><li>Declarações e anexos assinados.</li><li>Planilha, cronograma e portfólio.</li><li>Autorizações e cartas de anuência.</li></ul><label class="complete"><input data-lesson="19" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 20 — Portfólio e comprovação de trajetória</summary><div class="content"><p>Portfólio não é depósito de imagens. Organize uma narrativa: apresentação, linha do tempo, projetos, função exercida, resultados, links e evidências. Priorize provas relacionadas à proposta.</p><p>Use legendas com nome da ação, data, local, papel do proponente e fonte. Links precisam estar públicos e testados. Prints devem mostrar contexto.</p><label class="complete"><input data-lesson="20" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 21 — Envio e protocolo</summary><div class="content"><p>Preencha primeiro num documento de trabalho e depois transfira ao sistema. Salve respostas, gere PDF quando possível e faça revisão cruzada. Após enviar, baixe comprovante ou registre protocolo e data.</p><div class="exercise"><b>Revisão final:</b> categoria correta; campos completos; valores fecham; anexos abrem; assinaturas válidas; links funcionam; nome e CPF/CNPJ coincidem; envio confirmado.</div><label class="complete"><input data-lesson="21" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m8"><div class="module-head"><span>Módulo 8</span><h2>Seleção, execução e prestação de contas</h2><p>Prepare-se para o que acontece depois do botão “enviar”.</p></div>
+<details class="lesson"><summary>Aula 22 — Habilitação, mérito e recursos</summary><div class="content"><p>A seleção pode separar análise documental e análise de mérito. Leia resultados preliminares, pontuação e motivos. Recurso deve ser objetivo, respeitoso, tempestivo e fundamentado no edital e nos documentos enviados.</p><p>Não apresente projeto novo no recurso. Demonstre erro de interpretação, informação existente ou aplicação inadequada do critério. Cite item, fato e pedido.</p><label class="complete"><input data-lesson="22" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 23 — Gestão e comprovação da execução</summary><div class="content"><p>Ao ser selecionado, releia termo, plano aprovado e regras de alteração. Organize conta, contratos, comprovantes, registros de atividade, listas, fotos, materiais de comunicação e indicadores desde o primeiro dia.</p><p>Mudanças relevantes de escopo, orçamento, local, equipe ou prazo podem exigir autorização. Comunicação antecipada reduz risco.</p><label class="complete"><input data-lesson="23" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 24 — Relatório e prestação de contas</summary><div class="content"><p>A prestação de contas deve seguir o regime definido no instrumento e no edital. O Marco Regulatório do Fomento à Cultura reforçou abordagem orientada à entrega do objeto, mas isso não elimina obrigações documentais específicas.</p><p>Relate ações previstas e realizadas, público, resultados, alterações, acessibilidade, comunicação e evidências. Mantenha organização financeira mesmo quando o foco do relatório for o objeto.</p><div class="exercise"><b>Trabalho final:</b> entregue resumo, justificativa, objetivos, metas, metodologia, cronograma, orçamento, acessibilidade, público e checklist documental de um projeto real.</div><label class="complete"><input data-lesson="24" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="toolkit" id="kit"><h2>Kit de modelos Sparn</h2><p>Copie estas estruturas para seu documento de trabalho.</p><div class="templates"><div class="template"><b>Resumo</b><p>O projeto [nome] realizará [ações] em [território], durante [período], atendendo [público], com [entregas] e [forma de acesso].</p></div><div class="template"><b>Objetivo específico</b><p>Verbo no infinitivo + entrega + público/território + finalidade verificável.</p></div><div class="template"><b>Meta</b><p>Entregar [quantidade] de [produto/ação], para [público], até [prazo], comprovado por [evidência].</p></div><div class="template"><b>Linha de orçamento</b><p>Item | unidade | quantidade | valor unitário | total | justificativa.</p></div><div class="template"><b>Linha de cronograma</b><p>Ação | responsável | início | fim | entrega | dependência.</p></div><div class="template"><b>Estrutura de recurso</b><p>Item questionado | fato | regra do edital | evidência já enviada | pedido objetivo.</p></div></div></section>
+<section class="final" id="avaliacao"><h2>Avaliação final</h2><p>Marque uma resposta por questão. Aproveitamento recomendado: 70%.</p>
+<div class="quiz-q" data-answer="b"><p>1. O primeiro passo antes de escrever é:</p><label><input name="q1" type="radio" value="a"/> Criar o orçamento</label><label><input name="q1" type="radio" value="b"/> Confirmar objeto, elegibilidade e categoria</label><label><input name="q1" type="radio" value="c"/> Fazer o portfólio</label></div>
+<div class="quiz-q" data-answer="c"><p>2. Uma meta adequada é:</p><label><input name="q2" type="radio" value="a"/> Valorizar a cultura</label><label><input name="q2" type="radio" value="b"/> Transformar vidas</label><label><input name="q2" type="radio" value="c"/> Realizar 6 oficinas para 120 jovens</label></div>
+<div class="quiz-q" data-answer="a"><p>3. Critérios de avaliação servem para:</p><label><input name="q3" type="radio" value="a"/> Orientar onde a proposta deve apresentar evidências</label><label><input name="q3" type="radio" value="b"/> Substituir o objeto</label><label><input name="q3" type="radio" value="c"/> Garantir aprovação</label></div>
+<div class="quiz-q" data-answer="b"><p>4. Um orçamento consistente:</p><label><input name="q4" type="radio" value="a"/> Usa somente valores redondos</label><label><input name="q4" type="radio" value="b"/> Relaciona itens às ações e metas</label><label><input name="q4" type="radio" value="c"/> Omite memória de cálculo</label></div>
+<div class="quiz-q" data-answer="c"><p>5. Acessibilidade deve:</p><label><input name="q5" type="radio" value="a"/> Aparecer apenas na justificativa</label><label><input name="q5" type="radio" value="b"/> Ser decidida depois da aprovação</label><label><input name="q5" type="radio" value="c"/> Ter ações, responsáveis e custos quando necessários</label></div>
+<div class="quiz-q" data-answer="a"><p>6. Um portfólio forte:</p><label><input name="q6" type="radio" value="a"/> Contextualiza evidências e trajetória</label><label><input name="q6" type="radio" value="b"/> Reúne imagens sem legenda</label><label><input name="q6" type="radio" value="c"/> Usa links privados</label></div>
+<div class="quiz-q" data-answer="b"><p>7. O recurso administrativo deve:</p><label><input name="q7" type="radio" value="a"/> Apresentar um projeto novo</label><label><input name="q7" type="radio" value="b"/> Ser fundamentado no edital e no material enviado</label><label><input name="q7" type="radio" value="c"/> Atacar a comissão</label></div>
+<div class="quiz-q" data-answer="c"><p>8. Após a aprovação, alterações relevantes:</p><label><input name="q8" type="radio" value="a"/> São sempre livres</label><label><input name="q8" type="radio" value="b"/> Nunca podem ocorrer</label><label><input name="q8" type="radio" value="c"/> Devem seguir o instrumento e podem exigir autorização</label></div>
+<div class="quiz-q" data-answer="a"><p>9. O resumo deve informar:</p><label><input name="q9" type="radio" value="a"/> O que, onde, para quem, como e com quais entregas</label><label><input name="q9" type="radio" value="b"/> Apenas a história do proponente</label><label><input name="q9" type="radio" value="c"/> Somente o valor solicitado</label></div>
+<div class="quiz-q" data-answer="b"><p>10. Em caso de divergência, prevalece:</p><label><input name="q10" type="radio" value="a"/> Este curso</label><label><input name="q10" type="radio" value="b"/> O edital vigente, anexos e retificações</label><label><input name="q10" type="radio" value="c"/> Uma postagem em rede social</label></div>
+<button id="grade" type="button">Corrigir avaliação</button><div class="result" id="result"></div></section>
+<section class="sources"><b>Referências essenciais:</b> <a href="https://www.gov.br/cultura/pt-br/assuntos/pnab" rel="noopener" target="_blank">PNAB — Ministério da Cultura</a> · <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14903.htm" rel="noopener" target="_blank">Lei nº 14.903/2024</a> · <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14399.htm" rel="noopener" target="_blank">Lei nº 14.399/2022</a> · <a href="https://salic.cultura.gov.br/" rel="noopener" target="_blank">SALIC</a>. Consulte sempre a legislação e o edital aplicáveis à oportunidade escolhida.</section>
+</div></div></main>
+<footer><div class="wrap">Sparn — Dando asas às suas ideias.</div></footer>
+<script>
+const boxes=[...document.querySelectorAll('[data-lesson]')],key='sparn-editais-progresso';
+function update(){const done=boxes.filter(b=>b.checked).length;document.getElementById('fill').style.width=(done/boxes.length*100)+'%';document.getElementById('progressText').textContent=done+' de '+boxes.length+' aulas concluídas';localStorage.setItem(key,JSON.stringify(boxes.map(b=>b.checked)))}
+try{const saved=JSON.parse(localStorage.getItem(key)||'[]');boxes.forEach((b,i)=>b.checked=!!saved[i])}catch(e){}boxes.forEach(b=>b.addEventListener('change',update));update();
+document.getElementById('grade').addEventListener('click',()=>{let score=0;document.querySelectorAll('.quiz-q').forEach((q,i)=>{const c=q.querySelector('input:checked');if(c&&c.value===q.dataset.answer)score++});const pct=score*10;document.getElementById('result').textContent=score+' de 10 — '+pct+'%. '+(pct>=70?'Aprovado! Agora finalize seu projeto aplicado.':'Revise as aulas e tente novamente.')});
+</script>
+<script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

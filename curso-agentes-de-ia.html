@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Trabalhando com Agentes de IA | Sparn</title>
+<meta content="Curso completo sobre criação, coordenação e supervisão segura de agentes de inteligência artificial." name="description"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--bg:#050713;--panel:#0d1428;--text:#f7fbff;--muted:#a9b5ce;--cyan:#43e7ff;--violet:#9c6cff;--pink:#ff5fc7;--gold:#ffc65c;--line:rgba(255,255,255,.11)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0,rgba(67,231,255,.12),transparent 28%),radial-gradient(circle at 90% 10%,rgba(156,108,255,.14),transparent 30%),var(--bg);color:var(--text);font:16px/1.7 "DM Sans",sans-serif}.wrap{width:min(1120px,calc(100% - 34px));margin:auto}.top{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{text-decoration:none;color:#fff;font:700 1rem "Space Grotesk";letter-spacing:.17em}.back{text-decoration:none;color:var(--cyan);font-weight:800;font-size:.88rem}.hero{padding:58px 0 40px;display:grid;grid-template-columns:1fr .82fr;gap:46px;align-items:center}.tag{display:inline-flex;padding:7px 11px;border:1px solid rgba(67,231,255,.28);border-radius:99px;color:#bdf8ff;background:rgba(67,231,255,.07);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.hero h1{font:700 clamp(3rem,6vw,5.5rem)/.97 "Space Grotesk";letter-spacing:-.055em;margin:18px 0}.grad{background:linear-gradient(100deg,var(--cyan),#fff 48%,var(--pink));color:transparent;background-clip:text}.hero p{color:var(--muted);font-size:1.08rem}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.stats span{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);font-size:.83rem}.hero-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:1px solid rgba(67,231,255,.25);box-shadow:0 28px 80px rgba(0,0,0,.5)}.progress-box{position:sticky;top:0;z-index:5;background:rgba(5,7,19,.91);backdrop-filter:blur(16px);border-block:1px solid var(--line)}.progress-inner{height:58px;display:flex;align-items:center;gap:14px}.bar{height:7px;flex:1;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--pink));transition:.3s}.progress-label{font-size:.8rem;color:var(--muted);white-space:nowrap}.intro{padding:55px 0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border-radius:20px;padding:25px}.card h2{font-family:"Space Grotesk";margin-top:0}.card p,.card li{color:var(--muted)}.visual{margin:25px auto 65px}.visual img{display:block;width:100%;border-radius:26px;border:1px solid var(--line);box-shadow:0 25px 75px rgba(0,0,0,.38)}.visual figcaption{color:var(--muted);font-size:.82rem;margin-top:10px}.module{padding:64px 0;border-top:1px solid var(--line)}.module-head{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;margin-bottom:27px}.module-number{font:700 3.7rem/1 "Space Grotesk";color:transparent;-webkit-text-stroke:1px rgba(67,231,255,.65)}.module h2{font:700 clamp(2rem,4vw,3.5rem)/1.05 "Space Grotesk";margin:0 0 8px}.module-head p{margin:0;color:var(--muted)}.lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.lesson{border:1px solid var(--line);border-radius:18px;padding:23px;background:rgba(255,255,255,.025)}.lesson h3{font:700 1.15rem/1.3 "Space Grotesk";margin:0 0 10px}.lesson p{color:var(--muted);margin:0 0 14px}.lesson label{display:flex;align-items:center;gap:9px;color:#cfe9ef;font-size:.82rem;cursor:pointer}.lesson input{width:19px;height:19px;accent-color:var(--cyan)}.activity{margin:14px 0;padding:12px;border-radius:11px;background:rgba(67,231,255,.06);border-left:3px solid var(--cyan);font-size:.84rem;color:#cbd7e9}.tool{margin-top:28px;border:1px solid rgba(255,198,92,.28);background:rgba(255,198,92,.055);border-radius:18px;padding:23px}.tool h3{margin:0 0 8px;color:#ffe1a2}.tool p{margin:0;color:var(--muted)}.final{margin:65px auto;padding:34px;border:1px solid rgba(156,108,255,.35);border-radius:25px;background:radial-gradient(circle at 90% 15%,rgba(156,108,255,.22),transparent 35%),var(--panel)}.final h2{font:700 clamp(2rem,4vw,3.2rem)/1.05 "Space Grotesk";margin:0 0 12px}.final p{color:var(--muted)}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}.checklist span{padding:12px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.025)}.print{display:inline-flex;padding:13px 18px;border-radius:11px;background:linear-gradient(100deg,var(--cyan),#8cefff);color:#04101b;text-decoration:none;font-weight:900}footer{border-top:1px solid var(--line);padding:30px 0;color:#8491a9}.foot{display:flex;justify-content:space-between;gap:20px;font-size:.85rem}@media(max-width:800px){.hero{grid-template-columns:1fr}.intro-grid,.lessons,.checklist{grid-template-columns:1fr}.module-head{grid-template-columns:1fr}.module-number{font-size:2.6rem}.foot{display:block}}
+</style>
+<style id="sparn-project-ui">
+.project-workbook{margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.project-field{display:flex;flex-direction:column;gap:7px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#ffffff05}.project-field span{font-size:.78rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.project-field textarea{width:100%;min-height:92px;resize:vertical;border:1px solid var(--line);border-radius:10px;background:#090a16;color:var(--text);padding:12px;font:inherit;line-height:1.45;outline:none}.project-field textarea:focus{border-color:var(--cyan)}.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}.project-status{font-size:.8rem;color:var(--muted)}.project-btn{border:0;cursor:pointer;display:inline-flex;padding:13px 18px;border-radius:11px;background:linear-gradient(100deg,var(--gold),#ffe49a);color:#1d1200;font:900 .9rem "DM Sans";text-decoration:none}.project-btn.secondary{background:#ffffff0b;color:var(--text);border:1px solid var(--line)}@media(max-width:800px){.project-workbook{grid-template-columns:1fr}}@media print{body *{visibility:hidden!important}.final,.final *{visibility:visible!important}.final{position:absolute;inset:0 auto auto 0;width:100%;margin:0!important;border:0!important;background:#fff!important;color:#111!important;padding:22px!important}.final h2,.final p,.project-field span{color:#111!important}.checklist{display:none!important}.project-workbook{display:grid!important;grid-template-columns:1fr!important}.project-field{border:1px solid #bbb!important;background:#fff!important;break-inside:avoid}.project-field textarea{border:0!important;background:#fff!important;color:#111!important;min-height:70px;overflow:visible;resize:none}.project-actions,.progress-box{display:none!important}}</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head>
+<body>
+<header class="wrap top"><a class="brand" href="index.html">✦ SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></header>
+<main>
+<section class="wrap hero"><div><span class="tag">Profissões do Futuro · Curso 02</span><h1>Trabalhando com <span class="grad">Agentes de IA.</span></h1><p>Aprenda a desenhar, coordenar e supervisionar agentes que pesquisam, analisam, produzem e verificam tarefas — sempre com objetivos claros e uma pessoa no comando.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Projeto aplicado</span><span>Nível introdutório</span></div></div><img alt="Profissional coordenando uma equipe de agentes de inteligência artificial" class="hero-img" src="assets/agentes-de-ia.png.png"/></section>
+<div class="progress-box"><div class="wrap progress-inner"><span class="progress-label"><b id="done">0</b>/24 aulas</span><span class="bar"><i id="progress"></i></span><span class="progress-label" id="percent">0%</span></div></div>
+<section class="wrap intro"><div class="intro-grid"><article class="card"><h2>O que você vai aprender</h2><ul><li>Distinguir chatbot, automação e agente.</li><li>Transformar objetivos em funções e etapas.</li><li>Projetar equipes de agentes especializados.</li><li>Definir ferramentas, memória e limites.</li><li>Avaliar qualidade, custo, risco e resultado.</li></ul></article><article class="card"><h2>Seu projeto final</h2><p>Você desenvolverá o plano completo de uma <strong>Equipe de Agentes de IA</strong> para resolver um problema real, incluindo papéis, fluxo, ferramentas, pontos de aprovação humana e métricas.</p></article></div></section>
+<figure class="wrap visual"><img alt="Fluxo de pesquisa, análise, escrita, revisão e entrega realizado por agentes de IA" src="assets/agentes-fluxo-de-trabalho.png.png"/><figcaption>Agentes especializados entregam melhores resultados quando cada função, entrada e saída está clara.</figcaption></figure>
+<section class="wrap module"><div class="module-head"><span class="module-number">01</span><div><h2>O que é um agente de IA?</h2><p>Entenda a ideia antes de escolher ferramentas.</p></div></div><div class="lessons">
+<article class="lesson"><h3>1. Chatbot, automação ou agente?</h3><p>Chatbots respondem; automações seguem etapas fixas; agentes observam um objetivo, escolhem ações permitidas e ajustam o caminho.</p><div class="activity"><b>Prática:</b> classifique cinco exemplos do cotidiano.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>2. O ciclo perceber, decidir e agir</h3><p>Todo agente recebe contexto, avalia o estado, escolhe uma ação, usa uma ferramenta e observa o resultado.</p><div class="activity"><b>Prática:</b> desenhe o ciclo de uma tarefa simples.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>3. Autonomia tem níveis</h3><p>Um agente pode apenas sugerir, executar com aprovação ou agir dentro de limites previamente definidos.</p><div class="activity"><b>Prática:</b> determine o nível seguro para três tarefas.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>4. Onde agentes realmente ajudam</h3><p>Pesquisa repetitiva, triagem, organização, acompanhamento e produção estruturada são bons pontos de partida.</p><div class="activity"><b>Prática:</b> identifique uma dor frequente e mensurável.</div><label><input type="checkbox"/> Aula concluída</label></article>
+</div><div class="tool"><h3>Ferramenta — Ficha de oportunidade</h3><p>Problema, frequência, entrada, resultado esperado, risco e pessoa responsável.</p></div></section>
+<section class="wrap module"><div class="module-head"><span class="module-number">02</span><div><h2>Projetando um agente útil</h2><p>Um agente bom começa por uma função pequena e verificável.</p></div></div><div class="lessons">
+<article class="lesson"><h3>5. Objetivo e critério de sucesso</h3><p>Troque pedidos vagos por entregas observáveis, público definido, prazo e padrão de qualidade.</p><div class="activity"><b>Prática:</b> reescreva “ajude no marketing” como missão verificável.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>6. Papel, contexto e limites</h3><p>Defina quem o agente representa, o que precisa saber, o que pode fazer e quando deve parar.</p><div class="activity"><b>Prática:</b> crie um cartão de função do agente.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>7. Entradas e saídas estruturadas</h3><p>Campos claros reduzem ambiguidades. Determine informações obrigatórias e o formato exato da entrega.</p><div class="activity"><b>Prática:</b> monte um formulário de entrada e um modelo de saída.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>8. Instruções que resistem a erros</h3><p>Inclua sequência, exemplos, exceções, fontes aceitas e comportamento diante de informação insuficiente.</p><div class="activity"><b>Prática:</b> teste sua instrução com três casos difíceis.</div><label><input type="checkbox"/> Aula concluída</label></article>
+</div><div class="tool"><h3>Ferramenta — Cartão do agente</h3><p>Missão + entradas + ferramentas + regras + saída + condição de parada.</p></div></section>
+<section class="wrap module"><div class="module-head"><span class="module-number">03</span><div><h2>Equipes de agentes</h2><p>Divida problemas complexos sem criar uma multidão desnecessária.</p></div></div><div class="lessons">
+<article class="lesson"><h3>9. Especialização por função</h3><p>Pesquisa, análise, criação e revisão pedem critérios diferentes. Separe funções quando isso aumentar clareza.</p><div class="activity"><b>Prática:</b> divida um projeto em quatro especialidades.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>10. Coordenador e trabalhadores</h3><p>Um coordenador distribui tarefas, recebe entregas e decide o próximo passo sem executar tudo sozinho.</p><div class="activity"><b>Prática:</b> escreva as regras de encaminhamento.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>11. Passagem de contexto</h3><p>Cada agente precisa receber apenas o contexto necessário, junto com a origem e o estado atual do trabalho.</p><div class="activity"><b>Prática:</b> crie um pacote padrão de transferência.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>12. Paralelo ou sequência?</h3><p>Tarefas independentes podem acontecer ao mesmo tempo; tarefas dependentes precisam respeitar a ordem.</p><div class="activity"><b>Prática:</b> desenhe dependências e etapas paralelas.</div><label><input type="checkbox"/> Aula concluída</label></article>
+</div><div class="tool"><h3>Ferramenta — Mapa multiagente</h3><p>Agentes, responsabilidades, mensagens, dependências, aprovações e entrega final.</p></div></section>
+<figure class="wrap visual"><img alt="Pessoa supervisionando limites, memória, ferramentas e resultados de agentes de IA" src="assets/agentes-governanca-seguranca.png.png"/><figcaption>Autonomia responsável exige limites, registros, pontos de aprovação e capacidade de interromper o fluxo.</figcaption></figure>
+<section class="wrap module"><div class="module-head"><span class="module-number">04</span><div><h2>Ferramentas, memória e dados</h2><p>Dê acesso somente ao necessário e preserve a qualidade do contexto.</p></div></div><div class="lessons">
+<article class="lesson"><h3>13. Ferramentas são poderes</h3><p>Pesquisar, ler arquivos, enviar mensagens ou alterar dados são capacidades diferentes e devem ser autorizadas separadamente.</p><div class="activity"><b>Prática:</b> crie uma lista mínima de permissões.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>14. Memória de curto e longo prazo</h3><p>Contexto da tarefa é temporário; preferências e registros persistentes exigem critérios de retenção e correção.</p><div class="activity"><b>Prática:</b> defina o que lembrar, esquecer e revisar.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>15. Qualidade da fonte</h3><p>Agentes não transformam dados ruins em verdade. Origem, atualização e confiabilidade precisam acompanhar cada informação.</p><div class="activity"><b>Prática:</b> crie uma hierarquia de fontes.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>16. Privacidade desde o início</h3><p>Reduza dados pessoais, proteja segredos e impeça que informações sensíveis entrem em ferramentas inadequadas.</p><div class="activity"><b>Prática:</b> faça uma varredura de dados sensíveis.</div><label><input type="checkbox"/> Aula concluída</label></article>
+</div><div class="tool"><h3>Ferramenta — Matriz de acesso</h3><p>Agente × dado × ferramenta × permissão × responsável × prazo de retenção.</p></div></section>
+<section class="wrap module"><div class="module-head"><span class="module-number">05</span><div><h2>Supervisão, segurança e qualidade</h2><p>O profissional de agentes responde pelo sistema completo, não só pelo texto gerado.</p></div></div><div class="lessons">
+<article class="lesson"><h3>17. Aprovações humanas</h3><p>Ações financeiras, públicas, jurídicas, sensíveis ou irreversíveis precisam de revisão por pessoa autorizada.</p><div class="activity"><b>Prática:</b> marque cada etapa como livre, revisada ou proibida.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>18. Testes e casos extremos</h3><p>Teste entradas incompletas, contraditórias, maliciosas e fora do escopo antes de confiar no fluxo.</p><div class="activity"><b>Prática:</b> crie dez testes de resistência.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>19. Registros e explicabilidade</h3><p>Registre decisões, ferramentas usadas, fontes e aprovações para investigar erros e melhorar o sistema.</p><div class="activity"><b>Prática:</b> defina o diário mínimo de execução.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>20. Custo, tempo e qualidade</h3><p>Mais agentes nem sempre significam melhor resultado. Compare recursos consumidos com ganho real de qualidade.</p><div class="activity"><b>Prática:</b> estabeleça um orçamento por execução.</div><label><input type="checkbox"/> Aula concluída</label></article>
+</div><div class="tool"><h3>Ferramenta — Checklist antes de ligar</h3><p>Objetivo, limites, testes, responsáveis, parada de emergência, registro e revisão.</p></div></section>
+<section class="wrap module"><div class="module-head"><span class="module-number">06</span><div><h2>A profissão que está nascendo</h2><p>Transforme conhecimento em portfólio, serviço e oportunidade profissional.</p></div></div><div class="lessons">
+<article class="lesson"><h3>21. Funções e nomes emergentes</h3><p>Designer de agentes, orquestrador de fluxos, avaliador, especialista em automação e governança são partes de um campo em formação.</p><div class="activity"><b>Projeto:</b> escolha a função que mais combina com você.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>22. Portfólio sem cliente</h3><p>Documente um problema, arquitetura, testes, limites, demonstração e aprendizados em um estudo de caso honesto.</p><div class="activity"><b>Projeto:</b> monte a página do seu primeiro caso.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>23. Diagnóstico antes da venda</h3><p>Não venda “IA”. Investigue gargalo, volume, risco, processo atual e indicador que precisa melhorar.</p><div class="activity"><b>Projeto:</b> crie um roteiro de entrevista com dez perguntas.</div><label><input type="checkbox"/> Aula concluída</label></article>
+<article class="lesson"><h3>24. Plano de entrada em 30 dias</h3><p>Aprenda um conceito, construa um protótipo pequeno, teste com usuários e publique o estudo de caso.</p><div class="activity"><b>Projeto:</b> distribua quatro entregas ao longo de quatro semanas.</div><label><input type="checkbox"/> Aula concluída</label></article>
+</div><div class="tool"><h3>Ferramenta — Plano 1 × 1 × 30</h3><p>Um problema, uma equipe mínima de agentes e trinta dias para criar evidência profissional.</p></div></section>
+<section class="wrap final"><h2>Projeto final: sua equipe de agentes</h2><p>Apresente um sistema simples, útil e supervisionado. O valor está no problema resolvido com segurança — não na quantidade de agentes.</p><div class="checklist"><span>✓ Problema e métrica</span><span>✓ Papéis e fluxo</span><span>✓ Ferramentas e memória</span><span>✓ Limites e aprovações</span><span>✓ Testes e registros</span><span>✓ Estudo de caso</span></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Sparn</span><span>Dando asas às suas ideias.</span></div></footer>
+<script>const b=[...document.querySelectorAll('.lesson input')],k='sparn-agentes-ia-progresso',s=JSON.parse(localStorage.getItem(k)||'[]');b.forEach((x,i)=>x.checked=!!s[i]);function u(){const a=b.map(x=>x.checked),d=a.filter(Boolean).length,p=Math.round(d/b.length*100);localStorage.setItem(k,JSON.stringify(a));done.textContent=d;percent.textContent=p+'%';progress.style.width=p+'%'}b.forEach(x=>x.addEventListener('change',u));u();</script>
+<script id="sparn-project-js">(()=>{const box=document.querySelector('.final');if(!box||box.dataset.projectReady)return;box.dataset.projectReady='1';const title=(box.querySelector('h2')?.textContent||'Projeto final').replace(/^Projeto final:\s*/i,'').trim();const items=[...box.querySelectorAll('.checklist span')].map(x=>x.textContent.replace(/^[✓✔]\s*/,'').trim()).filter(Boolean);const key='sparn-projeto-'+location.pathname.split('/').pop(),saved=JSON.parse(localStorage.getItem(key)||'{}');const work=document.createElement('div');work.className='project-workbook';items.forEach((label,i)=>{const f=document.createElement('label');f.className='project-field';const s=document.createElement('span');s.textContent=label;const t=document.createElement('textarea');t.placeholder='Escreva aqui…';t.value=saved[i]||'';t.dataset.i=i;t.addEventListener('input',save);f.append(s,t);work.appendChild(f)});const actions=document.createElement('div');actions.className='project-actions';const saveBtn=document.createElement('button');saveBtn.type='button';saveBtn.className='project-btn secondary';saveBtn.textContent='Salvar respostas';const pdfBtn=document.createElement('button');pdfBtn.type='button';pdfBtn.className='project-btn';pdfBtn.textContent='Gerar / salvar em PDF →';const clearBtn=document.createElement('button');clearBtn.type='button';clearBtn.className='project-btn secondary';clearBtn.textContent='Limpar';const status=document.createElement('span');status.className='project-status';status.textContent='As respostas ficam salvas neste navegador.';function save(){const d={};work.querySelectorAll('textarea').forEach(t=>d[t.dataset.i]=t.value);localStorage.setItem(key,JSON.stringify(d));status.textContent='Salvo automaticamente ✓'}saveBtn.addEventListener('click',save);clearBtn.addEventListener('click',()=>{if(confirm('Limpar todas as respostas deste projeto?')){work.querySelectorAll('textarea').forEach(t=>t.value='');localStorage.removeItem(key);status.textContent='Respostas apagadas.'}});pdfBtn.addEventListener('click',()=>{save();window.print()});actions.append(saveBtn,pdfBtn,clearBtn,status);const old=box.querySelector('a.print');if(old)old.remove();box.append(work,actions)})();</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

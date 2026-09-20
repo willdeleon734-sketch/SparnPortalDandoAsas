@@ -1,0 +1,8 @@
+SPARN ACADEMIA
+1) Crie o projeto Supabase e rode supabase-schema.sql.
+2) Preencha sparn-config.js com Project URL + Publishable/Anon Key.
+3) Crie Edge Function create-pix. MERCADO_PAGO_ACCESS_TOKEN fica SOMENTE como secret no backend.
+4) create-pix autentica o aluno, cria o PIX e retorna qr_code, qr_code_base64 e payment_id.
+5) Configure webhook Mercado Pago em uma Edge Function. Ao confirmar o pagamento consultando a API do Mercado Pago, atualize profiles.subscription_status='active' e subscription_expires_at.
+6) Nunca aceite o navegador dizendo que pagou como prova.
+7) A trava adicionada aos HTMLs impede navegação casual, mas arquivos premium publicados como HTML público ainda podem ser baixados por URL. Para proteção forte, sirva o conteúdo premium somente após autenticação/autorização (ou por storage privado/endpoint autenticado).

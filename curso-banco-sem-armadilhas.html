@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Banco sem Armadilhas | Sparn</title><meta content="Curso completo sobre conta bancária, cartão, Pix, tarifas, limites, golpes e segurança digital." name="description"/><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');:root{--bg:#070713;--panel:#111225;--text:#fffaf5;--muted:#bbb7c8;--gold:#ffc85c;--coral:#ff766d;--cyan:#58e5f7;--green:#61e5aa;--line:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 0,rgba(88,229,247,.14),transparent 28%),radial-gradient(circle at 92% 8%,rgba(97,229,170,.13),transparent 30%),var(--bg);color:var(--text);font:16px/1.7 "DM Sans",sans-serif}.wrap{width:min(1120px,calc(100% - 34px));margin:auto}.top{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{color:#fff;text-decoration:none;font:700 1rem "Space Grotesk";letter-spacing:.17em}.back{color:var(--cyan);text-decoration:none;font-weight:800;font-size:.88rem}.hero{padding:58px 0 40px;display:grid;grid-template-columns:1fr .82fr;gap:46px;align-items:center}.tag{display:inline-flex;padding:7px 11px;border:1px solid rgba(88,229,247,.3);border-radius:99px;color:#c8f8ff;background:rgba(88,229,247,.07);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.hero h1{font:700 clamp(3rem,6vw,5.5rem)/.97 "Space Grotesk";letter-spacing:-.055em;margin:18px 0}.grad{background:linear-gradient(100deg,var(--cyan),#fff 48%,var(--green));color:transparent;background-clip:text}.hero p,.card p,.card li,.lesson p,.module-head p,.final p{color:var(--muted)}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.stats span{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);font-size:.83rem}.hero-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:1px solid rgba(88,229,247,.3);box-shadow:0 28px 80px #0008}.progress-box{position:sticky;top:0;z-index:5;background:rgba(7,7,19,.92);backdrop-filter:blur(16px);border-block:1px solid var(--line)}.progress-inner{height:58px;display:flex;align-items:center;gap:14px}.bar{height:7px;flex:1;background:#ffffff14;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold),var(--green));transition:.3s}.progress-label{font-size:.8rem;color:var(--muted);white-space:nowrap}.intro{padding:55px 0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card,.lesson{border:1px solid var(--line);background:linear-gradient(145deg,#ffffff0e,#ffffff05);border-radius:20px;padding:25px}.card h2,.lesson h3,.module h2,.final h2{font-family:"Space Grotesk"}.visual{margin:25px auto 65px}.visual img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:0 25px 75px #0006}.visual figcaption{color:var(--muted);font-size:.82rem;margin-top:10px}.module{padding:64px 0;border-top:1px solid var(--line)}.module-head{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;margin-bottom:27px}.module-number{font:700 3.7rem/1 "Space Grotesk";color:transparent;-webkit-text-stroke:1px rgba(88,229,247,.7)}.module h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;margin:0 0 8px}.module-head p{margin:0}.lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.lesson{border-radius:18px;padding:23px}.lesson h3{font-size:1.15rem;line-height:1.3;margin:0 0 10px}.lesson p{margin:0 0 14px}.lesson label{display:flex;align-items:center;gap:9px;color:#e1f5f7;font-size:.82rem;cursor:pointer}.lesson input{width:19px;height:19px;accent-color:var(--cyan)}.activity{margin:14px 0;padding:12px;border-radius:11px;background:rgba(88,229,247,.07);border-left:3px solid var(--cyan);font-size:.84rem;color:#deeff1}.tool{margin-top:28px;border:1px solid rgba(255,200,92,.28);background:rgba(255,200,92,.055);border-radius:18px;padding:23px}.tool h3{margin:0 0 8px;color:#ffe5a7}.tool p{margin:0;color:var(--muted)}.final{margin:65px auto;padding:34px;border:1px solid rgba(97,229,170,.38);border-radius:25px;background:radial-gradient(circle at 90% 15%,rgba(97,229,170,.18),transparent 35%),var(--panel)}.final h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:0 0 12px}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}.checklist span{padding:12px;border:1px solid var(--line);border-radius:11px;background:#ffffff06}.print{display:inline-flex;padding:13px 18px;border-radius:11px;background:linear-gradient(100deg,var(--cyan),#bff8ff);color:#07151a;text-decoration:none;font-weight:900}footer{border-top:1px solid var(--line);padding:30px 0;color:#8e899d}.foot{display:flex;justify-content:space-between;gap:20px;font-size:.85rem}@media(max-width:800px){.hero,.intro-grid,.lessons,.checklist{grid-template-columns:1fr}.module-head{grid-template-columns:1fr}.module-number{font-size:2.6rem}.foot{display:block}}
+</style><style id="sparn-project-ui">
+.project-workbook{margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.project-field{display:flex;flex-direction:column;gap:7px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#ffffff05}.project-field span{font-size:.78rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.project-field textarea{width:100%;min-height:92px;resize:vertical;border:1px solid var(--line);border-radius:10px;background:#090a16;color:var(--text);padding:12px;font:inherit;line-height:1.45;outline:none}.project-field textarea:focus{border-color:var(--cyan)}.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}.project-status{font-size:.8rem;color:var(--muted)}.project-btn{border:0;cursor:pointer;display:inline-flex;padding:13px 18px;border-radius:11px;background:linear-gradient(100deg,var(--gold),#ffe49a);color:#1d1200;font:900 .9rem "DM Sans";text-decoration:none}.project-btn.secondary{background:#ffffff0b;color:var(--text);border:1px solid var(--line)}@media(max-width:800px){.project-workbook{grid-template-columns:1fr}}@media print{body *{visibility:hidden!important}.final,.final *{visibility:visible!important}.final{position:absolute;inset:0 auto auto 0;width:100%;margin:0!important;border:0!important;background:#fff!important;color:#111!important;padding:22px!important}.final h2,.final p,.project-field span{color:#111!important}.checklist{display:none!important}.project-workbook{display:grid!important;grid-template-columns:1fr!important}.project-field{border:1px solid #bbb!important;background:#fff!important;break-inside:avoid}.project-field textarea{border:0!important;background:#fff!important;color:#111!important;min-height:70px;overflow:visible;resize:none}.project-actions,.progress-box{display:none!important}}</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header class="wrap top"><a class="brand" href="index.html">✦ SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
+<section class="wrap hero"><div><span class="tag">Educação Financeira · Curso 17</span><h1>Banco sem <span class="grad">Armadilhas.</span></h1><p>Entenda conta, cartão, Pix, limites e tarifas — e aprenda a reconhecer golpes antes que alguém use sua pressa contra você.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Kit de segurança</span><span>Nível introdutório</span></div></div><img alt="Jovem usando banco digital com segurança" class="hero-img" src="assets/banco-sem-armadilhas.png"/></section>
+<div class="progress-box"><div class="wrap progress-inner"><span class="progress-label"><b id="done">0</b>/24 aulas</span><span class="bar"><i id="progress"></i></span><span class="progress-label" id="percent">0%</span></div></div>
+<section class="wrap intro"><div class="intro-grid"><article class="card"><h2>O que você vai aprender</h2><ul><li>Entender o que sua conta faz e ler tarifas antes de aceitar.</li><li>Diferenciar débito, crédito, saldo e limite.</li><li>Usar Pix conferindo destinatário e contexto.</li><li>Reconhecer engenharia social, links falsos e falsa central.</li><li>Configurar hábitos de segurança para celular e contas.</li></ul></article><article class="card"><h2>Seu projeto final</h2><p>Você montará um <strong>Kit Banco sem Armadilhas</strong>: mapa das suas contas, regra para cartão e limites, checklist Pix, proteção do celular e protocolo para agir rapidamente diante de fraude.</p></article></div></section>
+<figure class="wrap visual"><img alt="Jovem verificando uma transação e reconhecendo sinais de golpe" src="assets/banco-sem-armadilhas-golpes.png"/><figcaption>Golpes costumam tentar substituir sua análise por urgência. Conferir antes de confirmar é uma habilidade financeira.</figcaption></figure>
+<div id="modules"></div>
+<figure class="wrap visual"><img alt="Jovem administrando sua vida bancária com segurança" src="assets/banco-sem-armadilhas-controle.png"/><figcaption>Banco é ferramenta. Quando você entende saldo, crédito, cobranças, limites e segurança, passa a controlar a ferramenta — e não o contrário.</figcaption></figure>
+<section class="wrap final"><h2>Projeto final: Kit Banco sem Armadilhas</h2><p>Faça uma auditoria simples da sua vida bancária e transforme o conteúdo em configurações e regras reais.</p><div class="checklist"><span>✓ Mapa de contas e tarifas</span><span>✓ Regra para cartão de crédito</span><span>✓ Limites revisados</span><span>✓ Checklist antes do Pix</span><span>✓ Celular e acessos protegidos</span><span>✓ Plano para suspeita de fraude</span></div></section></main>
+<footer><div class="wrap foot"><span>© 2026 Sparn</span><span>Dando asas às suas ideias.</span></div></footer><script>
+const data=[
+['01','Sua conta sem mistério','Entenda o que existe por trás da tela do aplicativo.','Mapa bancário — instituição + tipo de conta + serviços usados + tarifas + canais oficiais.',[['1. Conta é uma ferramenta','Uma conta permite guardar e movimentar recursos, fazer pagamentos e acessar serviços. Produtos disponíveis e condições variam entre instituições.','Liste todas as contas que você possui e para que usa cada uma.'],['2. Conta, saldo e extrato','Saldo mostra recursos disponíveis; extrato registra movimentações. Conferir o extrato ajuda a detectar cobranças, compras ou transferências desconhecidas.','Abra seu extrato e identifique cinco tipos de movimentação.'],['3. Leia antes de aceitar','Pacotes, cartões e serviços podem ter condições e cobranças diferentes. Consulte contrato e tabela atual da instituição antes de contratar.','Localize a tabela de tarifas da sua instituição.'],['4. Menos contas, mais clareza','Contas esquecidas podem dificultar acompanhamento. Centralizar ou atribuir uma função clara a cada conta reduz confusão.','Defina a função de cada conta que decidiu manter.']]],
+['02','Débito, crédito e limite','Pare de confundir dinheiro disponível com dinheiro emprestado.','Painel do cartão — fechamento + vencimento + limite + compras parceladas + fatura atual.',[['5. Débito usa seu saldo','No débito, o valor é retirado dos recursos disponíveis na conta vinculada. Isso facilita visualizar o impacto imediato da compra.','Compare uma compra de R$80 no débito com a mesma compra no crédito.'],['6. Crédito não aumenta sua renda','O limite do cartão representa capacidade de compra concedida pela instituição, não dinheiro que você ganhou.','Anote renda mensal e limite do cartão lado a lado.'],['7. Entenda a fatura','A fatura reúne compras e outras cobranças do período. Fechamento e vencimento são datas diferentes e precisam ser acompanhados.','Localize fechamento e vencimento no seu aplicativo.'],['8. Fatura parcial custa','Ao não pagar integralmente a fatura, o saldo não pago se transforma em operação de crédito sujeita a juros.','Crie uma regra pessoal para conferir a fatura antes do vencimento.']]],
+['03','Pix sem susto','Rapidez é útil; conferência continua sendo necessária.','Checklist Pix — valor + destinatário + instituição + motivo + confirmação.',[['9. Chaves são atalhos','A chave Pix facilita identificar a conta recebedora. Mesmo assim, a tela de confirmação deve ser lida antes de concluir.','Observe quais dados aparecem antes da confirmação de um Pix.'],['10. Confira o destinatário','Erro de digitação, QR Code adulterado ou pedido falso podem direcionar dinheiro à pessoa errada. Pare e confira os dados exibidos.','Crie o hábito de falar o nome do destinatário antes de confirmar.'],['11. Agendado não é concluído','Comprovante de agendamento e comprovante de transação concluída não significam a mesma coisa. Verifique o status no próprio aplicativo.','Encontre onde seu banco mostra Pix agendados e concluídos.'],['12. Recorrências também exigem atenção','Autorizações de pagamentos recorrentes devem ser acompanhadas. Revise empresas autorizadas, valores e necessidade do serviço.','Liste cobranças automáticas e recorrentes que você mantém.']]],
+['04','Tarifas, cobranças e assinaturas','Pequenos vazamentos também são dinheiro.','Auditoria de 90 dias — tarifa + assinatura + anuidade + saque + serviço pouco usado.',[['13. Tarifa não deve ser surpresa','Instituições divulgam tarifas de serviços e pacotes. Compare o que você paga com o que realmente utiliza.','Procure três cobranças bancárias nos últimos 90 dias.'],['14. Pacote precisa fazer sentido','Ter muitos serviços incluídos não é vantagem se você não os usa. Avalie necessidade, custo e alternativas oferecidas.','Marque quais serviços do seu pacote você realmente usa.'],['15. Assinaturas silenciosas','Streaming, aplicativos e testes gratuitos podem virar cobranças recorrentes que passam despercebidas.','Faça uma lista de todas as assinaturas atuais.'],['16. Notificação é ferramenta','Alertas de compras e movimentações ajudam a perceber rapidamente atividades desconhecidas.','Ative ou revise notificações importantes no aplicativo.']]],
+['05','Golpes e engenharia social','O alvo do golpe muitas vezes não é o sistema: é sua atenção.','Radar anti-golpe — urgência + segredo + link + pedido de código + mudança de destinatário.',[['17. Urgência é uma bandeira vermelha','Golpistas podem pressionar você a agir antes de pensar: “agora”, “última chance”, “sua conta será bloqueada”. Interrompa a conversa e verifique por outro canal.','Reescreva três mensagens urgentes transformando-as em perguntas de verificação.'],['18. Falsa central e falso funcionário','Alguém pode imitar banco ou suporte. Encerre o contato suspeito e procure você mesmo o canal oficial da instituição.','Salve os caminhos oficiais de atendimento que você utiliza.'],['19. Link, QR e código recebido','Não entregue senhas, códigos de autenticação ou acesso remoto a desconhecidos. Links e QR Codes devem ser tratados com cautela.','Crie sua regra: “recebi pressão + link = não clico”.'],['20. Se algo aconteceu, aja rápido','Diante de suspeita, use imediatamente os canais oficiais da instituição, proteja acessos e registre as informações necessárias. No Pix, contestações de fraude podem ser iniciadas pelo aplicativo conforme as regras aplicáveis.','Escreva seu protocolo de emergência em cinco passos.']]],
+['06','Seu sistema de segurança','Segurança não depende de memória perfeita: depende de camadas.','Plano 10 minutos — senha + autenticação + bloqueio + limites + alertas + canais oficiais.',[['21. Senhas fortes e diferentes','Reutilizar a mesma senha aumenta o impacto de um vazamento. Prefira credenciais únicas e recursos adicionais de autenticação disponíveis.','Identifique contas críticas que precisam de senha exclusiva.'],['22. Proteja o aparelho','Bloqueio de tela, biometria quando adequada, sistema atualizado e cuidado com acesso físico reduzem riscos ao aplicativo bancário.','Revise as configurações de bloqueio do celular.'],['23. Limites também protegem','Limites de transação devem combinar com sua rotina. Valores muito acima do necessário podem aumentar o impacto de um acesso indevido.','Compare seus limites atuais com seu uso normal.'],['24. Faça uma revisão mensal','Extrato, fatura, assinaturas, dispositivos conectados e alertas merecem uma revisão curta e recorrente.','Marque uma revisão bancária mensal de dez minutos.']]]];
+modules.innerHTML=data.map(([n,t,sub,tool,lessons])=>`<section class="wrap module"><div class="module-head"><span class="module-number">${n}</span><div><h2>${t}</h2><p>${sub}</p></div></div><div class="lessons">${lessons.map(([h,p,a])=>`<article class="lesson"><h3>${h}</h3><p>${p}</p><div class="activity"><b>Prática:</b> ${a}</div><label><input type="checkbox"> Aula concluída</label></article>`).join('')}</div><div class="tool"><h3>Ferramenta</h3><p>${tool}</p></div></section>`).join('');
+const b=[...document.querySelectorAll('.lesson input')],k='sparn-banco-sem-armadilhas-progresso',s=JSON.parse(localStorage.getItem(k)||'[]');b.forEach((x,i)=>x.checked=!!s[i]);function u(){const a=b.map(x=>x.checked),d=a.filter(Boolean).length,p=Math.round(d/b.length*100);localStorage.setItem(k,JSON.stringify(a));done.textContent=d;percent.textContent=p+'%';progress.style.width=p+'%'}b.forEach(x=>x.addEventListener('change',u));u();
+</script><script id="sparn-project-js">(()=>{const box=document.querySelector('.final');if(!box||box.dataset.projectReady)return;box.dataset.projectReady='1';const title=(box.querySelector('h2')?.textContent||'Projeto final').replace(/^Projeto final:\s*/i,'').trim();const items=[...box.querySelectorAll('.checklist span')].map(x=>x.textContent.replace(/^[✓✔]\s*/,'').trim()).filter(Boolean);const key='sparn-projeto-'+location.pathname.split('/').pop(),saved=JSON.parse(localStorage.getItem(key)||'{}');const work=document.createElement('div');work.className='project-workbook';items.forEach((label,i)=>{const f=document.createElement('label');f.className='project-field';const s=document.createElement('span');s.textContent=label;const t=document.createElement('textarea');t.placeholder='Escreva aqui…';t.value=saved[i]||'';t.dataset.i=i;t.addEventListener('input',save);f.append(s,t);work.appendChild(f)});const actions=document.createElement('div');actions.className='project-actions';const saveBtn=document.createElement('button');saveBtn.type='button';saveBtn.className='project-btn secondary';saveBtn.textContent='Salvar respostas';const pdfBtn=document.createElement('button');pdfBtn.type='button';pdfBtn.className='project-btn';pdfBtn.textContent='Gerar / salvar em PDF →';const clearBtn=document.createElement('button');clearBtn.type='button';clearBtn.className='project-btn secondary';clearBtn.textContent='Limpar';const status=document.createElement('span');status.className='project-status';status.textContent='As respostas ficam salvas neste navegador.';function save(){const d={};work.querySelectorAll('textarea').forEach(t=>d[t.dataset.i]=t.value);localStorage.setItem(key,JSON.stringify(d));status.textContent='Salvo automaticamente ✓'}saveBtn.addEventListener('click',save);clearBtn.addEventListener('click',()=>{if(confirm('Limpar todas as respostas deste projeto?')){work.querySelectorAll('textarea').forEach(t=>t.value='');localStorage.removeItem(key);status.textContent='Respostas apagadas.'}});pdfBtn.addEventListener('click',()=>{save();window.print()});actions.append(saveBtn,pdfBtn,clearBtn,status);const old=box.querySelector('a.print');if(old)old.remove();box.append(work,actions)})();</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

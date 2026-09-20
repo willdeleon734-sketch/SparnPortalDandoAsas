@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Produção Cultural na Prática — Sparn</title><meta content="Curso completo de produção cultural, do planejamento à entrega." name="description"/><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');:root{--bg:#050713;--p:#0e1428;--w:#f7fbff;--m:#9da9c2;--c:#43e7ff;--u:#9c6cff;--k:#ff5fc7;--g:#54e2ae;--l:rgba(255,255,255,.1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0,rgba(67,231,255,.13),transparent 27%),radial-gradient(circle at 92% 11%,rgba(156,108,255,.17),transparent 29%),var(--bg);color:var(--w);font:16px/1.7 "DM Sans",sans-serif}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}header{position:sticky;top:0;z-index:9;background:rgba(5,7,19,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--l)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{color:#fff;text-decoration:none;font:800 1rem "Space Grotesk";letter-spacing:.16em}.back{color:var(--c);text-decoration:none;font-weight:800;font-size:.85rem}.hero{padding:62px 0 42px;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center}.eye{color:#baf7ff;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.72rem}h1,h2,h3{font-family:"Space Grotesk"}h1{font-size:clamp(3rem,7vw,6rem);line-height:.96;letter-spacing:-.055em;margin:12px 0}.grad{background:linear-gradient(100deg,var(--c),#fff 48%,var(--k));color:transparent;background-clip:text}.hero p,.mh p{color:var(--m)}.stats{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.stat{padding:8px 11px;border:1px solid var(--l);border-radius:99px;font-size:.78rem}.prog{padding:24px;border:1px solid rgba(67,231,255,.22);border-radius:22px;background:linear-gradient(145deg,#111a34,#080d1d)}.bar{height:10px;border-radius:99px;background:#050815;overflow:hidden;margin:13px 0}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--c),var(--u),var(--k))}.prog small{color:var(--m)}.notice{padding:16px 18px;border-left:3px solid var(--k);background:rgba(255,95,199,.055);border-radius:0 13px 13px 0;margin-bottom:36px}.layout{display:grid;grid-template-columns:265px 1fr;gap:28px;align-items:start}.side{position:sticky;top:88px;padding:17px;border:1px solid var(--l);border-radius:17px;background:rgba(14,20,40,.86)}.side b,.side a{display:block}.side a{color:var(--m);text-decoration:none;font-size:.81rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}.mod{margin-bottom:32px;scroll-margin-top:88px}.mh{padding:23px;border:1px solid var(--l);border-radius:19px 19px 0 0;background:linear-gradient(135deg,rgba(67,231,255,.08),rgba(156,108,255,.09))}.mh span{color:var(--c);font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}.mh h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.1;margin:6px 0}.mh p{margin:0}.lesson{border:1px solid var(--l);border-top:0;background:rgba(14,20,40,.72)}.lesson:last-child{border-radius:0 0 19px 19px}.lesson summary{list-style:none;cursor:pointer;padding:18px 21px;font-family:"Space Grotesk";font-weight:700;display:flex;justify-content:space-between}.lesson summary::-webkit-details-marker{display:none}.lesson summary:after{content:"+";color:var(--c)}.lesson[open] summary:after{content:"−"}.ct{padding:0 21px 23px;color:#dce5f3}.box{padding:14px 16px;border-radius:12px;margin:16px 0;background:rgba(67,231,255,.055);border:1px solid rgba(67,231,255,.15)}.do{background:rgba(84,226,174,.055);border-color:rgba(84,226,174,.17)}.done{display:inline-flex;gap:8px;align-items:center;color:#c8fbed;font-size:.84rem;font-weight:700}.done input{width:18px;height:18px;accent-color:var(--g)}.kit,.final{margin:50px 0;padding:27px;border:1px solid var(--l);border-radius:21px;background:var(--p)}.cards{display:grid;grid-template-columns:1fr 1fr;gap:11px}.card{padding:15px;border:1px solid var(--l);border-radius:12px;background:rgba(255,255,255,.025)}.card b{color:var(--c)}.quiz{padding:15px 0;border-bottom:1px solid var(--l)}.quiz p{font-weight:800}.quiz label{display:block;margin:6px 0}button{border:0;border-radius:10px;background:var(--c);color:#04101b;padding:12px 17px;font-weight:900;margin-top:16px;cursor:pointer}.res{margin-top:14px;font-weight:800}.refs{color:var(--m);font-size:.85rem;padding-bottom:50px}.refs a{color:var(--c)}footer{padding:25px 0;border-top:1px solid var(--l);color:#7f8ca4;font-size:.82rem}@media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.side{position:static}.cards{grid-template-columns:1fr}}
+</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header><div class="wrap nav"><a class="brand" href="index.html">SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></div></header><main class="wrap"><section class="hero"><div><div class="eye">Curso original Sparn · Cultura + Gestão</div><h1>Produção Cultural <span class="grad">na Prática</span></h1><p>Transforme uma proposta cultural em uma operação viável, acessível, segura e bem documentada — do primeiro briefing ao relatório final.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">10 horas</span><span class="stat">Modelos de produção</span><span class="stat">Plano executivo</span></div></div><aside class="prog"><b>Seu progresso</b><div class="bar"><div class="fill" id="fill"></div></div><small id="pt">0 de 24 aulas concluídas</small></aside></section><div class="notice"><b>Princípio do curso:</b> produzir cultura é coordenar pessoas, recursos, tempo, direitos e cuidado para que uma intenção artística aconteça com qualidade no mundo real.</div>
+<figure style="margin:0 0 36px;border:1px solid rgba(156,108,255,.25);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Equipe jovem coordenando a produção de um evento cultural" src="assets/producao-cultural.png" style="display:block"/></figure>
+<div class="layout"><nav class="side"><b>Conteúdo</b><a href="#m1">1. Fundamentos</a><a href="#m2">2. Pré-produção</a><a href="#m3">3. Equipe e fornecedores</a><a href="#m4">4. Infraestrutura</a><a href="#m5">5. Acessibilidade</a><a href="#m6">6. Segurança e operação</a><a href="#m7">7. Comunicação e público</a><a href="#m8">8. Pós-produção</a><a href="#kit">Kit de produção</a><a href="#final">Avaliação</a></nav><div>
+<section class="mod" id="m1"><div class="mh"><span>Módulo 1</span><h2>Fundamentos da produção cultural</h2><p>Entenda a função que conecta visão artística e realização.</p></div>
+<details class="lesson"><summary>Aula 1 — O trabalho da produção</summary><div class="ct"><p>Produção traduz objetivos em escopo, responsabilidades, recursos, decisões e entregas. Ela antecipa necessidades, cria acordos e mantém informação confiável circulando entre direção, equipe, público e parceiros.</p><div class="box do"><b>Prática:</b> descreva uma ação cultural em uma página: propósito, público, formato, data, local, capacidade, duração e resultado esperado.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 2 — Ciclo de um projeto</summary><div class="ct"><p>O ciclo reúne concepção, viabilidade, pré-produção, montagem, realização, desmontagem, pagamentos, avaliação e memória. Decisões tardias custam mais; encerramentos mal feitos comprometem a próxima edição.</p><div class="box"><b>Mapa:</b> fase | decisão-chave | responsável | entrega | condição de avanço.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 3 — Escopo e critérios de sucesso</summary><div class="ct"><p>Defina o que será e o que não será entregue. Combine qualidade artística, público, acessibilidade, prazo, orçamento, segurança e impacto. Sucesso não pode ser medido apenas por lotação.</p><div class="box do"><b>Exercício:</b> formule cinco critérios mensuráveis e três limites inegociáveis.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m2"><div class="mh"><span>Módulo 2</span><h2>Pré-produção e planejamento</h2><p>Organize o trabalho antes que a urgência organize por você.</p></div>
+<details class="lesson"><summary>Aula 4 — Estrutura analítica do projeto</summary><div class="ct"><p>Divida a entrega em frentes: artística, técnica, logística, público, comunicação, administrativo-financeira, acessibilidade e segurança. Quebre cada frente em tarefas pequenas o bastante para atribuir e acompanhar.</p><div class="box"><b>Regra:</b> toda tarefa precisa de ação, responsável, prazo, dependência e evidência de conclusão.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 5 — Cronograma reverso</summary><div class="ct"><p>Comece pela data da realização e volte marcando entregas, aprovações, contratações, compras, divulgação e ensaios. Inclua folgas para atrasos e datas-limite de decisão.</p><div class="box do"><b>Prática:</b> identifique o caminho crítico — tarefas cujo atraso empurra a entrega final.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 6 — Orçamento de produção</summary><div class="ct"><p>Organize quantidades, unidades, valores, memória de cálculo, impostos, taxas e fontes. Inclua contingência compatível com o risco. Atualize previsto, contratado, pago e saldo.</p><div class="box"><b>Controle:</b> item | fornecedor | quantidade | unitário | total | fonte | status | vencimento.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m3"><div class="mh"><span>Módulo 3</span><h2>Equipe, contratos e fornecedores</h2><p>Monte uma rede capaz, diversa e alinhada.</p></div>
+<details class="lesson"><summary>Aula 7 — Organograma e comunicação</summary><div class="ct"><p>Defina coordenação, responsáveis por frente, canais, reuniões e escalonamento de decisões. A equipe precisa saber quem decide, quem executa, quem deve ser consultado e quem só precisa ser informado.</p><div class="box do"><b>Prática:</b> crie uma matriz RACI para dez entregas críticas.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 8 — Briefing e contratação</summary><div class="ct"><p>Peça propostas comparáveis com escopo, quantidade, prazo, local, condições técnicas e responsabilidades. Avalie capacidade, referências, regularidade, atendimento e custo total — não apenas o menor preço.</p><div class="box"><b>Contrato:</b> entrega | padrão | prazo | pagamento | direitos | cancelamento | responsabilidade.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 9 — Reuniões e documentação</summary><div class="ct"><p>Reuniões devem gerar decisões, responsáveis e prazos. Centralize versões, nomeie arquivos de modo consistente e controle documentos pendentes. Informação espalhada em mensagens vira risco.</p><div class="box do"><b>Ata enxuta:</b> decisão | ação | responsável | prazo | bloqueio.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m4"><div class="mh"><span>Módulo 4</span><h2>Local, técnica e logística</h2><p>Faça o espaço servir à obra, à equipe e ao público.</p></div>
+<details class="lesson"><summary>Aula 10 — Visita técnica</summary><div class="ct"><p>Verifique acessos, capacidade, circulação, energia, internet, acústica, carga e descarga, camarins, banheiros, rotas de fuga, vizinhança, horários e restrições. Registre medidas e fotos autorizadas.</p><div class="box do"><b>Entrega:</b> planta ou croqui com palco, público, técnica, apoio, acessibilidade e emergência.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 11 — Rider e mapa técnico</summary><div class="ct"><p>Consolide necessidades de som, luz, vídeo, energia, estruturas, instrumentos, comunicação e operação. Diferencie essencial, recomendado e adaptável; valide compatibilidade entre todos os sistemas.</p><div class="box"><b>Checklist:</b> equipamento | especificação | quantidade | origem | operador | teste.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 12 — Transporte, hospedagem e alimentação</summary><div class="ct"><p>Planeje pessoas, equipamentos, itinerários, margens de tempo, bagagens, restrições alimentares, descanso e contatos. Confirme reservas e mantenha vouchers e listas acessíveis à equipe responsável.</p><div class="box do"><b>Mapa de movimento:</b> quem/o quê | origem | destino | horário | responsável | plano B.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m5"><div class="mh"><span>Módulo 5</span><h2>Acessibilidade e acolhimento</h2><p>Planeje participação digna desde o início.</p></div>
+<details class="lesson"><summary>Aula 13 — Acessibilidade integrada</summary><div class="ct"><p>Considere dimensões arquitetônica, comunicacional, atitudinal, programática e digital. Consulte pessoas com deficiência e profissionais qualificados; recurso previsto tarde pode ser inviável ou inadequado.</p><div class="box"><b>Plano:</b> barreira | público afetado | solução | responsável | teste | comunicação.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 14 — Serviços acessíveis</summary><div class="ct"><p>Planeje Libras, audiodescrição, legendas, materiais acessíveis, assentos reservados, circulação, acolhimento e informações antecipadas conforme o projeto. Teste equipamentos e tempos de cena.</p><div class="box do"><b>Prática:</b> percorra inscrição, chegada, experiência e saída identificando barreiras em cada etapa.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 15 — Hospitalidade e código de conduta</summary><div class="ct"><p>Treine equipe para orientar sem infantilizar. Defina política contra assédio e discriminação, canais de ajuda, protocolo para crianças e pessoas vulneráveis e procedimento para achados e perdidos.</p><div class="box"><b>Acolher é informar:</b> horários, duração, conteúdos sensíveis, acessos, serviços e contatos devem estar claros.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m6"><div class="mh"><span>Módulo 6</span><h2>Segurança e operação</h2><p>Prepare decisões para quando o tempo for curto.</p></div>
+<details class="lesson"><summary>Aula 16 — Riscos e contingências</summary><div class="ct"><p>Liste riscos técnicos, climáticos, sanitários, financeiros, humanos, reputacionais e de segurança. Classifique probabilidade e impacto; defina prevenção, gatilho, resposta e autoridade para decidir.</p><div class="box do"><b>Prática:</b> simule queda de energia, chuva, atraso artístico, superlotação e emergência médica.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 17 — Licenças e conformidade</summary><div class="ct"><p>Exigências variam por atividade e município. Verifique uso do espaço, segurança, direitos autorais, alimentos, ruído, trabalho, seguros, autorizações e proteção de dados com órgãos e profissionais competentes.</p><div class="box"><b>Controle:</b> documento | órgão | responsável | protocolo | validade | condição.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 18 — Roteiro operacional</summary><div class="ct"><p>Crie uma ordem do dia minuto a minuto com chegada, montagem, testes, abertura, entradas, intervalos, encerramento e desmontagem. Inclua contatos, posições, comunicação e pontos de decisão.</p><div class="box do"><b>Ferramenta:</b> horário | ação | local | responsável | equipe | recurso | observação.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m7"><div class="mh"><span>Módulo 7</span><h2>Comunicação, bilheteria e público</h2><p>Alinhe a promessa divulgada à experiência entregue.</p></div>
+<details class="lesson"><summary>Aula 19 — Informações de serviço</summary><div class="ct"><p>Garanta consistência de data, local, horário, duração, preço, classificação, acessibilidade, transporte, política de entrada e contato. Mudanças precisam de uma fonte oficial e comunicação rápida.</p><div class="box"><b>Documento mestre:</b> uma ficha validada alimenta site, redes, imprensa, equipe e sinalização.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 20 — Inscrição, credenciamento e entrada</summary><div class="ct"><p>Dimensione capacidade, filas, conferência, cortesias, pagamentos, pulseiras, proteção de dados e atendimento a exceções. Teste o fluxo no volume de pico, não apenas vazio.</p><div class="box do"><b>Indicadores:</b> tempo de espera | taxa de comparecimento | ocupação | ocorrências | satisfação.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 21 — Registro e uso de imagem</summary><div class="ct"><p>Defina finalidade, equipe, áreas, lista de momentos, créditos, armazenamento e autorização. Proteja quem não deseja aparecer e redobre cuidados com crianças, bastidores e situações sensíveis.</p><div class="box"><b>Shot list:</b> momento | enquadramento | prioridade | autorização | destino.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m8"><div class="mh"><span>Módulo 8</span><h2>Pós-produção e legado</h2><p>Feche o projeto com a mesma precisão usada para abri-lo.</p></div>
+<details class="lesson"><summary>Aula 22 — Desmontagem e encerramento</summary><div class="ct"><p>Planeje devoluções, conferência de patrimônio, limpeza, transporte, horas extras, pagamentos, documentos fiscais e baixa de pendências. Confirme que o espaço foi entregue conforme acordado.</p><div class="box do"><b>Checklist final:</b> pessoas | equipamentos | espaço | documentos | pagamentos | incidentes.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 23 — Avaliação, relatório e memória</summary><div class="ct"><p>Compare metas e resultados, escute equipe, público e parceiros, registre ocorrências e explique desvios. Organize fotos, autorizações, clipping, listas, indicadores e aprendizados para comprovação e continuidade.</p><div class="box"><b>Reunião de balanço:</b> manter | parar | corrigir | testar | responsável pelo próximo passo.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 24 — Projeto final: plano executivo</summary><div class="ct"><p>Escolha uma ação real e reúna briefing, escopo, organograma, cronograma, orçamento, contratações, planta, logística, acessibilidade, segurança, operação, comunicação e pós-produção.</p><div class="box do"><b>Entrega:</b> caderno executivo completo + apresentação de 10 minutos para equipe e parceiros.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="kit" id="kit"><h2>Kit de produção</h2><div class="cards"><div class="card"><b>Briefing mestre</b><p>Propósito | público | formato | data | local | capacidade | duração | limites.</p></div><div class="card"><b>Cronograma</b><p>Tarefa | responsável | início | prazo | dependência | status | evidência.</p></div><div class="card"><b>Orçamento</b><p>Item | memória de cálculo | previsto | contratado | pago | saldo | fonte.</p></div><div class="card"><b>Mapa de risco</b><p>Risco | probabilidade | impacto | prevenção | gatilho | resposta | decisão.</p></div><div class="card"><b>Ordem do dia</b><p>Horário | ação | local | equipe | recurso | comunicação | plano B.</p></div><div class="card"><b>Relatório</b><p>Meta | resultado | evidência | desvio | aprendizado | recomendação.</p></div></div></section>
+<section class="final" id="final"><h2>Avaliação final</h2><p>Aproveitamento recomendado: 70%.</p>
+<div class="quiz" data-a="b"><p>1. Produção cultural conecta:</p><label><input name="q1" type="radio" value="a"/> Apenas fornecedores</label><label><input name="q1" type="radio" value="b"/> Intenção artística, pessoas, recursos e entrega</label><label><input name="q1" type="radio" value="c"/> Somente orçamento</label></div>
+<div class="quiz" data-a="c"><p>2. Uma tarefa bem definida tem:</p><label><input name="q2" type="radio" value="a"/> Só um título</label><label><input name="q2" type="radio" value="b"/> Apenas prazo</label><label><input name="q2" type="radio" value="c"/> Ação, responsável, prazo, dependência e evidência</label></div>
+<div class="quiz" data-a="a"><p>3. Cronograma reverso começa:</p><label><input name="q3" type="radio" value="a"/> Pela data final e retorna às entregas anteriores</label><label><input name="q3" type="radio" value="b"/> Sem data</label><label><input name="q3" type="radio" value="c"/> Pela desmontagem apenas</label></div>
+<div class="quiz" data-a="b"><p>4. Na escolha de fornecedor, avalie:</p><label><input name="q4" type="radio" value="a"/> Só o menor preço</label><label><input name="q4" type="radio" value="b"/> Capacidade, referências, regularidade e custo total</label><label><input name="q4" type="radio" value="c"/> Apenas amizade</label></div>
+<div class="quiz" data-a="c"><p>5. Acessibilidade deve entrar:</p><label><input name="q5" type="radio" value="a"/> Após a divulgação</label><label><input name="q5" type="radio" value="b"/> No dia do evento</label><label><input name="q5" type="radio" value="c"/> Desde a concepção e o orçamento</label></div>
+<div class="quiz" data-a="a"><p>6. Um plano de risco inclui:</p><label><input name="q6" type="radio" value="a"/> Prevenção, gatilho, resposta e autoridade</label><label><input name="q6" type="radio" value="b"/> Só uma lista de medos</label><label><input name="q6" type="radio" value="c"/> Apenas seguro</label></div>
+<div class="quiz" data-a="b"><p>7. Licenças e exigências:</p><label><input name="q7" type="radio" value="a"/> São iguais em todo lugar</label><label><input name="q7" type="radio" value="b"/> Dependem da atividade e do município</label><label><input name="q7" type="radio" value="c"/> Nunca precisam ser verificadas</label></div>
+<div class="quiz" data-a="c"><p>8. A ordem do dia serve para:</p><label><input name="q8" type="radio" value="a"/> Substituir contratos</label><label><input name="q8" type="radio" value="b"/> Fazer divulgação</label><label><input name="q8" type="radio" value="c"/> Coordenar operação, horários e responsáveis</label></div>
+<div class="quiz" data-a="a"><p>9. Registro de imagem exige:</p><label><input name="q9" type="radio" value="a"/> Finalidade, autorização, créditos e proteção</label><label><input name="q9" type="radio" value="b"/> Publicação automática</label><label><input name="q9" type="radio" value="c"/> Nenhum cuidado</label></div>
+<div class="quiz" data-a="b"><p>10. O projeto termina quando:</p><label><input name="q10" type="radio" value="a"/> O público vai embora</label><label><input name="q10" type="radio" value="b"/> Desmontagem, pagamentos, avaliação e memória são concluídos</label><label><input name="q10" type="radio" value="c"/> A apresentação começa</label></div>
+<button id="grade">Corrigir avaliação</button><div class="res" id="result"></div></section>
+<section class="refs"><b>Referências para atualização contínua:</b> <a href="https://www.gov.br/cultura/" rel="noopener" target="_blank">Ministério da Cultura</a> · <a href="https://www.gov.br/iphan/" rel="noopener" target="_blank">IPHAN</a> · <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-com-deficiencia" rel="noopener" target="_blank">Direitos da Pessoa com Deficiência</a>. Licenças e requisitos variam por atividade e município; confirme sempre com órgãos locais e profissionais habilitados.</section>
+</div></div></main><footer><div class="wrap">Sparn — Dando asas às suas ideias.</div></footer><script>const bs=[...document.querySelectorAll('[data-l]')],key='sparn-producao-cultural';function u(){const n=bs.filter(x=>x.checked).length;fill.style.width=n/24*100+'%';pt.textContent=n+' de 24 aulas concluídas';localStorage.setItem(key,JSON.stringify(bs.map(x=>x.checked)))}try{const s=JSON.parse(localStorage.getItem(key)||'[]');bs.forEach((x,i)=>x.checked=!!s[i])}catch(e){}bs.forEach(x=>x.onchange=u);u();grade.onclick=()=>{let n=0;document.querySelectorAll('.quiz').forEach(q=>{const c=q.querySelector('input:checked');if(c&&c.value===q.dataset.a)n++});result.textContent=n+' de 10 — '+n*10+'%. '+(n>=7?'Aprovado! Agora finalize o plano executivo do seu projeto real.':'Revise as aulas e tente novamente.')}</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

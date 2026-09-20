@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Artista Visível — Sparn</title><meta content="Curso completo de marketing digital para artistas e projetos culturais." name="description"/><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');:root{--bg:#050713;--p:#0e1428;--w:#f7fbff;--m:#9da9c2;--c:#43e7ff;--u:#9c6cff;--k:#ff5fc7;--g:#54e2ae;--l:rgba(255,255,255,.1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0,rgba(67,231,255,.13),transparent 27%),radial-gradient(circle at 92% 11%,rgba(255,95,199,.15),transparent 29%),var(--bg);color:var(--w);font:16px/1.7 "DM Sans",sans-serif}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}header{position:sticky;top:0;z-index:9;background:rgba(5,7,19,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--l)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{color:#fff;text-decoration:none;font:800 1rem "Space Grotesk";letter-spacing:.16em}.back{color:var(--c);text-decoration:none;font-weight:800;font-size:.85rem}.hero{padding:62px 0 42px;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center}.eye{color:#baf7ff;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.72rem}h1,h2,h3{font-family:"Space Grotesk"}h1{font-size:clamp(3rem,7vw,6rem);line-height:.96;letter-spacing:-.055em;margin:12px 0}.grad{background:linear-gradient(100deg,var(--c),#fff 48%,var(--k));color:transparent;background-clip:text}.hero p,.mh p{color:var(--m)}.stats{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.stat{padding:8px 11px;border:1px solid var(--l);border-radius:99px;font-size:.78rem}.prog{padding:24px;border:1px solid rgba(67,231,255,.22);border-radius:22px;background:linear-gradient(145deg,#111a34,#080d1d)}.bar{height:10px;border-radius:99px;background:#050815;overflow:hidden;margin:13px 0}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--c),var(--u),var(--k))}.prog small{color:var(--m)}.notice{padding:16px 18px;border-left:3px solid var(--k);background:rgba(255,95,199,.055);border-radius:0 13px 13px 0;margin-bottom:36px}.layout{display:grid;grid-template-columns:265px 1fr;gap:28px;align-items:start}.side{position:sticky;top:88px;padding:17px;border:1px solid var(--l);border-radius:17px;background:rgba(14,20,40,.86)}.side b,.side a{display:block}.side a{color:var(--m);text-decoration:none;font-size:.81rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}.mod{margin-bottom:32px;scroll-margin-top:88px}.mh{padding:23px;border:1px solid var(--l);border-radius:19px 19px 0 0;background:linear-gradient(135deg,rgba(67,231,255,.08),rgba(156,108,255,.09))}.mh span{color:var(--c);font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}.mh h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.1;margin:6px 0}.mh p{margin:0}.lesson{border:1px solid var(--l);border-top:0;background:rgba(14,20,40,.72)}.lesson:last-child{border-radius:0 0 19px 19px}.lesson summary{list-style:none;cursor:pointer;padding:18px 21px;font-family:"Space Grotesk";font-weight:700;display:flex;justify-content:space-between}.lesson summary::-webkit-details-marker{display:none}.lesson summary:after{content:"+";color:var(--c)}.lesson[open] summary:after{content:"−"}.ct{padding:0 21px 23px;color:#dce5f3}.box{padding:14px 16px;border-radius:12px;margin:16px 0;background:rgba(67,231,255,.055);border:1px solid rgba(67,231,255,.15)}.do{background:rgba(84,226,174,.055);border-color:rgba(84,226,174,.17)}.done{display:inline-flex;gap:8px;align-items:center;color:#c8fbed;font-size:.84rem;font-weight:700}.done input{width:18px;height:18px;accent-color:var(--g)}.kit,.final{margin:50px 0;padding:27px;border:1px solid var(--l);border-radius:21px;background:var(--p)}.cards{display:grid;grid-template-columns:1fr 1fr;gap:11px}.card{padding:15px;border:1px solid var(--l);border-radius:12px;background:rgba(255,255,255,.025)}.card b{color:var(--c)}.quiz{padding:15px 0;border-bottom:1px solid var(--l)}.quiz p{font-weight:800}.quiz label{display:block;margin:6px 0}button{border:0;border-radius:10px;background:var(--c);color:#04101b;padding:12px 17px;font-weight:900;margin-top:16px;cursor:pointer}.res{margin-top:14px;font-weight:800}.refs{color:var(--m);font-size:.85rem;padding-bottom:50px}.refs a{color:var(--c)}footer{padding:25px 0;border-top:1px solid var(--l);color:#7f8ca4;font-size:.82rem}@media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.side{position:static}.cards{grid-template-columns:1fr}}
+</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header><div class="wrap nav"><a class="brand" href="index.html">SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></div></header><main class="wrap"><section class="hero"><div><div class="eye">Curso original Sparn · Cultura + Comunicação</div><h1>Artista <span class="grad">Visível</span></h1><p>Marketing digital para projetos culturais: transforme presença online em relacionamento, público e oportunidades sem diluir sua identidade.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">9 horas</span><span class="stat">Modelos práticos</span><span class="stat">Plano de 30 dias</span></div></div><aside class="prog"><b>Seu progresso</b><div class="bar"><div class="fill" id="fill"></div></div><small id="pt">0 de 24 aulas concluídas</small></aside></section><div class="notice"><b>Princípio do curso:</b> visibilidade não é aparecer o tempo todo. É ser reconhecido pelas pessoas certas, com uma mensagem coerente e um caminho claro para a ação.</div>
+<figure style="margin:0 0 36px;border:1px solid rgba(255,95,199,.24);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Artista jovem criando conexão com sua comunidade" src="assets/artista-visivel.png" style="display:block"/></figure>
+<div class="layout"><nav class="side"><b>Conteúdo</b><a href="#m1">1. Posicionamento</a><a href="#m2">2. Público</a><a href="#m3">3. Identidade e narrativa</a><a href="#m4">4. Sistema de conteúdo</a><a href="#m5">5. Plataformas</a><a href="#m6">6. Campanhas</a><a href="#m7">7. Comunidade</a><a href="#m8">8. Métricas e ética</a><a href="#kit">Kit de trabalho</a><a href="#final">Avaliação</a></nav><div>
+<section class="mod" id="m1"><div class="mh"><span>Módulo 1</span><h2>Posicionamento cultural</h2><p>Defina o lugar que seu trabalho deseja ocupar na mente e na vida do público.</p></div>
+<details class="lesson"><summary>Aula 1 — Marketing como construção de relação</summary><div class="ct"><p>Marketing cultural conecta obra, contexto e pessoas. Não começa no post: começa na clareza sobre o valor do projeto e termina numa relação que pode continuar depois do evento.</p><div class="box do"><b>Prática:</b> complete: “Criamos ___ para ___ porque acreditamos que ___”. Depois retire toda palavra genérica.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 2 — Território, diferença e promessa</summary><div class="ct"><p>Mapeie linguagem artística, tema, território, experiência oferecida e transformação desejada. Diferenciação não é inventar superioridade: é tornar singularidade compreensível.</p><div class="box"><b>Mapa:</b> somos | fazemos | para quem | de um jeito próprio | para gerar.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 3 — Objetivos que orientam</summary><div class="ct"><p>Separe reconhecimento, relacionamento e conversão. Cada fase exige comportamento observável: ser encontrado, receber respostas, captar contatos, vender ingressos ou gerar inscrições.</p><div class="box do"><b>Meta:</b> verbo + público + número + prazo + evidência. Ex.: captar 120 contatos consentidos até a estreia.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m2"><div class="mh"><span>Módulo 2</span><h2>Público e jornada</h2><p>Troque o “todo mundo” por pessoas reais, necessidades concretas e contexto.</p></div>
+<details class="lesson"><summary>Aula 4 — Pesquisa de público</summary><div class="ct"><p>Converse, observe comentários, bilheteria, formulários e repertórios locais. Investigue motivações, barreiras, linguagem, hábitos culturais, acessibilidade e quem ainda não está chegando.</p><div class="box do"><b>Roteiro:</b> como descobre programas? O que faz decidir? O que impede? Com quem compartilha? O que espera sentir?</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 5 — Segmentos úteis, não caricaturas</summary><div class="ct"><p>Agrupe pessoas por relação com o projeto: curioso, participante, apoiador, profissional, parceiro ou imprensa. Combine dados demográficos apenas quando forem relevantes.</p><div class="box"><b>Ficha:</b> contexto | desejo | barreira | canal | prova necessária | próxima ação.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 6 — Jornada de descoberta à defesa</summary><div class="ct"><p>Desenhe cinco momentos: descobrir, compreender, confiar, agir e recomendar. Em cada um, defina pergunta do público, conteúdo adequado e chamada para ação.</p><div class="box do"><b>Exercício:</b> percorra a jornada como visitante novo e registre toda dúvida sem resposta.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m3"><div class="mh"><span>Módulo 3</span><h2>Identidade e narrativa</h2><p>Construa reconhecimento sem transformar toda publicação em propaganda.</p></div>
+<details class="lesson"><summary>Aula 7 — Voz da marca cultural</summary><div class="ct"><p>Defina três qualidades de voz e seus limites. “Próxima, provocadora e clara” orienta escolhas; “criativa” diz pouco. Registre palavras preferidas, evitadas e exemplos.</p><div class="box"><b>Teste:</b> a mesma legenda deve ser reconhecível mesmo sem logotipo.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 8 — História central</summary><div class="ct"><p>Uma narrativa forte articula origem, tensão, escolha, processo e futuro. O artista não precisa fabricar intimidade: bastidores podem mostrar método, pessoas e decisões sem expor a vida privada.</p><div class="box do"><b>Roteiro:</b> “Vimos ___; decidimos ___; estamos criando ___; convidamos você a ___”.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 9 — Sistema visual reconhecível</summary><div class="ct"><p>Organize paleta, tipografia, fotografia, enquadramentos, capas e movimento. Crie regras simples para variar sem parecer outro projeto a cada semana. Inclua contraste, legibilidade e texto alternativo.</p><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m4"><div class="mh"><span>Módulo 4</span><h2>Sistema de conteúdo</h2><p>Produza com constância sustentável e intenção editorial.</p></div>
+<details class="lesson"><summary>Aula 10 — Pilares editoriais</summary><div class="ct"><p>Escolha de três a cinco pilares: obra, processo, repertório, território, pessoas, serviço ou convite. Cada pilar precisa servir ao público e ao objetivo, não apenas preencher calendário.</p><div class="box do"><b>Prática:</b> crie cinco pautas por pilar e classifique por descobrir, confiar ou agir.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 11 — Formato, gancho e entrega</summary><div class="ct"><p>Comece pela ideia; depois escolha vídeo, foto, carrossel, texto, áudio ou transmissão. O gancho cria relevância sem enganar; a entrega cumpre a promessa; a chamada propõe um próximo passo.</p><div class="box"><b>Estrutura:</b> tensão ou pergunta → valor → prova → convite específico.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 12 — Calendário e produção em lote</summary><div class="ct"><p>Planeje por campanha e capacidade real. Reserve blocos para pesquisa, captação, edição, publicação e conversa. Reaproveite uma ideia em formatos adequados, sem copiar mecanicamente.</p><div class="box do"><b>Semana mínima:</b> 1 conteúdo profundo + 2 derivações + presença na comunidade + 1 revisão de dados.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m5"><div class="mh"><span>Módulo 5</span><h2>Plataformas com propósito</h2><p>Escolha canais por função e construa ativos que você controla.</p></div>
+<details class="lesson"><summary>Aula 13 — Ecossistema de canais</summary><div class="ct"><p>Site ou página concentra informações; e-mail mantém contato consentido; redes geram descoberta e conversa; mensageria mobiliza grupos. Não dependa de uma única plataforma.</p><div class="box"><b>Arquitetura:</b> canal de descoberta → página clara → cadastro ou compra → relacionamento.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 14 — Perfil e página que convertem</summary><div class="ct"><p>Em poucos segundos, a pessoa deve entender quem é você, o que oferece, para quem e qual o próximo passo. Padronize nome, imagem, biografia, contatos, agenda, acessibilidade e links.</p><div class="box do"><b>Auditoria:</b> peça a alguém que nunca viu o perfil para responder essas quatro perguntas.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 15 — Distribuição e mídia paga</summary><div class="ct"><p>Distribua primeiro a parceiros, comunidades e base própria. Se anunciar, defina objetivo, público, peça, orçamento, prazo e conversão mensurável. Teste pequenas variações e nunca compre seguidores.</p><div class="box"><b>Regra:</b> impulsionar conteúdo confuso apenas paga para mais pessoas não entenderem.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m6"><div class="mh"><span>Módulo 6</span><h2>Campanhas e lançamentos</h2><p>Crie ritmo, informação e motivo real para agir.</p></div>
+<details class="lesson"><summary>Aula 16 — Arquitetura de campanha</summary><div class="ct"><p>Organize aquecimento, anúncio, aprofundamento, conversão, cobertura e continuidade. Defina uma mensagem central, públicos, ofertas, provas, cronograma, responsáveis e plano de contingência.</p><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 17 — Oferta cultural e chamada</summary><div class="ct"><p>Explique experiência, data, lugar, preço ou gratuidade, duração, classificação, acessibilidade e como participar. Reduza incerteza. A chamada deve indicar uma ação, não apenas “confira”.</p><div class="box do"><b>Prática:</b> escreva versões para descobrir, considerar e decidir — mantendo os mesmos fatos.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 18 — Imprensa, influenciadores e parceiros</summary><div class="ct"><p>Personalize contatos por afinidade real. Entregue pauta, contexto, imagens autorizadas, serviço completo e porta-voz. Proponha valor mútuo e identifique publicidade ou permuta com transparência.</p><div class="box"><b>Kit:</b> release curto | nota factual | fotos e créditos | links | contatos | acessibilidade.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m7"><div class="mh"><span>Módulo 7</span><h2>Comunidade e parcerias</h2><p>Converta alcance passageiro em vínculo e circulação.</p></div>
+<details class="lesson"><summary>Aula 19 — Conversa e moderação</summary><div class="ct"><p>Responda com presença, faça perguntas e reconheça contribuições. Defina política contra assédio, preconceito, spam e exposição indevida. Crítica legítima pede escuta; violência pede limite.</p><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 20 — Rede de colaboração</summary><div class="ct"><p>Mapeie espaços, coletivos, escolas, imprensa, negócios locais, criadores e instituições com convergência. Proponha ações específicas, responsabilidades, contrapartidas e métricas compartilhadas.</p><div class="box do"><b>Mapa:</b> parceiro | interesse comum | público conectado | proposta | primeiro contato.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 21 — Pós-evento e fidelização</summary><div class="ct"><p>A relação não termina na entrega. Agradeça, compartilhe registros autorizados, colete retorno, mostre resultados e indique o próximo encontro. Convide para lista apenas com consentimento.</p><div class="box"><b>Ciclo:</b> experiência → escuta → memória → reconhecimento → novo convite.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="mod" id="m8"><div class="mh"><span>Módulo 8</span><h2>Métricas, ética e plano final</h2><p>Aprenda, ajuste e cresça sem sacrificar confiança.</p></div>
+<details class="lesson"><summary>Aula 22 — Métricas que respondem perguntas</summary><div class="ct"><p>Alcance indica exposição; retenção, interesse; salvamentos e respostas, valor; cliques, intenção; cadastros, vendas e presença, resultado. Compare períodos equivalentes e interprete contexto.</p><div class="box"><b>Painel:</b> objetivo | indicador | fonte | meta | resultado | aprendizado | decisão.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 23 — Dados, direitos e confiança</summary><div class="ct"><p>Colete apenas dados necessários, informe finalidade, proteja acesso e ofereça saída. Obtenha autorização para imagem e voz, respeite direitos autorais e identifique parcerias comerciais.</p><div class="box do"><b>Checklist:</b> consentimento | créditos | licenças | privacidade | acessibilidade | transparência.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 24 — Projeto final: plano de 30 dias</summary><div class="ct"><p>Crie um plano para um projeto real: diagnóstico, posicionamento, dois públicos, jornada, mensagem, canais, quatro pilares, calendário, campanha, parcerias, orçamento e painel de métricas.</p><div class="box do"><b>Entrega:</b> plano de comunicação de 30 dias + 6 peças-modelo + página de conversão + rotina semanal de análise.</div><label class="done"><input data-l="" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="kit" id="kit"><h2>Kit de trabalho</h2><div class="cards"><div class="card"><b>Frase de posicionamento</b><p>Para [público], somos [categoria] que oferece [valor] por meio de [diferença/prova].</p></div><div class="card"><b>Briefing de conteúdo</b><p>Objetivo | público | etapa da jornada | ideia | formato | prova | chamada | acessibilidade.</p></div><div class="card"><b>Calendário</b><p>Data | pilar | pauta | canal | responsável | status | link | resultado.</p></div><div class="card"><b>Campanha</b><p>Meta | oferta | mensagem | fases | peças | parceiros | mídia | contingência.</p></div><div class="card"><b>UTM simples</b><p>Registre origem, meio e campanha nos links para comparar distribuição sem adivinhar.</p></div><div class="card"><b>Revisão semanal</b><p>O que funcionou? Por quê? O que parar, manter, ajustar e testar na próxima semana?</p></div></div></section>
+<section class="final" id="final"><h2>Avaliação final</h2><p>Aproveitamento recomendado: 70%.</p>
+<div class="quiz" data-a="b"><p>1. Posicionamento eficaz:</p><label><input name="q1" type="radio" value="a"/> Tenta agradar todos</label><label><input name="q1" type="radio" value="b"/> Torna singularidade e valor compreensíveis</label><label><input name="q1" type="radio" value="c"/> Copia tendências</label></div>
+<div class="quiz" data-a="c"><p>2. Uma meta útil contém:</p><label><input name="q2" type="radio" value="a"/> Só um desejo</label><label><input name="q2" type="radio" value="b"/> Muitos adjetivos</label><label><input name="q2" type="radio" value="c"/> Público, número, prazo e evidência</label></div>
+<div class="quiz" data-a="a"><p>3. A pesquisa de público deve:</p><label><input name="q3" type="radio" value="a"/> Investigar motivações e barreiras reais</label><label><input name="q3" type="radio" value="b"/> Inventar uma persona</label><label><input name="q3" type="radio" value="c"/> Considerar todos iguais</label></div>
+<div class="quiz" data-a="b"><p>4. Na jornada, depois de descobrir vem:</p><label><input name="q4" type="radio" value="a"/> Recomendar automaticamente</label><label><input name="q4" type="radio" value="b"/> Compreender e construir confiança</label><label><input name="q4" type="radio" value="c"/> Comprar sempre</label></div>
+<div class="quiz" data-a="c"><p>5. O formato do conteúdo deve ser escolhido:</p><label><input name="q5" type="radio" value="a"/> Pela moda</label><label><input name="q5" type="radio" value="b"/> Pelo algoritmo</label><label><input name="q5" type="radio" value="c"/> Pela ideia, público e objetivo</label></div>
+<div class="quiz" data-a="a"><p>6. Um ecossistema resiliente:</p><label><input name="q6" type="radio" value="a"/> Combina descoberta com canais próprios</label><label><input name="q6" type="radio" value="b"/> Depende de uma rede</label><label><input name="q6" type="radio" value="c"/> Compra seguidores</label></div>
+<div class="quiz" data-a="b"><p>7. Antes de investir em mídia:</p><label><input name="q7" type="radio" value="a"/> Publique qualquer peça</label><label><input name="q7" type="radio" value="b"/> Defina objetivo, público e conversão</label><label><input name="q7" type="radio" value="c"/> Ignore orçamento</label></div>
+<div class="quiz" data-a="c"><p>8. Uma campanha cultural completa inclui:</p><label><input name="q8" type="radio" value="a"/> Só o anúncio</label><label><input name="q8" type="radio" value="b"/> Apenas a estreia</label><label><input name="q8" type="radio" value="c"/> Aquecimento, conversão e continuidade</label></div>
+<div class="quiz" data-a="a"><p>9. Uma métrica deve:</p><label><input name="q9" type="radio" value="a"/> Responder a uma pergunta do objetivo</label><label><input name="q9" type="radio" value="b"/> Ser sempre curtida</label><label><input name="q9" type="radio" value="c"/> Ser grande sem contexto</label></div>
+<div class="quiz" data-a="b"><p>10. Para uma lista de contatos:</p><label><input name="q10" type="radio" value="a"/> Adicione todos</label><label><input name="q10" type="radio" value="b"/> Colete o necessário, com finalidade e consentimento</label><label><input name="q10" type="radio" value="c"/> Nunca permita saída</label></div>
+<button id="grade">Corrigir avaliação</button><div class="res" id="result"></div></section>
+<section class="refs"><b>Referências para atualização contínua:</b> <a href="https://www.gov.br/anpd/pt-br" rel="noopener" target="_blank">ANPD — Proteção de dados</a> · <a href="https://www.facebook.com/business/learn" rel="noopener" target="_blank">Meta Blueprint</a> · <a href="https://creatoracademy.youtube.com/" rel="noopener" target="_blank">YouTube Creator Academy</a> · <a href="https://www.tiktok.com/business/learning-center" rel="noopener" target="_blank">TikTok Business Learning Center</a>. Plataformas mudam: confirme recursos e regras atuais nos canais oficiais.</section>
+</div></div></main><footer><div class="wrap">Sparn — Dando asas às suas ideias.</div></footer><script>const bs=[...document.querySelectorAll('[data-l]')],key='sparn-artista-visivel';function u(){const n=bs.filter(x=>x.checked).length;fill.style.width=n/24*100+'%';pt.textContent=n+' de 24 aulas concluídas';localStorage.setItem(key,JSON.stringify(bs.map(x=>x.checked)))}try{const s=JSON.parse(localStorage.getItem(key)||'[]');bs.forEach((x,i)=>x.checked=!!s[i])}catch(e){}bs.forEach(x=>x.onchange=u);u();grade.onclick=()=>{let n=0;document.querySelectorAll('.quiz').forEach(q=>{const c=q.querySelector('input:checked');if(c&&c.value===q.dataset.a)n++});result.textContent=n+' de 10 — '+n*10+'%. '+(n>=7?'Aprovado! Agora finalize seu Acesso Beta de comunicação de 30 dias.':'Revise as aulas e tente novamente.')}</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

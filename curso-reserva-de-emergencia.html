@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Reserva de Emergência | Sparn</title><meta content="Curso completo para calcular, construir, guardar, usar e recompor sua reserva de emergência." name="description"/><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');:root{--bg:#070713;--panel:#111225;--text:#fffaf5;--muted:#bbb7c8;--gold:#ffc85c;--green:#61e5aa;--cyan:#58e5f7;--violet:#9a78ff;--line:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 0,rgba(97,229,170,.14),transparent 28%),radial-gradient(circle at 92% 8%,rgba(88,229,247,.13),transparent 30%),var(--bg);color:var(--text);font:16px/1.7 "DM Sans",sans-serif}.wrap{width:min(1120px,calc(100% - 34px));margin:auto}.top{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{color:#fff;text-decoration:none;font:700 1rem "Space Grotesk";letter-spacing:.17em}.back{color:var(--cyan);text-decoration:none;font-weight:800;font-size:.88rem}.hero{padding:58px 0 40px;display:grid;grid-template-columns:1fr .82fr;gap:46px;align-items:center}.tag{display:inline-flex;padding:7px 11px;border:1px solid rgba(97,229,170,.3);border-radius:99px;color:#caffea;background:rgba(97,229,170,.07);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.hero h1{font:700 clamp(3rem,6vw,5.5rem)/.97 "Space Grotesk";letter-spacing:-.055em;margin:18px 0}.grad{background:linear-gradient(100deg,var(--green),#fff 48%,var(--cyan));color:transparent;background-clip:text}.hero p,.card p,.card li,.lesson p,.module-head p,.final p{color:var(--muted)}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.stats span{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);font-size:.83rem}.hero-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:1px solid rgba(97,229,170,.3);box-shadow:0 28px 80px #0008}.progress-box{position:sticky;top:0;z-index:5;background:rgba(7,7,19,.92);backdrop-filter:blur(16px);border-block:1px solid var(--line)}.progress-inner{height:58px;display:flex;align-items:center;gap:14px}.bar{height:7px;flex:1;background:#ffffff14;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--gold),var(--cyan));transition:.3s}.progress-label{font-size:.8rem;color:var(--muted);white-space:nowrap}.intro{padding:55px 0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card,.lesson{border:1px solid var(--line);background:linear-gradient(145deg,#ffffff0e,#ffffff05);border-radius:20px;padding:25px}.card h2,.lesson h3,.module h2,.final h2{font-family:"Space Grotesk"}.visual{margin:25px auto 65px}.visual img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:0 25px 75px #0006}.visual figcaption{color:var(--muted);font-size:.82rem;margin-top:10px}.module{padding:64px 0;border-top:1px solid var(--line)}.module-head{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;margin-bottom:27px}.module-number{font:700 3.7rem/1 "Space Grotesk";color:transparent;-webkit-text-stroke:1px rgba(97,229,170,.72)}.module h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;margin:0 0 8px}.module-head p{margin:0}.lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.lesson{border-radius:18px;padding:23px}.lesson h3{font-size:1.15rem;line-height:1.3;margin:0 0 10px}.lesson p{margin:0 0 14px}.lesson label{display:flex;align-items:center;gap:9px;color:#e3f7ec;font-size:.82rem;cursor:pointer}.lesson input{width:19px;height:19px;accent-color:var(--green)}.activity{margin:14px 0;padding:12px;border-radius:11px;background:rgba(97,229,170,.07);border-left:3px solid var(--green);font-size:.84rem;color:#e0eee7}.tool{margin-top:28px;border:1px solid rgba(255,200,92,.28);background:rgba(255,200,92,.055);border-radius:18px;padding:23px}.tool h3{margin:0 0 8px;color:#ffe5a7}.tool p{margin:0;color:var(--muted)}.final{margin:65px auto;padding:34px;border:1px solid rgba(154,120,255,.38);border-radius:25px;background:radial-gradient(circle at 90% 15%,rgba(154,120,255,.22),transparent 35%),var(--panel)}.final h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:0 0 12px}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}.checklist span{padding:12px;border:1px solid var(--line);border-radius:11px;background:#ffffff06}.print{display:inline-flex;padding:13px 18px;border-radius:11px;background:linear-gradient(100deg,var(--green),#caffea);color:#062018;text-decoration:none;font-weight:900}footer{border-top:1px solid var(--line);padding:30px 0;color:#8e899d}.foot{display:flex;justify-content:space-between;gap:20px;font-size:.85rem}@media(max-width:800px){.hero,.intro-grid,.lessons,.checklist{grid-template-columns:1fr}.module-head{grid-template-columns:1fr}.module-number{font-size:2.6rem}.foot{display:block}}
+</style><style id="sparn-project-ui">
+.project-workbook{margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.project-field{display:flex;flex-direction:column;gap:7px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#ffffff05}.project-field span{font-size:.78rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.project-field textarea{width:100%;min-height:92px;resize:vertical;border:1px solid var(--line);border-radius:10px;background:#090a16;color:var(--text);padding:12px;font:inherit;line-height:1.45;outline:none}.project-field textarea:focus{border-color:var(--cyan)}.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}.project-status{font-size:.8rem;color:var(--muted)}.project-btn{border:0;cursor:pointer;display:inline-flex;padding:13px 18px;border-radius:11px;background:linear-gradient(100deg,var(--gold),#ffe49a);color:#1d1200;font:900 .9rem "DM Sans";text-decoration:none}.project-btn.secondary{background:#ffffff0b;color:var(--text);border:1px solid var(--line)}@media(max-width:800px){.project-workbook{grid-template-columns:1fr}}@media print{body *{visibility:hidden!important}.final,.final *{visibility:visible!important}.final{position:absolute;inset:0 auto auto 0;width:100%;margin:0!important;border:0!important;background:#fff!important;color:#111!important;padding:22px!important}.final h2,.final p,.project-field span{color:#111!important}.checklist{display:none!important}.project-workbook{display:grid!important;grid-template-columns:1fr!important}.project-field{border:1px solid #bbb!important;background:#fff!important;break-inside:avoid}.project-field textarea{border:0!important;background:#fff!important;color:#111!important;min-height:70px;overflow:visible;resize:none}.project-actions,.progress-box{display:none!important}}</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header class="wrap top"><a class="brand" href="index.html">✦ SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
+<section class="wrap hero"><div><span class="tag">Educação Financeira · Curso 16</span><h1>Reserva de <span class="grad">Emergência.</span></h1><p>Construa seu primeiro escudo financeiro: descubra quanto guardar, onde deixar o dinheiro, quando realmente usar e como começar mesmo ganhando pouco.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Plano de proteção</span><span>Nível introdutório</span></div></div><img alt="Jovem construindo sua reserva de emergência" class="hero-img" src="assets/reserva-de-emergencia.png"/></section>
+<div class="progress-box"><div class="wrap progress-inner"><span class="progress-label"><b id="done">0</b>/24 aulas</span><span class="bar"><i id="progress"></i></span><span class="progress-label" id="percent">0%</span></div></div>
+<section class="wrap intro"><div class="intro-grid"><article class="card"><h2>O que você vai aprender</h2><ul><li>Distinguir emergência, desejo e gasto planejável.</li><li>Calcular seu custo essencial e uma meta de proteção.</li><li>Escolher onde manter a reserva com foco em segurança e acesso.</li><li>Criar aportes mesmo com renda baixa ou variável.</li><li>Usar e reconstruir a reserva sem perder o controle.</li></ul></article><article class="card"><h2>Seu projeto final</h2><p>Você construirá seu <strong>Plano de Proteção Financeira</strong>: custo essencial, meta em etapas, regra de aporte, critérios de uso e estratégia de reconstrução.</p></article></div></section>
+<figure class="wrap visual"><img alt="Jovem avaliando imprevistos financeiros" src="assets/reserva-de-emergencia-imprevistos.png"/><figcaption>Reserva de emergência é uma resposta preparada para situações necessárias, inesperadas e urgentes — não um fundo para qualquer vontade.</figcaption></figure>
+<div id="modules"></div>
+<figure class="wrap visual"><img alt="Jovem tranquila depois de construir proteção financeira" src="assets/reserva-de-emergencia-seguranca.png"/><figcaption>O objetivo da reserva não é deixar o dinheiro parado por medo: é criar margem para atravessar imprevistos sem transformar todo problema em dívida.</figcaption></figure>
+<section class="wrap final"><h2>Projeto final: seu Plano de Proteção Financeira</h2><p>Preencha os itens abaixo e faça seu primeiro aporte. O projeto só termina quando a ideia vira comportamento.</p><div class="checklist"><span>✓ Custo essencial mensal</span><span>✓ Primeira mini-reserva</span><span>✓ Meta de meses protegidos</span><span>✓ Regra de aporte</span><span>✓ Critérios para usar</span><span>✓ Plano para reconstruir</span></div></section></main>
+<footer><div class="wrap foot"><span>© 2026 Sparn</span><span>Dando asas às suas ideias.</span></div></footer><script>
+const data=[
+['01','Entenda seu escudo','Antes de guardar, entenda exatamente o que a reserva deve proteger.','Radar de emergência — necessário + inesperado + urgente.',[['1. Por que a reserva existe','Um imprevisto pode obrigar você a tomar decisões caras e rápidas. A reserva cria tempo e evita depender imediatamente de crédito.','Liste três imprevistos que poderiam afetar sua rotina.'],['2. Reserva não é dinheiro sobrando','Esse dinheiro tem uma função específica. Viagem, presente, lazer e compras desejadas devem ter outros objetivos.','Dê um nome e uma finalidade à sua reserva.'],['3. Emergência, meta ou desejo?','Uma emergência tende a combinar necessidade, imprevisibilidade e urgência. Uma compra desejada pode ser importante sem ser emergencial.','Classifique dez gastos recentes nessas três categorias.'],['4. O custo de não ter margem','Sem proteção, um gasto inesperado pode virar atraso, rotativo, empréstimo ou sequência de novas dívidas.','Desenhe o efeito dominó de um imprevisto sem reserva.']]],
+['02','Descubra seu número','Transforme “preciso guardar dinheiro” em uma meta concreta e alcançável.','Calculadora-base — despesas essenciais mensais × meses de proteção escolhidos.',[['5. Seu custo essencial','Some apenas o necessário para manter a vida funcionando: moradia, alimentação básica, transporte, saúde e obrigações indispensáveis.','Monte sua lista de despesas essenciais.'],['6. O que pode ser cortado','Diferencie custo essencial de padrão de consumo. Em uma emergência, algumas despesas podem ser reduzidas temporariamente.','Marque cada gasto como essencial, ajustável ou adiável.'],['7. Quantos meses proteger?','Não existe um número universal. Estabilidade da renda, responsabilidades e dependentes mudam o tamanho adequado da meta.','Escolha uma meta inicial e registre por que ela faz sentido.'],['8. Metas em etapas','Uma meta grande fica mais executável quando vira mini-reserva, primeiro mês protegido e etapas seguintes.','Crie três marcos com valores definidos.']]],
+['03','Construa mesmo começando pequeno','Consistência transforma pequenos aportes em proteção real.','Regra de aporte — valor ou percentual + momento da transferência + frequência.',[['9. O primeiro valor importa','Começar pequeno cria comportamento. Esperar a situação perfeita pode adiar indefinidamente a construção da reserva.','Escolha um primeiro aporte possível hoje.'],['10. Separe ao receber','Guardar somente o que sobra coloca a reserva no fim da fila. Uma regra antecipada reduz a dependência de força de vontade.','Defina quando seu aporte será feito.'],['11. Renda variável','Quem recebe por bicos, comissões ou freelance pode usar uma porcentagem de cada entrada em vez de depender de valor fixo.','Simule três meses com rendas diferentes.'],['12. Acelere sem se punir','Rendas extras podem acelerar a meta, mas um plano sustentável é melhor que uma meta agressiva abandonada.','Defina um percentual para entradas extraordinárias.']]],
+['04','Onde deixar a reserva','Proteção exige equilíbrio entre segurança, simplicidade e disponibilidade.','Checklist do lugar certo — risco + liquidez + custos + regras de resgate + acesso.',[['13. Liquidez','Uma emergência não espera. Entenda em quanto tempo o dinheiro pode estar disponível e quais condições existem para o resgate.','Compare o prazo de acesso de opções que você conhece.'],['14. Baixo risco primeiro','A reserva não existe para buscar o maior retorno possível. Sua função principal é estar preservada e disponível.','Escreva por que retorno e segurança têm papéis diferentes aqui.'],['15. Custos e regras','Taxas, tributação aplicável, horários, carências e condições de resgate precisam ser entendidos antes da escolha.','Crie uma checklist para avaliar uma opção financeira.'],['16. Separe do dinheiro cotidiano','Misturar reserva e saldo de consumo dificulta acompanhar a meta e aumenta a chance de uso impulsivo.','Defina onde sua reserva ficará separada.']]],
+['05','Use sem destruir o plano','A reserva foi feita para ser usada quando necessário — com critérios e proporcionalidade.','Protocolo de uso — situação + necessidade + valor mínimo + decisão + reconstrução.',[['17. O teste das três perguntas','Pergunte: é necessário? foi inesperado? precisa ser resolvido agora? Nenhuma regra substitui contexto, mas esse filtro melhora a decisão.','Teste cinco situações hipotéticas.'],['18. Use sem culpa quando for real','Se a emergência é legítima, usar a reserva significa que ela cumpriu sua função. Evitar usá-la e assumir dívida pode contrariar o objetivo.','Escreva dois casos em que você usaria a reserva.'],['19. Gaste somente o necessário','Uma emergência não transforma todo o saldo em dinheiro livre. Compare alternativas e resolva o problema com proporcionalidade.','Simule uma reserva de R$2.000 e um imprevisto de R$650.'],['20. Reconstrua depois','Depois do uso, recompor a proteção volta a ser prioridade antes de acelerar objetivos menos urgentes.','Crie um plano para repor um saque em três etapas.']]],
+['06','Proteja e mantenha','Seu escudo precisa sobreviver a golpes, mudanças de renda e à passagem do tempo.','Plano 30 dias — meta + aporte + segurança + revisão + primeiro marco.',[['21. Segurança digital','Use senhas fortes e exclusivas, autenticação adicional quando disponível e dispositivos protegidos. Nunca entregue códigos de acesso.','Revise as proteções da conta onde ficará a reserva.'],['22. Golpes exploram urgência','Desconfie de pressão para agir imediatamente. Acesse aplicativos e canais oficiais por conta própria em vez de seguir links recebidos.','Crie três regras pessoais contra golpes.'],['23. Revise sua meta','Mudanças de renda, moradia e responsabilidades podem alterar seu custo essencial e o nível de proteção desejado.','Agende uma revisão trimestral da meta.'],['24. Depois da reserva','Com uma proteção adequada à sua realidade, novos recursos podem seguir para outras metas e investimentos compatíveis com cada objetivo.','Liste os próximos dois objetivos financeiros após a reserva.']]]];
+modules.innerHTML=data.map(([n,t,sub,tool,lessons])=>`<section class="wrap module"><div class="module-head"><span class="module-number">${n}</span><div><h2>${t}</h2><p>${sub}</p></div></div><div class="lessons">${lessons.map(([h,p,a])=>`<article class="lesson"><h3>${h}</h3><p>${p}</p><div class="activity"><b>Prática:</b> ${a}</div><label><input type="checkbox"> Aula concluída</label></article>`).join('')}</div><div class="tool"><h3>Ferramenta</h3><p>${tool}</p></div></section>`).join('');
+const b=[...document.querySelectorAll('.lesson input')],k='sparn-reserva-emergencia-progresso',s=JSON.parse(localStorage.getItem(k)||'[]');b.forEach((x,i)=>x.checked=!!s[i]);function u(){const a=b.map(x=>x.checked),d=a.filter(Boolean).length,p=Math.round(d/b.length*100);localStorage.setItem(k,JSON.stringify(a));done.textContent=d;percent.textContent=p+'%';progress.style.width=p+'%'}b.forEach(x=>x.addEventListener('change',u));u();
+</script><script id="sparn-project-js">(()=>{const box=document.querySelector('.final');if(!box||box.dataset.projectReady)return;box.dataset.projectReady='1';const title=(box.querySelector('h2')?.textContent||'Projeto final').replace(/^Projeto final:\s*/i,'').trim();const items=[...box.querySelectorAll('.checklist span')].map(x=>x.textContent.replace(/^[✓✔]\s*/,'').trim()).filter(Boolean);const key='sparn-projeto-'+location.pathname.split('/').pop(),saved=JSON.parse(localStorage.getItem(key)||'{}');const work=document.createElement('div');work.className='project-workbook';items.forEach((label,i)=>{const f=document.createElement('label');f.className='project-field';const s=document.createElement('span');s.textContent=label;const t=document.createElement('textarea');t.placeholder='Escreva aqui…';t.value=saved[i]||'';t.dataset.i=i;t.addEventListener('input',save);f.append(s,t);work.appendChild(f)});const actions=document.createElement('div');actions.className='project-actions';const saveBtn=document.createElement('button');saveBtn.type='button';saveBtn.className='project-btn secondary';saveBtn.textContent='Salvar respostas';const pdfBtn=document.createElement('button');pdfBtn.type='button';pdfBtn.className='project-btn';pdfBtn.textContent='Gerar / salvar em PDF →';const clearBtn=document.createElement('button');clearBtn.type='button';clearBtn.className='project-btn secondary';clearBtn.textContent='Limpar';const status=document.createElement('span');status.className='project-status';status.textContent='As respostas ficam salvas neste navegador.';function save(){const d={};work.querySelectorAll('textarea').forEach(t=>d[t.dataset.i]=t.value);localStorage.setItem(key,JSON.stringify(d));status.textContent='Salvo automaticamente ✓'}saveBtn.addEventListener('click',save);clearBtn.addEventListener('click',()=>{if(confirm('Limpar todas as respostas deste projeto?')){work.querySelectorAll('textarea').forEach(t=>t.value='');localStorage.removeItem(key);status.textContent='Respostas apagadas.'}});pdfBtn.addEventListener('click',()=>{save();window.print()});actions.append(saveBtn,pdfBtn,clearBtn,status);const old=box.querySelector('a.print');if(old)old.remove();box.append(work,actions)})();</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

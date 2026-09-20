@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Da Ideia ao Projeto — Sparn</title><meta content="Curso completo de concepção e escrita cultural profissional." name="description"/><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');:root{--bg:#050713;--panel:#0e1428;--white:#f7fbff;--muted:#9da9c2;--cyan:#43e7ff;--purple:#9c6cff;--pink:#ff5fc7;--green:#54e2ae;--line:rgba(255,255,255,.1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 0,rgba(255,95,199,.12),transparent 27%),radial-gradient(circle at 92% 12%,rgba(67,231,255,.12),transparent 28%),var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.7}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}header{position:sticky;top:0;z-index:20;background:rgba(5,7,19,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{color:#fff;text-decoration:none;font:800 1rem "Space Grotesk";letter-spacing:.16em}.back{color:var(--cyan);text-decoration:none;font-weight:800;font-size:.85rem}.hero{padding:62px 0 42px;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center}.eyebrow{color:#ffb9e6;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.72rem}h1,h2,h3{font-family:"Space Grotesk"}h1{font-size:clamp(3rem,7vw,6rem);line-height:.96;letter-spacing:-.055em;margin:12px 0}.gradient{background:linear-gradient(100deg,var(--pink),#fff 48%,var(--cyan));color:transparent;background-clip:text}.hero p,.module-head p{color:var(--muted)}.stats{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.stat{padding:8px 11px;border:1px solid var(--line);border-radius:999px;font-size:.78rem}.progress{padding:24px;border:1px solid rgba(255,95,199,.22);border-radius:22px;background:linear-gradient(145deg,#111a34,#080d1d)}.bar{height:10px;border-radius:99px;background:#050815;overflow:hidden;margin:13px 0}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--purple),var(--cyan))}.progress small{color:var(--muted)}.layout{display:grid;grid-template-columns:265px 1fr;gap:28px;align-items:start}.side{position:sticky;top:88px;padding:17px;border:1px solid var(--line);border-radius:17px;background:rgba(14,20,40,.85)}.side b,.side a{display:block}.side a{color:var(--muted);text-decoration:none;font-size:.81rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}.module{margin-bottom:32px;scroll-margin-top:88px}.module-head{padding:23px;border:1px solid var(--line);border-radius:19px 19px 0 0;background:linear-gradient(135deg,rgba(255,95,199,.08),rgba(67,231,255,.07))}.module-head span{color:#ffb9e6;font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}.module-head h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.1;margin:6px 0}.module-head p{margin:0}.lesson{border:1px solid var(--line);border-top:0;background:rgba(14,20,40,.72)}.lesson:last-child{border-radius:0 0 19px 19px}.lesson summary{list-style:none;cursor:pointer;padding:18px 21px;font-family:"Space Grotesk";font-weight:700;display:flex;justify-content:space-between}.lesson summary::-webkit-details-marker{display:none}.lesson summary:after{content:"+";color:var(--cyan)}.lesson[open] summary:after{content:"−"}.content{padding:0 21px 23px;color:#dce5f3}.content li{margin:7px 0}.box{padding:14px 16px;border-radius:12px;margin:16px 0;background:rgba(67,231,255,.055);border:1px solid rgba(67,231,255,.15)}.practice{background:rgba(84,226,174,.055);border-color:rgba(84,226,174,.17)}.complete{display:inline-flex;gap:8px;align-items:center;color:#c8fbed;font-size:.84rem;font-weight:700}.complete input{width:18px;height:18px;accent-color:var(--green)}.kit,.final{margin:50px 0;padding:27px;border:1px solid var(--line);border-radius:21px;background:var(--panel)}.cards{display:grid;grid-template-columns:1fr 1fr;gap:11px}.card{padding:15px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025)}.card b{color:var(--cyan)}.quiz{padding:15px 0;border-bottom:1px solid var(--line)}.quiz p{font-weight:800}.quiz label{display:block;margin:6px 0}button{border:0;border-radius:10px;background:var(--cyan);color:#04101b;padding:12px 17px;font-weight:900;margin-top:16px;cursor:pointer}.result{margin-top:14px;font-weight:800}footer{padding:25px 0;border-top:1px solid var(--line);color:#7f8ca4;font-size:.82rem}@media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.side{position:static}.cards{grid-template-columns:1fr}}
+</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header><div class="wrap nav"><a class="brand" href="index.html">SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></div></header><main class="wrap">
+<section class="hero"><div><div class="eyebrow">Curso original Sparn · Cultura</div><h1>Da Ideia ao <span class="gradient">Projeto</span></h1><p>Transforme uma intuição criativa em uma proposta cultural clara, coerente, humana e profissional — pronta para ser apresentada a parceiros, instituições, patrocinadores ou editais.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">8 horas</span><span class="stat">Caderno de projeto</span><span class="stat">Avaliação final</span></div></div><aside class="progress"><b>Seu progresso</b><div class="bar"><div class="fill" id="fill"></div></div><small id="pt">0 de 24 aulas concluídas</small></aside></section>
+<figure style="margin:0 0 36px;border:1px solid rgba(67,231,255,.22);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Ideia criativa se transformando em projeto cultural" src="assets/da-ideia-ao-projeto.png" style="display:block"/></figure>
+<div class="layout"><nav class="side"><b>Conteúdo</b><a href="#m1">1. Captura da ideia</a><a href="#m2">2. Pesquisa e contexto</a><a href="#m3">3. Conceito e identidade</a><a href="#m4">4. Arquitetura do projeto</a><a href="#m5">5. Escrita profissional</a><a href="#m6">6. Experiência e público</a><a href="#m7">7. Impacto e comunicação</a><a href="#m8">8. Apresentação final</a><a href="#kit">Caderno de projeto</a><a href="#final">Avaliação</a></nav><div>
+<section class="module" id="m1"><div class="module-head"><span>Módulo 1</span><h2>Captura e lapidação da ideia</h2><p>Descubra o núcleo vivo do projeto antes de preencher formulários.</p></div>
+<details class="lesson"><summary>Aula 1 — De onde nasce um projeto</summary><div class="content"><p>Projetos culturais podem nascer de uma inquietação, memória, obra, necessidade territorial, desejo de encontro ou oportunidade de circulação. Registre a origem sem tentar deixá-la “bonita”. Primeiro capture; depois organize.</p><div class="box practice"><b>Prática:</b> escreva por dez minutos: “Este projeto precisa existir porque…”. Não edite durante a escrita.</div><label class="complete"><input data-l="1" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 2 — O núcleo em uma frase</summary><div class="content"><p>Resuma a proposta em sujeito, ação, público, território e transformação. Uma frase clara revela se a ideia tem foco.</p><div class="box"><b>Modelo:</b> “Um programa de oficinas e mostra que conecta jovens músicos de bairros periféricos à criação autoral e ao público local.”</div><label class="complete"><input data-l="2" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 3 — Escopo: o que entra e o que fica fora</summary><div class="content"><p>Projetos frágeis tentam resolver tudo. Defina entrega central, limites, duração e escala. Crie uma lista “agora” e outra “futuro”.</p><div class="box practice"><b>Decisão:</b> escolha no máximo três entregas principais. Todo elemento restante deve apoiá-las ou sair.</div><label class="complete"><input data-l="3" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m2"><div class="module-head"><span>Módulo 2</span><h2>Pesquisa, território e contexto</h2><p>Troque suposições por observação, escuta e evidências.</p></div>
+<details class="lesson"><summary>Aula 4 — Pesquisa cultural aplicada</summary><div class="content"><p>Pesquise referências artísticas, projetos semelhantes, dados públicos, história local e práticas do público. A pesquisa não serve para copiar; serve para localizar sua contribuição.</p><div class="box practice"><b>Mapa:</b> reúna cinco referências e registre o que aprender, evitar e adaptar de cada uma.</div><label class="complete"><input data-l="4" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 5 — Escuta do território</summary><div class="content"><p>Converse com pessoas, coletivos, equipamentos e lideranças. Pergunte sobre desejos, barreiras, horários, circulação e formas de participação. Um projeto “para” alguém deve ser pensado “com” alguém sempre que possível.</p><label class="complete"><input data-l="5" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 6 — Diagnóstico sem exagero</summary><div class="content"><p>Descreva situação, público afetado, causa, consequência e oportunidade. Diferencie fato, percepção e hipótese. Não invente estatísticas.</p><div class="box"><b>Estrutura:</b> “No território X, observamos Y, o que dificulta Z. O projeto responde oferecendo A por meio de B.”</div><label class="complete"><input data-l="6" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m3"><div class="module-head"><span>Módulo 3</span><h2>Conceito e identidade</h2><p>Dê unidade artística e verbal à proposta.</p></div>
+<details class="lesson"><summary>Aula 7 — Conceito curatorial</summary><div class="content"><p>Conceito é a ideia que organiza escolhas de conteúdo, linguagem e experiência. Ele não é um slogan; é um critério de decisão.</p><div class="box practice"><b>Teste:</b> escreva “Escolhemos ___ porque o projeto investiga ___”. Repita para repertório, espaço e formato.</div><label class="complete"><input data-l="7" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 8 — Nome e subtítulo</summary><div class="content"><p>O nome deve ser memorável, pronunciável e coerente. O subtítulo explica a função. Verifique se já existe projeto semelhante e evite termos genéricos demais.</p><div class="box"><b>Exemplo:</b> “Vozes do Bairro — Laboratório de composição e circulação musical”.</div><label class="complete"><input data-l="8" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 9 — Tom, linguagem e universo visual</summary><div class="content"><p>Defina três atributos de personalidade, referências visuais, vocabulário e sensações desejadas. A identidade deve servir ao público e à experiência, não apenas ao gosto da equipe.</p><label class="complete"><input data-l="9" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m4"><div class="module-head"><span>Módulo 4</span><h2>Arquitetura do projeto</h2><p>Construa uma lógica em que cada parte sustenta a seguinte.</p></div>
+<details class="lesson"><summary>Aula 10 — Problema, propósito e transformação</summary><div class="content"><p>Problema é a situação enfrentada. Propósito é o compromisso do projeto. Transformação é a mudança plausível que se pretende provocar. Não prometa resolver sozinho questões estruturais.</p><label class="complete"><input data-l="10" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 11 — Objetivo geral e específicos</summary><div class="content"><p>O objetivo geral expressa direção. Os específicos revelam caminhos: formar, produzir, preservar, circular, pesquisar, registrar, conectar ou difundir.</p><div class="box practice"><b>Revisão:</b> elimine verbos vagos como “conscientizar” quando não houver método para observar a mudança.</div><label class="complete"><input data-l="11" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 12 — Entregas, resultados e indicadores</summary><div class="content"><p>Entrega é o que o projeto produz; resultado é a mudança gerada; indicador é o sinal utilizado para acompanhar. Uma mostra é entrega; presença de público e circulação das obras são resultados observáveis.</p><label class="complete"><input data-l="12" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m5"><div class="module-head"><span>Módulo 5</span><h2>Escrita cultural profissional</h2><p>Escreva com precisão sem apagar a força poética.</p></div>
+<details class="lesson"><summary>Aula 13 — Clareza antes de ornamentação</summary><div class="content"><p>Use frases diretas, parágrafos com uma função e verbos concretos. Termos artísticos são bem-vindos quando explicados. Corte repetições e adjetivos que não acrescentam informação.</p><div class="box practice"><b>Edição:</b> reduza um parágrafo em 30% sem perder nenhuma informação essencial.</div><label class="complete"><input data-l="13" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 14 — Resumo que orienta</summary><div class="content"><p>O resumo apresenta formato, ações, público, território, duração e resultado. Escreva-o quando as demais partes estiverem definidas.</p><div class="box"><b>Modelo:</b> “[Nome] é um [formato] que realizará [ações] para [público], em [território], durante [período], resultando em [entregas].”</div><label class="complete"><input data-l="14" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 15 — Justificativa persuasiva e honesta</summary><div class="content"><p>Conecte contexto, relevância, singularidade, capacidade e oportunidade. A justificativa não deve manipular: deve demonstrar valor cultural e público com lógica e evidência.</p><label class="complete"><input data-l="15" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m6"><div class="module-head"><span>Módulo 6</span><h2>Público e desenho da experiência</h2><p>Pense na jornada real das pessoas antes, durante e depois.</p></div>
+<details class="lesson"><summary>Aula 16 — Segmentação humana</summary><div class="content"><p>Defina público principal e secundário por relação com o projeto, não apenas idade. Descreva repertório, motivação, barreiras, canais e necessidades de acesso.</p><label class="complete"><input data-l="16" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 17 — Jornada de participação</summary><div class="content"><p>Mapeie descoberta, interesse, inscrição ou chegada, acolhimento, experiência, saída e continuidade. Cada etapa pode criar abandono ou vínculo.</p><div class="box practice"><b>Prática:</b> desenhe a jornada em sete passos e identifique um risco e uma solução para cada passo.</div><label class="complete"><input data-l="17" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 18 — Acessibilidade desde a concepção</summary><div class="content"><p>Inclua acessibilidade arquitetônica, comunicacional, digital, atitudinal e de conteúdo desde o início. Consulte pessoas e profissionais adequados; não reduza acessibilidade a uma lista automática.</p><label class="complete"><input data-l="18" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m7"><div class="module-head"><span>Módulo 7</span><h2>Impacto, memória e comunicação</h2><p>Faça o projeto circular, deixar rastros e aprender consigo mesmo.</p></div>
+<details class="lesson"><summary>Aula 19 — Indicadores quantitativos e qualitativos</summary><div class="content"><p>Combine números — inscrições, presença, alcance, obras — com qualidade — depoimentos, observação, mudança de repertório e vínculos. Escolha poucos indicadores úteis.</p><label class="complete"><input data-l="19" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 20 — Registro e memória</summary><div class="content"><p>Planeje fotografia, vídeo, áudio, autorização de uso, organização de arquivos, créditos e preservação. Registro não é só divulgação: também é memória e comprovação.</p><label class="complete"><input data-l="20" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 21 — Plano de comunicação</summary><div class="content"><p>Defina objetivo, público, mensagem, canal, formato, calendário e responsável. Diferencie mobilização de participantes, comunicação institucional e cobertura dos resultados.</p><div class="box practice"><b>Plano mínimo:</b> três fases — convocar, acompanhar e devolver resultados ao público.</div><label class="complete"><input data-l="21" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="module" id="m8"><div class="module-head"><span>Módulo 8</span><h2>Apresentação e revisão final</h2><p>Transforme o material em uma proposta confiável e adaptável.</p></div>
+<details class="lesson"><summary>Aula 22 — Pitch de um minuto</summary><div class="content"><p>Apresente contexto, proposta, público, diferencial, entregas e pedido. Fale como conversa, não como leitura de formulário. Grave, assista e ajuste.</p><label class="complete"><input data-l="22" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 23 — Dossiê profissional</summary><div class="content"><p>Monte capa, resumo, conceito, contexto, objetivos, ações, público, impacto, cronograma, orçamento estimado, equipe e contato. Adapte a extensão ao interlocutor.</p><label class="complete"><input data-l="23" type="checkbox"/> Concluir aula</label></div></details>
+<details class="lesson"><summary>Aula 24 — Laboratório de coerência</summary><div class="content"><p>Faça a leitura horizontal: problema liga ao objetivo; objetivo liga às ações; ações geram entregas; entregas cabem no tempo e no orçamento; indicadores observam resultados.</p><div class="box practice"><b>Trabalho final:</b> produza um dossiê de 5 a 10 páginas e apresente o pitch a duas pessoas — uma da cultura e outra de fora da área.</div><label class="complete"><input data-l="24" type="checkbox"/> Concluir aula</label></div></details></section>
+<section class="kit" id="kit"><h2>Caderno de projeto</h2><div class="cards"><div class="card"><b>1. Frase-núcleo</b><p>O projeto [ação] com [público] em [território] para [transformação].</p></div><div class="card"><b>2. Diagnóstico</b><p>Situação · evidência · público · consequência · oportunidade.</p></div><div class="card"><b>3. Arquitetura</b><p>Problema → objetivo → ações → entregas → resultados → indicadores.</p></div><div class="card"><b>4. Público</b><p>Motivação · barreira · canal · acessibilidade · jornada.</p></div><div class="card"><b>5. Comunicação</b><p>Objetivo · mensagem · canal · formato · data · responsável.</p></div><div class="card"><b>6. Revisão</b><p>Clareza · coerência · viabilidade · singularidade · evidências.</p></div></div></section>
+<section class="final" id="final"><h2>Avaliação final</h2><p>Aproveitamento recomendado: 70%.</p>
+<div class="quiz" data-a="b"><p>1. O núcleo de um projeto deve indicar:</p><label><input name="q1" type="radio" value="a"/> Apenas o nome</label><label><input name="q1" type="radio" value="b"/> Ação, público, território e transformação</label><label><input name="q1" type="radio" value="c"/> Somente o orçamento</label></div>
+<div class="quiz" data-a="c"><p>2. Escopo significa:</p><label><input name="q2" type="radio" value="a"/> Fazer tudo</label><label><input name="q2" type="radio" value="b"/> Aumentar o texto</label><label><input name="q2" type="radio" value="c"/> Definir entregas e limites</label></div>
+<div class="quiz" data-a="a"><p>3. O diagnóstico deve separar:</p><label><input name="q3" type="radio" value="a"/> Fato, percepção e hipótese</label><label><input name="q3" type="radio" value="b"/> Arte e cultura</label><label><input name="q3" type="radio" value="c"/> Texto e imagem</label></div>
+<div class="quiz" data-a="b"><p>4. Conceito curatorial é:</p><label><input name="q4" type="radio" value="a"/> Um slogan</label><label><input name="q4" type="radio" value="b"/> Um critério que organiza escolhas</label><label><input name="q4" type="radio" value="c"/> Uma planilha</label></div>
+<div class="quiz" data-a="c"><p>5. Entrega e resultado:</p><label><input name="q5" type="radio" value="a"/> São iguais</label><label><input name="q5" type="radio" value="b"/> Não precisam se relacionar</label><label><input name="q5" type="radio" value="c"/> Produto e mudança observada são diferentes</label></div>
+<div class="quiz" data-a="a"><p>6. Uma escrita profissional prioriza:</p><label><input name="q6" type="radio" value="a"/> Clareza e precisão</label><label><input name="q6" type="radio" value="b"/> Adjetivos</label><label><input name="q6" type="radio" value="c"/> Frases longas</label></div>
+<div class="quiz" data-a="b"><p>7. A jornada do público começa:</p><label><input name="q7" type="radio" value="a"/> No evento</label><label><input name="q7" type="radio" value="b"/> Na descoberta da proposta</label><label><input name="q7" type="radio" value="c"/> No relatório</label></div>
+<div class="quiz" data-a="c"><p>8. Acessibilidade deve ser:</p><label><input name="q8" type="radio" value="a"/> Decorativa</label><label><input name="q8" type="radio" value="b"/> Decidida no fim</label><label><input name="q8" type="radio" value="c"/> Planejada desde a concepção</label></div>
+<div class="quiz" data-a="a"><p>9. Indicadores eficazes:</p><label><input name="q9" type="radio" value="a"/> Combinam quantidade e qualidade</label><label><input name="q9" type="radio" value="b"/> São infinitos</label><label><input name="q9" type="radio" value="c"/> Servem só para relatório</label></div>
+<div class="quiz" data-a="b"><p>10. Na revisão horizontal, verificamos:</p><label><input name="q10" type="radio" value="a"/> Apenas gramática</label><label><input name="q10" type="radio" value="b"/> Coerência entre todas as partes</label><label><input name="q10" type="radio" value="c"/> Apenas estética</label></div>
+<button id="grade">Corrigir avaliação</button><div class="result" id="result"></div></section>
+</div></div></main><footer><div class="wrap">Sparn — Dando asas às suas ideias.</div></footer><script>
+const bs=[...document.querySelectorAll('[data-l]')],k='sparn-ideia-projeto';function u(){const n=bs.filter(x=>x.checked).length;fill.style.width=n/24*100+'%';pt.textContent=n+' de 24 aulas concluídas';localStorage.setItem(k,JSON.stringify(bs.map(x=>x.checked)))}try{const s=JSON.parse(localStorage.getItem(k)||'[]');bs.forEach((x,i)=>x.checked=!!s[i])}catch(e){}bs.forEach(x=>x.onchange=u);u();grade.onclick=()=>{let n=0;document.querySelectorAll('.quiz').forEach(q=>{const c=q.querySelector('input:checked');if(c&&c.value===q.dataset.a)n++});result.textContent=n+' de 10 — '+n*10+'%. '+(n>=7?'Aprovado! Finalize seu dossiê profissional.':'Revise as aulas e tente novamente.')}
+</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Economia de Verdade | Sparn</title><meta content="Curso avançado de economia: escolhas, mercados, macroeconomia, indicadores, desenvolvimento e análise econômica." name="description"/><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');:root{--bg:#070713;--panel:#111225;--text:#fffaf5;--muted:#bbb7c8;--gold:#ffc85c;--coral:#ff766d;--cyan:#58e5f7;--green:#61e5aa;--line:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 0,rgba(255,200,92,.12),transparent 28%),radial-gradient(circle at 92% 8%,rgba(88,229,247,.11),transparent 30%),var(--bg);color:var(--text);font:16px/1.7 "DM Sans",sans-serif}.wrap{width:min(1120px,calc(100% - 34px));margin:auto}.top{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{color:#fff;text-decoration:none;font:700 1rem "Space Grotesk";letter-spacing:.17em}.back{color:var(--gold);text-decoration:none;font-weight:800;font-size:.88rem}.hero{padding:58px 0 40px;display:grid;grid-template-columns:1fr .82fr;gap:46px;align-items:center}.tag{display:inline-flex;padding:7px 11px;border:1px solid rgba(255,200,92,.32);border-radius:99px;color:#ffe7ac;background:rgba(255,200,92,.07);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.hero h1{font:700 clamp(3rem,6vw,5.5rem)/.97 "Space Grotesk";letter-spacing:-.055em;margin:18px 0}.grad{background:linear-gradient(100deg,var(--gold),#fff 48%,var(--cyan));color:transparent;background-clip:text}.hero p,.card p,.card li,.lesson p,.module-head p,.final p{color:var(--muted)}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.stats span{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.035);font-size:.83rem}.hero-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:1px solid rgba(255,200,92,.28);box-shadow:0 28px 80px #0008}.progress-box{position:sticky;top:0;z-index:5;background:rgba(7,7,19,.92);backdrop-filter:blur(16px);border-block:1px solid var(--line)}.progress-inner{height:58px;display:flex;align-items:center;gap:14px}.bar{height:7px;flex:1;background:#ffffff14;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--cyan),var(--green));transition:.3s}.progress-label{font-size:.8rem;color:var(--muted);white-space:nowrap}.intro{padding:55px 0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card,.lesson,.quiz{border:1px solid var(--line);background:linear-gradient(145deg,#ffffff0e,#ffffff05);border-radius:20px;padding:25px}.card h2,.lesson h3,.module h2,.final h2,.quiz h3{font-family:"Space Grotesk"}.visual{margin:25px auto 65px}.visual img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:0 25px 75px #0006}.visual figcaption{color:var(--muted);font-size:.82rem;margin-top:10px}.module{padding:64px 0;border-top:1px solid var(--line)}.module-head{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;margin-bottom:27px}.module-number{font:700 3.7rem/1 "Space Grotesk";color:transparent;-webkit-text-stroke:1px rgba(255,200,92,.7)}.module h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;margin:0 0 8px}.module-head p{margin:0}.lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.lesson{border-radius:18px;padding:23px}.lesson h3{font-size:1.15rem;line-height:1.3;margin:0 0 10px}.lesson p{margin:0 0 14px}.lesson label{display:flex;align-items:center;gap:9px;color:#e1f5f7;font-size:.82rem;cursor:pointer}.lesson input{width:19px;height:19px;accent-color:var(--gold)}.activity{margin:14px 0;padding:12px;border-radius:11px;background:rgba(255,200,92,.065);border-left:3px solid var(--gold);font-size:.84rem;color:#f5ead2}.tool{margin-top:28px;border:1px solid rgba(88,229,247,.28);background:rgba(88,229,247,.055);border-radius:18px;padding:23px}.tool h3{margin:0 0 8px;color:#c7f8ff}.tool p{margin:0;color:var(--muted)}.quiz{margin-top:24px}.quiz h3{margin:0 0 5px}.quiz .q{padding:16px 0;border-top:1px solid var(--line)}.quiz .q:first-of-type{border-top:0}.quiz .q b{display:block;margin-bottom:8px}.quiz label{display:block;padding:7px 10px;border-radius:9px;cursor:pointer;color:var(--muted)}.quiz label:hover{background:#ffffff08}.quiz input{accent-color:var(--green);margin-right:8px}.quiz button,.project-btn{border:0;cursor:pointer;padding:12px 17px;border-radius:10px;background:linear-gradient(100deg,var(--gold),#ffe49a);color:#211500;font-weight:900}.quiz-result{margin-left:12px;font-weight:800}.final{margin:65px auto;padding:34px;border:1px solid rgba(97,229,170,.38);border-radius:25px;background:radial-gradient(circle at 90% 15%,rgba(97,229,170,.18),transparent 35%),var(--panel)}.final h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:0 0 12px}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}.checklist span{padding:12px;border:1px solid var(--line);border-radius:11px;background:#ffffff06}.project-workbook{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.project-field{display:flex;flex-direction:column;gap:6px;padding:13px;border:1px solid var(--line);border-radius:12px}.project-field span{font-size:.77rem;font-weight:800;color:var(--muted)}.project-field textarea{min-height:90px;resize:vertical;background:#090a16;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:11px;font:inherit}.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.project-btn.secondary{background:#ffffff0b;color:var(--text);border:1px solid var(--line)}footer{border-top:1px solid var(--line);padding:30px 0;color:#8e899d}.foot{display:flex;justify-content:space-between;gap:20px;font-size:.85rem}@media(max-width:800px){.hero,.intro-grid,.lessons,.checklist,.project-workbook{grid-template-columns:1fr}.module-head{grid-template-columns:1fr}.module-number{font-size:2.6rem}.foot{display:block}}@media print{body *{visibility:hidden!important}.final,.final *{visibility:visible!important}.final{position:absolute;left:0;top:0;width:100%;margin:0!important;background:#fff!important;color:#111!important;border:0!important}.final h2,.final p,.project-field span{color:#111!important}.checklist{display:none!important}.project-field textarea{background:#fff!important;color:#111!important;border:0!important}.project-actions{display:none!important}}
+</style><style data-sparn-rule="editor-elastico">
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+.course-cover.visual,
+.sparn-img-editor{
+  position:relative!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.course-cover.visual{
+  display:block!important;
+  padding:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+.course-card[open] .course-cover,
+.course-card[open] .course-cover.visual{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+}
+.course-cover.visual > img.cover-full-image,
+.sparn-img-editor > img{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  transform-origin:center center!important;
+  clip-path:none!important;
+  mask:none!important;
+}
+/* PRISTINE: asset puro, sem transformação */
+.sparn-img-editor:not([data-editor-state="edited"]) > img{
+  transform:none!important;
+}
+/* EDITADO: libera o transform inline do editor */
+.sparn-img-editor[data-editor-state="edited"] > img{
+  transform-origin:center center!important;
+}
+/* Não cortar a imagem quando ela for movida/transformada */
+.course-card,
+.course-area-grid,
+.course-grid{
+  overflow:visible!important;
+}
+.course-cover.visual > .cover-overlay{
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  width:100%!important;
+  height:100%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:space-between!important;
+  padding:18px!important;
+  pointer-events:none!important;
+}
+.course-cover.visual > .cover-overlay .plus{pointer-events:auto!important}
+.sparn-edit-image{
+  position:absolute!important;right:10px!important;top:10px!important;z-index:50!important;
+  width:38px!important;height:38px!important;border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.5)!important;background:#08101f!important;color:#fff!important;
+  cursor:pointer!important;font-size:20px!important;
+}
+.sparn-img-panel{
+  position:absolute!important;left:10px!important;right:10px!important;bottom:10px!important;z-index:60!important;
+  display:none!important;gap:6px!important;flex-wrap:wrap!important;padding:9px!important;
+  border:1px solid rgba(67,231,255,.45)!important;border-radius:12px!important;
+  background:rgba(5,9,20,.94)!important;box-shadow:0 10px 35px rgba(0,0,0,.45)!important;
+}
+.sparn-img-editor.editing .sparn-img-panel{display:flex!important}
+.sparn-img-panel button{
+  border:1px solid rgba(255,255,255,.22)!important;background:#111a30!important;color:#fff!important;
+  border-radius:8px!important;padding:7px 10px!important;cursor:pointer!important;
+}
+.sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
+</style><style data-sparn-rule="replace-image-db">
+/* SPARN — substituir imagem */
+.sparn-replace-image{
+ position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
+ border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+}
+.sparn-replace-save{
+ position:absolute!important;right:54px!important;top:48px!important;z-index:70!important;
+ border:1px solid rgba(67,231,255,.6)!important;background:#0b1c2b!important;color:#fff!important;
+ border-radius:9px!important;padding:8px 10px!important;cursor:pointer!important;font-size:12px!important;
+ display:none!important;
+}
+.sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+.sparn-img-editor > img{
+ width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;
+ object-fit:initial!important;object-position:initial!important;
+}
+</style><style data-sparn-rule="developer-mode-fix-v2">
+/* SPARN DEV FIX v2 */
+.sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
+body:not(.sparn-dev-mode) .sparn-edit-image,
+body:not(.sparn-dev-mode) .sparn-replace-image,
+body:not(.sparn-dev-mode) .sparn-replace-save,
+body:not(.sparn-dev-mode) .sparn-img-panel{display:none!important}
+body.sparn-dev-mode .sparn-edit-image,
+body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
+body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script></head><body><header class="wrap top"><a class="brand" href="index.html">✦ SPARN</a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
+<section class="wrap hero"><div><span class="tag">Economia Avançada · Curso 18</span><h1>Economia de <span class="grad">Verdade.</span></h1><p>Como escolhas individuais, empresas, preços, produção, moeda e grandes indicadores se conectam. Uma introdução rigorosa, mas compreensível, ao raciocínio econômico.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Avaliação final</span><span>Projeto aplicado</span></div></div><img alt="Jovem observando a cidade e estudando economia" class="hero-img" src="assets/economia-de-verdade.png"/></section>
+<div class="progress-box"><div class="wrap progress-inner"><span class="progress-label"><b id="done">0</b>/24 aulas</span><span class="bar"><i id="progress"></i></span><span class="progress-label" id="percent">0%</span></div></div>
+<section class="wrap intro"><div class="intro-grid"><article class="card"><h2>Você vai aprender a pensar como economista</h2><ul><li>Escassez, escolhas, incentivos e custo de oportunidade.</li><li>Oferta, demanda, preços e elasticidade.</li><li>Empresas, custos, concorrência e estruturas de mercado.</li><li>PIB, inflação, desemprego, juros e ciclos.</li><li>Produtividade, desenvolvimento e leitura crítica de indicadores.</li></ul></article><article class="card"><h2>Agora existem avaliações</h2><p>Ao concluir os 6 módulos, você fará uma <strong>avaliação final interativa</strong> reunindo os principais conceitos do curso. Depois, constrói um <strong>Diagnóstico Econômico</strong> preenchível e exportável em PDF.</p></article></div></section>
+<figure class="wrap visual"><img alt="Jovem diante de caminhos que representam escolhas econômicas" src="assets/economia-de-verdade-escolhas.png"/><figcaption>Economia começa onde os desejos encontram limites: escolher uma alternativa também significa abrir mão de outra.</figcaption></figure><div id="modules"></div>
+<figure class="wrap visual"><img alt="Jovem estudando conexões entre economia e sociedade" src="assets/economia-de-verdade-sistema.png"/><figcaption>O objetivo não é decorar indicadores. É compreender relações, hipóteses, evidências e consequências.</figcaption></figure>
+<section class="wrap module" id="avaliacao-final"><div class="module-head"><span class="module-number">★</span><div><h2>Avaliação Final</h2><p>Conclua o curso e teste sua compreensão dos conceitos essenciais de economia.</p></div></div><div class="quiz" id="finalQuiz"><h3>Prova final · 12 questões</h3><p>Selecione uma alternativa por questão. O resultado aparece imediatamente e você pode refazer.</p><div id="finalQuestions"></div><button id="correctFinal" type="button">Corrigir avaliação</button><span class="quiz-result" id="finalResult"></span></div></section><section class="wrap final"><h2>Projeto final: Diagnóstico Econômico</h2><p>Escolha uma situação econômica real — sua cidade, um setor, uma empresa fictícia ou um mercado — e organize uma análise usando os conceitos do curso.</p><div class="checklist"><span>Problema e contexto</span><span>Recursos e escolhas</span><span>Oferta e demanda</span><span>Indicadores relevantes</span><span>Incentivos e efeitos</span><span>Conclusão baseada em evidências</span></div><div class="project-workbook"></div><div class="project-actions"><button class="project-btn secondary" id="saveProject">Salvar respostas</button><button class="project-btn" id="pdfProject">Gerar / salvar em PDF →</button><button class="project-btn secondary" id="clearProject">Limpar</button></div></section></main>
+<footer><div class="wrap foot"><span>© 2026 Sparn</span><span>Dando asas às suas ideias.</span></div></footer>
+<script>
+const data=[
+['01','Fundamentos da Economia','Toda economia começa com escolhas sob restrições.','Mapa de decisão — objetivo + recursos disponíveis + alternativas + custo de oportunidade.',
+[['1. Escassez e escolha','Recursos como tempo, renda, trabalho e matérias-primas são limitados diante de múltiplos usos possíveis. Por isso, escolher é inevitável.','Liste três recursos limitados no seu cotidiano.'],['2. Custo de oportunidade','O custo econômico de uma escolha inclui o valor da melhor alternativa abandonada. Ele ajuda a enxergar custos que não aparecem numa etiqueta.','Compare duas formas de usar duas horas livres.'],['3. Incentivos','Pessoas e organizações respondem a benefícios, custos, regras e expectativas. Incentivos alteram comportamentos, mas seus efeitos precisam ser observados no contexto.','Encontre um incentivo que muda uma decisão sua.'],['4. Pensar na margem','Muitas decisões não são “tudo ou nada”: envolvem fazer um pouco mais ou um pouco menos. Comparar benefício e custo adicionais ajuda a analisar essas escolhas.','Dê um exemplo de decisão marginal.']]],
+['02','Oferta, Demanda e Preços','Preços coordenam decisões de compradores e vendedores, mas mercados reais têm fricções.','Mapa de mercado — produto + compradores + vendedores + fatores que deslocam oferta e demanda.',
+[['5. Demanda','Mantidos outros fatores, uma mudança no preço pode alterar a quantidade demandada. Mudanças em renda, preferências e expectativas podem deslocar a demanda.','Escolha um produto e liste três fatores que afetam sua demanda.'],['6. Oferta','A oferta depende de preço, custos, tecnologia, capacidade produtiva e expectativas, entre outros fatores.','Liste três fatores que podem mudar a oferta de um alimento.'],['7. Equilíbrio e ajuste','O encontro entre planos de compra e venda ajuda a explicar preços e quantidades observados. Choques podem iniciar novos processos de ajuste.','Imagine uma quebra de safra e descreva a direção provável do choque de oferta.'],['8. Elasticidade','Elasticidade mede sensibilidade: quanto uma quantidade responde à mudança em outra variável, como preço ou renda.','Compare intuitivamente a sensibilidade da demanda por um item essencial e por um item facilmente substituível.']]],
+['03','Empresas e Mercados','Produzir envolve tecnologia, organização, custos e decisões estratégicas.','Raio-X da firma — receita + custos fixos + custos variáveis + concorrentes + diferenciação.',
+[['9. Produção e produtividade','Produtividade relaciona produção aos recursos utilizados. Melhorias tecnológicas, qualificação e organização podem elevar a quantidade produzida por unidade de recurso.','Pense em uma atividade e proponha uma melhoria de produtividade.'],['10. Custos fixos e variáveis','Alguns custos mudam pouco com a quantidade produzida no curto prazo; outros acompanham mais diretamente o volume de produção.','Classifique cinco custos de uma pequena lanchonete.'],['11. Concorrência','Número de vendedores, barreiras à entrada, diferenciação e informação ajudam a caracterizar a estrutura de um mercado.','Compare dois mercados que parecem ter níveis diferentes de concorrência.'],['12. Poder de mercado','Quando uma empresa consegue influenciar condições de mercado, preços podem se afastar do que ocorreria sob concorrência mais intensa.','Liste fontes possíveis de poder de mercado sem concluir que toda empresa grande o possui.']]],
+['04','Macroeconomia na Prática','Agora saímos de mercados isolados e observamos a economia agregada.','Painel macro — produção + preços + trabalho + juros + crédito + setor externo.',
+[['13. PIB e produção','O PIB mede o valor da produção final de bens e serviços em determinado território e período. É importante, mas não resume sozinho o bem-estar.','Escreva duas coisas que o PIB informa e duas que não informa sozinho.'],['14. Inflação','Inflação é aumento persistente e generalizado do nível de preços. Índices usam cestas e metodologias específicas, por isso experiências individuais podem diferir do índice agregado.','Monte uma pequena cesta de gastos e observe quais preços mais afetam você.'],['15. Mercado de trabalho','Taxas de desemprego, participação, ocupação, rendimento e informalidade capturam dimensões diferentes do trabalho.','Explique por que uma única taxa não conta toda a história.'],['16. Juros, crédito e atividade','Juros influenciam decisões de poupar, tomar crédito e investir. Seus efeitos percorrem diferentes canais e não acontecem todos de uma vez.','Descreva como juros maiores podem afetar uma compra financiada.']]],
+['05','Crescimento e Desenvolvimento','Produzir mais e melhorar condições de vida são conceitos relacionados, mas não idênticos.','Matriz de desenvolvimento — produtividade + educação + infraestrutura + tecnologia + instituições + distribuição.',
+[['17. Crescimento de longo prazo','Acumulação de capital, trabalho, produtividade e inovação estão entre os elementos usados para estudar crescimento econômico.','Escolha um fator e explique como poderia elevar capacidade produtiva.'],['18. Capital humano','Conhecimentos, habilidades e saúde influenciam a capacidade produtiva das pessoas e as oportunidades disponíveis.','Liste um investimento em habilidade e seu possível retorno não monetário.'],['19. Instituições e ambiente econômico','Regras, direitos, contratos e capacidade de coordenação influenciam incentivos e decisões. Seus efeitos variam conforme desenho e contexto.','Dê um exemplo de regra que reduz incerteza numa troca.'],['20. Desigualdade e distribuição','Médias podem esconder diferenças importantes. Distribuição de renda, patrimônio e oportunidades acrescenta dimensões à análise econômica.','Explique por que renda média e distribuição devem ser observadas juntas.']]],
+['06','Leitura Econômica do Mundo','O nível avançado começa quando você separa dado, hipótese e conclusão.','Método de análise — pergunta + hipótese + indicador + comparação + limitações + conclusão.',
+[['21. Correlação não é causalidade','Duas variáveis se moverem juntas não prova que uma causa a outra. Pode haver causalidade reversa, coincidência ou terceiros fatores.','Crie um exemplo de correlação que não demonstre causalidade.'],['22. Leia gráficos com atenção','Eixos, unidades, período, escala, fonte e população analisada podem mudar completamente a interpretação de um gráfico.','Escolha um gráfico de notícia e confira esses seis elementos.'],['23. Nominal x real','Valores nominais estão expressos em preços correntes; comparações ao longo do tempo frequentemente precisam considerar mudanças no nível de preços.','Explique por que comparar apenas valores nominais de anos distantes pode enganar.'],['24. Construa uma análise','Uma boa análise explicita pergunta, evidência, hipóteses, mecanismos e limitações antes de concluir.','Escreva uma pergunta econômica e indique quais dados seriam necessários para investigá-la.']]]];
+
+const quizzes=[
+[{q:'Qual conceito representa a melhor alternativa abandonada ao fazer uma escolha?',a:['Custo fixo','Custo de oportunidade','Inflação','Produtividade'],c:1},{q:'Pensar na margem significa analisar:',a:['Somente decisões nacionais','Custos já irrecuperáveis','Benefícios e custos adicionais','Apenas preços'],c:2},{q:'Escassez significa que:',a:['Nada existe em quantidade suficiente para ninguém','Recursos têm usos alternativos e são limitados diante dos desejos','Todo preço é alto','Toda escolha é ruim'],c:1}],
+[{q:'Uma mudança no gosto dos consumidores pode:',a:['Deslocar a demanda','Ser necessariamente inflação','Eliminar a oferta','Fixar o preço'],c:0},{q:'Elasticidade mede principalmente:',a:['Tamanho de uma empresa','Sensibilidade entre variáveis','Quantidade de moeda','Lucro contábil'],c:1},{q:'Um aumento de custos de produção, mantidos outros fatores, tende a afetar primeiro:',a:['A oferta','A definição do PIB','A população','O conceito de escassez'],c:0}],
+[{q:'Qual é um exemplo típico de custo variável?',a:['Aluguel mensal fixo','Ingrediente usado por unidade produzida','Registro da empresa já pago','Placa da fachada'],c:1},{q:'Produtividade relaciona:',a:['Produção e recursos utilizados','Preço e inflação apenas','Lucro e imposto apenas','População e território apenas'],c:0},{q:'Poder de mercado significa, em termos gerais:',a:['Toda empresa ter lucro','Capacidade de influenciar condições de mercado','Empresa ser estatal','Consumidor não escolher'],c:1}],
+[{q:'O PIB, sozinho:',a:['Mede perfeitamente bem-estar','Resume toda desigualdade','Mede produção final, mas não resume todas as dimensões sociais','É um índice de preços'],c:2},{q:'Inflação é melhor descrita como:',a:['Qualquer aumento de um único preço','Aumento persistente e generalizado do nível de preços','Queda do PIB','Aumento de salários apenas'],c:1},{q:'Juros podem influenciar:',a:['Crédito, consumo e investimento','Somente exportações','Somente salários','Nada fora dos bancos'],c:0}],
+[{q:'Crescimento econômico e desenvolvimento:',a:['São sempre exatamente iguais','São relacionados, mas desenvolvimento envolve dimensões adicionais','Nunca se relacionam','São apenas conceitos contábeis'],c:1},{q:'Capital humano inclui:',a:['Apenas máquinas','Conhecimentos e habilidades','Somente moeda','Apenas recursos naturais'],c:1},{q:'Uma média de renda:',a:['Sempre revela a distribuição','Pode esconder diferenças entre pessoas','Substitui todos os indicadores','Mede patrimônio automaticamente'],c:1}],
+[{q:'Correlação entre duas variáveis:',a:['Sempre prova causalidade','Nunca é útil','Não prova causalidade por si só','Elimina terceiros fatores'],c:2},{q:'Ao ler um gráfico, é importante verificar:',a:['Apenas as cores','Eixos, unidades, período e fonte','Somente o título','A opinião do leitor'],c:1},{q:'Uma análise econômica cuidadosa deve:',a:['Esconder limitações','Separar pergunta, evidência, hipóteses e conclusão','Começar pela conclusão desejada','Ignorar dados contrários'],c:1}]
+];
+
+const modules=document.getElementById('modules');
+modules.innerHTML=data.map(([n,t,sub,tool,lessons],mi)=>`<section class="wrap module"><div class="module-head"><span class="module-number">${n}</span><div><h2>${t}</h2><p>${sub}</p></div></div><div class="lessons">${lessons.map(([h,p,a])=>`<article class="lesson"><h3>${h}</h3><p>${p}</p><div class="activity"><b>Prática:</b> ${a}</div><label><input type="checkbox"> Aula concluída</label></article>`).join('')}</div><div class="tool"><h3>Ferramenta</h3><p>${tool}</p></div></section>`).join('');
+
+const boxes=[...document.querySelectorAll('.lesson input[type=checkbox]')],progressKey='sparn-economia-de-verdade-progresso',state=JSON.parse(localStorage.getItem(progressKey)||'[]');
+boxes.forEach((x,i)=>x.checked=!!state[i]);
+function update(){const a=boxes.map(x=>x.checked),d=a.filter(Boolean).length,p=Math.round(d/boxes.length*100);localStorage.setItem(progressKey,JSON.stringify(a));done.textContent=d;percent.textContent=p+'%';progress.style.width=p+'%'}
+boxes.forEach(x=>x.addEventListener('change',update));update();
+
+const finalQuizQuestions=[
+quizzes[0][0],quizzes[0][1],quizzes[1][0],quizzes[1][1],
+quizzes[2][0],quizzes[2][1],quizzes[3][0],quizzes[3][1],
+quizzes[4][0],quizzes[4][1],quizzes[5][0],quizzes[5][1]
+];
+const finalQuestions=document.getElementById('finalQuestions');
+finalQuestions.innerHTML=finalQuizQuestions.map((x,qi)=>`<div class="q"><b>${qi+1}. ${x.q}</b>${x.a.map((a,ai)=>`<label><input type="radio" name="final_${qi}" value="${ai}">${a}</label>`).join('')}</div>`).join('');
+document.getElementById('correctFinal').addEventListener('click',()=>{let score=0;finalQuizQuestions.forEach((x,qi)=>{const r=document.querySelector(`input[name=final_${qi}]:checked`);if(r&&+r.value===x.c)score++});const pct=Math.round(score/finalQuizQuestions.length*100);document.getElementById('finalResult').textContent=`${score}/${finalQuizQuestions.length} · ${pct}%`;localStorage.setItem('sparn-economia-avaliacao-final',JSON.stringify({score,pct}))});
+
+const labels=[...document.querySelectorAll('.checklist span')].map(x=>x.textContent.trim()),work=document.querySelector('.project-workbook'),projectKey='sparn-economia-de-verdade-projeto',saved=JSON.parse(localStorage.getItem(projectKey)||'{}');
+labels.forEach((label,i)=>{const f=document.createElement('label');f.className='project-field';f.innerHTML=`<span>${label}</span><textarea data-i="${i}" placeholder="Desenvolva este item…"></textarea>`;work.appendChild(f);f.querySelector('textarea').value=saved[i]||''});
+function saveProject(){const d={};work.querySelectorAll('textarea').forEach(t=>d[t.dataset.i]=t.value);localStorage.setItem(projectKey,JSON.stringify(d))}
+work.addEventListener('input',saveProject);document.getElementById('saveProject').onclick=saveProject;document.getElementById('pdfProject').onclick=()=>{saveProject();window.print()};document.getElementById('clearProject').onclick=()=>{if(confirm('Limpar o projeto?')){work.querySelectorAll('textarea').forEach(t=>t.value='');localStorage.removeItem(projectKey)}};
+</script><script>
+(()=>{
+ const STORE='sparn_image_editor_elastic_v1';
+ let saved={}; try{saved=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+ const persist=()=>localStorage.setItem(STORE,JSON.stringify(saved));
+ const page=location.pathname.split('/').pop()||'index.html';
+
+ function apply(img,wrap,s){
+   const edited = s && (s.dx!==0 || s.dy!==0 || s.zoom!==1);
+   wrap.dataset.editorState = edited ? 'edited' : 'pristine';
+   img.style.setProperty('width','100%','important');
+   img.style.setProperty('height','auto','important');
+   img.style.setProperty('max-height','none','important');
+   img.style.setProperty('aspect-ratio','auto','important');
+   if(edited){
+      img.style.setProperty('transform',`translate(${s.dx}%, ${s.dy}%) scale(${s.zoom})`,'important');
+   }else{
+      img.style.removeProperty('transform');
+   }
+ }
+
+ document.querySelectorAll('img').forEach((img,i)=>{
+   if(img.closest('.sparn-img-editor')) return;
+   const src=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${src}::${i}`;
+   const state=saved[key]||{dx:0,dy:0,zoom:1};
+
+   let wrap;
+   const summary=img.closest('summary.course-cover.visual');
+   if(summary && img.parentElement===summary){
+      wrap=summary; wrap.classList.add('sparn-img-editor');
+   }else{
+      wrap=document.createElement('div');
+      wrap.className='sparn-img-editor';
+      img.parentNode.insertBefore(wrap,img);
+      wrap.appendChild(img);
+   }
+
+   apply(img,wrap,state);
+
+   const edit=document.createElement('button');
+   edit.type='button'; edit.className='sparn-edit-image'; edit.textContent='✥';
+   edit.title='Mover e transformar esta imagem';
+
+   const panel=document.createElement('div');
+   panel.className='sparn-img-panel';
+   panel.innerHTML=
+    '<button data-a="up">↑</button><button data-a="down">↓</button>'+
+    '<button data-a="left">←</button><button data-a="right">→</button>'+
+    '<button data-a="out">− Zoom</button><button data-a="in">＋ Zoom</button>'+
+    '<button data-a="reset">Original</button><button data-a="save">✓ Salvar</button>'+
+    '<small>imagem inteira • caixa elástica</small>';
+
+   wrap.append(panel,edit);
+
+   edit.addEventListener('click',e=>{
+      e.preventDefault();e.stopPropagation();
+      document.querySelectorAll('.sparn-img-editor.editing').forEach(x=>{if(x!==wrap)x.classList.remove('editing')});
+      wrap.classList.toggle('editing');
+   });
+
+   panel.addEventListener('click',e=>{
+      const a=e.target.dataset.a;if(!a)return;
+      e.preventDefault();e.stopPropagation();
+      if(a==='up')state.dy-=3;
+      if(a==='down')state.dy+=3;
+      if(a==='left')state.dx-=3;
+      if(a==='right')state.dx+=3;
+      if(a==='out')state.zoom=Math.max(.25,+(state.zoom-.05).toFixed(2));
+      if(a==='in')state.zoom=Math.min(4,+(state.zoom+.05).toFixed(2));
+      if(a==='reset')Object.assign(state,{dx:0,dy:0,zoom:1});
+      apply(img,wrap,state);
+      if(a==='save'){
+         saved[key]={...state};persist();wrap.classList.remove('editing');
+      }
+   });
+ });
+})();
+</script><script>
+(()=>{
+ const DB='sparn_academia_assets_db', STORE='images', VER=1;
+ const page=location.pathname.split('/').pop()||'index.html';
+ const openDB=()=>new Promise((res,rej)=>{
+   const r=indexedDB.open(DB,VER);
+   r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(STORE))r.result.createObjectStore(STORE)};
+   r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error);
+ });
+ const get=async k=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})};
+ const put=async(k,v)=>{const db=await openDB();return new Promise((res,rej)=>{const r=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);r.onsuccess=()=>res();r.onerror=()=>rej(r.error)})};
+
+ document.querySelectorAll('.sparn-img-editor').forEach(async(wrap,i)=>{
+   const img=wrap.querySelector(':scope > img'); if(!img)return;
+   const original=img.getAttribute('src')||`img-${i}`;
+   const key=`${page}::${original}::${i}`;
+   const stored=await get(key).catch(()=>null);
+   if(stored && stored.blob){
+      img.src=URL.createObjectURL(stored.blob);
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+   }
+
+   const input=document.createElement('input');
+   input.type='file';input.accept='image/*';input.hidden=true;
+   const replace=document.createElement('button');
+   replace.type='button';replace.className='sparn-replace-image';replace.textContent='Substituir imagem';
+   const save=document.createElement('button');
+   save.type='button';save.className='sparn-replace-save';save.textContent='💾 Salvar imagem';
+   wrap.append(input,replace,save);
+
+   let pending=null, previewURL=null;
+   replace.onclick=e=>{e.preventDefault();e.stopPropagation();input.click()};
+   input.onchange=()=>{
+      const f=input.files&&input.files[0];if(!f)return;
+      if(previewURL)URL.revokeObjectURL(previewURL);
+      pending=f;previewURL=URL.createObjectURL(f);img.src=previewURL;
+      wrap.dataset.replacePending='1';
+      /* NOVA IMAGEM SEMPRE ENTRA INTEIRA */
+      wrap.dataset.editorState='pristine';
+      img.style.removeProperty('transform');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('aspect-ratio','auto','important');
+      img.style.setProperty('object-fit','initial','important');
+   };
+   save.onclick=async e=>{
+      e.preventDefault();e.stopPropagation();if(!pending)return;
+      await put(key,{blob:pending,name:pending.name,type:pending.type,savedAt:Date.now()});
+      wrap.dataset.replacePending='0';
+      save.textContent='✓ Salvo no banco local';
+      setTimeout(()=>save.textContent='💾 Salvar imagem',1600);
+      pending=null;
+   };
+ });
+})();
+</script><script>
+(()=>{
+ const PASS='spr7373', SESSION='sparn_dev_authenticated_v2';
+ const $all=s=>Array.from(document.querySelectorAll(s));
+
+ function refreshControls(){
+   const on=document.body.classList.contains('sparn-dev-mode');
+   $all('.sparn-edit-image,.sparn-replace-image').forEach(el=>{
+     el.style.setProperty('display',on?'block':'none','important');
+     el.style.setProperty('visibility',on?'visible':'hidden','important');
+     el.style.setProperty('opacity',on?'1':'0','important');
+   });
+   if(!on){
+     $all('.sparn-img-panel,.sparn-replace-save').forEach(el=>el.style.setProperty('display','none','important'));
+     $all('.sparn-img-editor.editing').forEach(el=>el.classList.remove('editing'));
+   }
+ }
+ function setMode(on){
+   document.body.classList.toggle('sparn-dev-mode',on);
+   sessionStorage.setItem(SESSION,on?'1':'0');
+   const b=document.querySelector('.sparn-dev-toggle');
+   if(b)b.textContent=on?'🛠 Desenvolvedor: ON':'🛠 Modo Desenvolvedor';
+   refreshControls();
+ }
+ function boot(){
+   // Remove old dev button/dialog only; preserve editor and image replacement controls.
+   document.querySelectorAll('.sparn-dev-toggle,.sparn-dev-dialog').forEach(x=>x.remove());
+
+   const btn=document.createElement('button');
+   btn.type='button';btn.className='sparn-dev-toggle';btn.textContent='🛠 Modo Desenvolvedor';
+   document.body.appendChild(btn);
+
+   const dlg=document.createElement('dialog');
+   dlg.className='sparn-dev-dialog';
+   dlg.innerHTML='<h3>Modo Desenvolvedor</h3><p>Digite a senha para liberar a edição.</p>'+
+    '<input type="password" placeholder="Senha" autocomplete="current-password">'+
+    '<div class="sparn-dev-error"></div><div class="sparn-dev-actions">'+
+    '<button type="button" data-x="cancel">Cancelar</button><button type="button" data-x="enter">Entrar</button></div>';
+   document.body.appendChild(dlg);
+   const inp=dlg.querySelector('input'),err=dlg.querySelector('.sparn-dev-error');
+   const login=()=>{
+     if(inp.value===PASS){err.textContent='';inp.value='';dlg.close();setMode(true)}
+     else{err.textContent='Senha incorreta.';inp.select()}
+   };
+   btn.onclick=()=>{
+     if(document.body.classList.contains('sparn-dev-mode')){setMode(false);return}
+     inp.value='';err.textContent='';dlg.showModal();setTimeout(()=>inp.focus(),20);
+   };
+   dlg.querySelector('[data-x="cancel"]').onclick=()=>dlg.close();
+   dlg.querySelector('[data-x="enter"]').onclick=login;
+   inp.onkeydown=e=>{if(e.key==='Enter')login()};
+
+   // Existing editor/replacement scripts build their controls during DOMContentLoaded / parsing.
+   // Run after the document is complete, then explicitly reveal them.
+   setMode(sessionStorage.getItem(SESSION)==='1');
+
+   // Keep controls synchronized if another script creates them just after this one.
+   setTimeout(refreshControls,0);
+   setTimeout(refreshControls,150);
+   setTimeout(refreshControls,500);
+
+   // When clicking the edit button in dev mode, force the panel visible.
+   document.addEventListener('click',e=>{
+     if(!document.body.classList.contains('sparn-dev-mode'))return;
+     const edit=e.target.closest('.sparn-edit-image');
+     if(edit){
+       const wrap=edit.closest('.sparn-img-editor');
+       setTimeout(()=>{
+         if(wrap && wrap.classList.contains('editing')){
+           const panel=wrap.querySelector('.sparn-img-panel');
+           if(panel)panel.style.setProperty('display','flex','important');
+         }
+       },0);
+     }
+   },true);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
+ else boot();
+})();
+</script></body></html>
