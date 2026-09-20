@@ -393,6 +393,101 @@ header.nav, header, .nav, nav.menu, .menu, .courses-menu{
 }
 </style>
 
+
+<style id="teca-kids-theme-ui-v4">
+/* Títulos precisam continuar legíveis em QUALQUER aparência */
+.course-area-head h3,
+.section-head h2,
+.course-info h3,
+.course-cover strong{
+  color:#071b2b!important;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.95),
+    0 0 8px rgba(255,255,255,.92),
+    0 2px 14px rgba(255,255,255,.80)!important;
+}
+.course-cover strong{
+  display:inline;
+  padding:.08em .28em;
+  border-radius:.35em;
+  background:rgba(255,255,255,.76)!important;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+.course-area-head{
+  background:rgba(255,255,255,.32);
+  border-radius:16px 16px 0 0;
+  padding:18px 14px 13px!important;
+}
+
+/* Aparência vira uma brincadeira acessível no menu superior */
+.teca-top-appearance{
+  appearance:none;
+  border:1px solid rgba(0,174,202,.38);
+  background:rgba(255,255,255,.60);
+  color:#10283a;
+  font:800 .88rem "DM Sans",sans-serif;
+  padding:10px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  white-space:nowrap;
+  box-shadow:0 7px 20px rgba(16,40,58,.10);
+}
+.teca-top-appearance:hover,
+.teca-top-appearance[aria-expanded="true"]{
+  background:#fff;
+  transform:translateY(-1px);
+}
+#teca-top-theme-panel{
+  position:fixed!important;
+  z-index:2147483646!important;
+  min-width:250px;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.78);
+  border-radius:18px;
+  background:rgba(255,255,255,.94);
+  box-shadow:0 24px 70px rgba(0,0,0,.25);
+  backdrop-filter:blur(20px);
+}
+#teca-top-theme-panel[hidden]{display:none!important}
+#teca-top-theme-panel button{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:4px 0;
+  padding:11px 12px;
+  border:0;
+  border-radius:12px;
+  background:transparent;
+  color:#10283a;
+  font:800 .86rem "DM Sans",sans-serif;
+  cursor:pointer;
+  text-align:left;
+}
+#teca-top-theme-panel button:hover{background:#eef9fb}
+.teca-theme-dot{width:22px;height:22px;border-radius:50%;border:2px solid rgba(16,40,58,.18);flex:0 0 22px}
+.teca-theme-dot.cenario{background:linear-gradient(135deg,#061a2c,#00aeca,#e1a528)}
+.teca-theme-dot.amarelo{background:linear-gradient(135deg,#fff7ca,#f3d66e)}
+.teca-theme-dot.azul{background:linear-gradient(135deg,#effaff,#a9def0)}
+.teca-theme-dot.menta{background:linear-gradient(135deg,#effff2,#aee8c0)}
+
+/* O seletor flutuante antigo não compete com Modo Desenvolvedor */
+.teca-appearance,
+.teca-appearance-toggle,
+#teca-appearance,
+#teca-appearance-toggle{
+  display:none!important;
+}
+
+header.nav,.nav,.menu,.courses-menu{z-index:100000!important;overflow:visible!important}
+.courses-panel{z-index:100100!important}
+
+@media(max-width:850px){
+  .teca-top-appearance{padding:9px 11px;font-size:.78rem}
+}
+</style>
+
 </head>
 <body>
 <header class="wrap nav"><a class="brand sparn-logo-link" href="#topo"><img alt="Instituto TECA" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></a><nav class="menu"><div class="courses-menu"><button aria-expanded="false" class="courses-trigger" type="button">Cursos ▾</button><div class="courses-panel"><details class="course-category"><summary>Cultura, Arte &amp; Produção</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-editais-sem-misterio.html" href="#">Editais sem Mistério</a><a class="sparn-course-link" data-course-href="curso-da-ideia-ao-projeto.html" href="#">Da Ideia ao Projeto</a><a class="sparn-course-link" data-course-href="curso-ia-para-artistas.html" href="#">IA para Artistas</a><a class="sparn-course-link" data-course-href="curso-artista-visivel.html" href="#">Artista Visível</a><a class="sparn-course-link" data-course-href="curso-viver-de-arte.html" href="#">Viver de Arte</a><a class="sparn-course-link" data-course-href="curso-producao-cultural.html" href="#">Produção Cultural na Prática</a></div></details><details class="course-category"><summary>Futuro, Tecnologia &amp; Carreira</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-profissoes-do-futuro.html" href="#">Profissões do Futuro</a><a class="sparn-course-link" data-course-href="curso-agentes-de-ia.html" href="#">Trabalhando com Agentes de IA</a><a class="sparn-course-link" data-course-href="curso-criador-aumentado.html" href="#">Criador Aumentado</a><a class="sparn-course-link" data-course-href="curso-robos-chegaram.html" href="#">Robôs Chegaram</a><a class="sparn-course-link" data-course-href="curso-humano-premium.html" href="#">Humano Premium</a><a class="sparn-course-link" data-course-href="curso-trabalho-do-futuro.html" href="#">Construa Seu Trabalho do Futuro</a></div></details><details class="course-category"><summary>Educação Financeira &amp; Economia</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-dinheiro-sem-misterio.html" href="#">Dinheiro sem Mistério</a><a class="sparn-course-link" data-course-href="curso-mente-milionaria.html" href="#">Mente Milionária de Verdade</a><a class="sparn-course-link" data-course-href="curso-reserva-de-emergencia.html" href="#">Reserva de Emergência</a><a class="sparn-course-link" data-course-href="curso-banco-sem-armadilhas.html" href="#">Banco sem Armadilhas</a><a class="sparn-course-link" data-course-href="curso-economia-de-verdade.html" href="#">Economia de Verdade</a></div></details><details class="course-category"><summary>Agroeconomia, Terra &amp; Regeneração</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-da-terra-ao-prato.html" href="#">Da Terra ao Prato</a><a class="sparn-course-link" data-course-href="curso-horta-do-zero.html" href="#">Horta do Zero</a><a class="sparn-course-link" data-course-href="curso-agroeconomia.html" href="#">Agroeconomia</a><a class="sparn-course-link" data-course-href="curso-agrofloresta.html" href="#">Agrofloresta</a><a class="sparn-course-link" data-course-href="curso-juventude-que-refloresta.html" href="#">Juventude que Refloresta</a><a class="sparn-course-link" data-course-href="curso-guardioes-das-nascentes.html" href="#">Guardiões das Nascentes</a><a class="sparn-course-link" data-course-href="curso-solo-vivo.html" href="#">Solo Vivo</a><a class="sparn-course-link" data-course-href="curso-sementes-do-futuro.html" href="#">Sementes do Futuro</a></div></details><details class="course-category"><summary>Artes do Passado &amp; do Futuro</summary><div class="course-category-links">
@@ -405,7 +500,7 @@ header.nav, header, .nav, nav.menu, .menu, .courses-menu{
 <a class="sparn-course-link" data-course-href="curso-arte-materiais-reutilizados.html" href="#">Arte com Materiais Reutilizados</a>
 <a class="sparn-course-link" data-course-href="curso-pintura-criativa.html" href="#">Pintura Criativa</a>
 <a class="sparn-course-link" data-course-href="curso-escultura-modelagem.html" href="#">Escultura &amp; Modelagem</a>
-</div></details><details class="course-category"><summary>Mobilidade &amp; Novos Caminhos</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-home-office.html" href="#">Home Office</a><a class="sparn-course-link" data-course-href="curso-nomade-digital.html" href="#">Nômade Digital</a><a class="sparn-course-link" data-course-href="curso-rotas-pelo-brasil.html" href="#">Rotas pelo Brasil</a><a class="sparn-course-link" data-course-href="curso-mochilao-do-zero.html" href="#">Mochilão do Zero</a><a class="sparn-course-link" data-course-href="curso-saude-na-estrada.html" href="#">Saúde na Estrada</a><a class="sparn-course-link" data-course-href="curso-viajar-com-pouco-dinheiro.html" href="#">Viajar com Pouco Dinheiro</a><a class="sparn-course-link" data-course-href="curso-id-jovem-na-estrada.html" href="#">ID Jovem na Estrada</a><a class="sparn-course-link" data-course-href="curso-rota-europa.html" href="#">Rota Europa</a></div></details></div></div><a href="#novidades">Novidades</a><a href="#biblioteca">Biblioteca</a><a class="access" href="#curso">R$ 11,11</a><span class="sparn-account"><a href="login.html">Entrar</a><a href="perfil-aluno.html">Meu perfil</a><a class="access" href="pagamento.html">Acesso Beta</a></span></nav></header>
+</div></details><details class="course-category"><summary>Mobilidade &amp; Novos Caminhos</summary><div class="course-category-links"><a class="sparn-course-link" data-course-href="curso-home-office.html" href="#">Home Office</a><a class="sparn-course-link" data-course-href="curso-nomade-digital.html" href="#">Nômade Digital</a><a class="sparn-course-link" data-course-href="curso-rotas-pelo-brasil.html" href="#">Rotas pelo Brasil</a><a class="sparn-course-link" data-course-href="curso-mochilao-do-zero.html" href="#">Mochilão do Zero</a><a class="sparn-course-link" data-course-href="curso-saude-na-estrada.html" href="#">Saúde na Estrada</a><a class="sparn-course-link" data-course-href="curso-viajar-com-pouco-dinheiro.html" href="#">Viajar com Pouco Dinheiro</a><a class="sparn-course-link" data-course-href="curso-id-jovem-na-estrada.html" href="#">ID Jovem na Estrada</a><a class="sparn-course-link" data-course-href="curso-rota-europa.html" href="#">Rota Europa</a></div></details></div></div><button class="teca-top-appearance" id="teca-top-appearance" type="button" aria-label="Trocar aparência">🎨 Aparência</button><a href="#novidades">Novidades</a><a href="#biblioteca">Biblioteca</a><a class="access" href="#curso">R$ 11,11</a><span class="sparn-account"><a href="login.html">Entrar</a><a href="perfil-aluno.html">Meu perfil</a><a class="access" href="pagamento.html">Acesso Beta</a></span></nav></header>
 <main id="topo">
 <section class="wrap hero"><div><span class="eyebrow"><span class="dot"></span> Tecnologia • Educação • Cultura • Arte</span><h1>Da periferia para o mundo: <span class="gradient">mais futuro, mais possibilidades.</span></h1><p class="lead">Cursos do Instituto TECA, ferramentas práticas e uma biblioteca global para aprender, criar, trabalhar e acessar novas possibilidades.</p><div class="actions"><a class="btn primary" href="#curso">Explorar cursos →</a><a class="btn secondary" href="#novidades">Ver novidades</a></div><div class="micro"><span><b>R$ 11,11</b> Acesso Beta</span><span>Conteúdo original</span><span>Novos cursos em expansão</span></div></div>
 <div class="course-visual"><img alt="Instituto TECA" class="official-logo" src="Assets/teca-logo-high-tech.png"/><h3>Dando asas às suas ideias</h3><p>Cursos, oportunidades e caminhos para avançar.</p></div>
@@ -672,4 +767,85 @@ header.nav, header, .nav, nav.menu, .menu, .courses-menu{
 (()=>{const m=document.querySelector('.courses-menu'),b=m?.querySelector('.courses-trigger');if(!m||!b)return;b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});document.addEventListener('click',e=>{if(!m.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}})})();
 </script>
 <script>document.addEventListener("DOMContentLoaded",async()=>{let paid=false;try{paid=await SparnAuth.access()}catch(e){}if(paid)document.body.classList.add("sparn-paid");document.querySelectorAll(".sparn-course-link").forEach(a=>a.addEventListener("click",async e=>{e.preventDefault();const t=a.dataset.courseHref,u=await SparnAuth.user();if(!u){location.href="login.html?next="+encodeURIComponent(t);return}if(!(await SparnAuth.access())){location.href="pagamento.html";return}location.href=t}))});</script><script src="teca-aparencia.js?v=1"></script>
+
+<script id="teca-top-theme-controller-v4">
+(function(){
+  const KEY='teca_aparencia_v1';
+  const themes={
+    cenario:{
+      label:'🌌 Cenário TECA',
+      bg:'#071523',
+      image:'url("Assets/teca-background-universal.png")',
+      surface:'rgba(8,25,40,.70)', text:'#f7fbff', muted:'#d7e7ef'
+    },
+    amarelo:{
+      label:'☀️ Amarelo Solar',
+      bg:'#f8df85', image:'none',
+      surface:'rgba(255,249,215,.72)', text:'#10283a', muted:'#40596a'
+    },
+    azul:{
+      label:'💧 Azul Céu',
+      bg:'#dff4fb', image:'none',
+      surface:'rgba(246,253,255,.78)', text:'#10283a', muted:'#40596a'
+    },
+    menta:{
+      label:'🌿 Verde Menta',
+      bg:'#ddf5df', image:'none',
+      surface:'rgba(249,255,241,.80)', text:'#10283a', muted:'#40596a'
+    }
+  };
+  function apply(name){
+    if(!themes[name]) name='amarelo';
+    const t=themes[name];
+    document.documentElement.dataset.tecaTheme=name;
+    document.body.style.setProperty('background-color',t.bg,'important');
+    document.body.style.setProperty('background-image',t.image,'important');
+    document.body.style.setProperty('background-size',name==='cenario'?'cover':'auto','important');
+    document.body.style.setProperty('background-position','center','important');
+    document.body.style.setProperty('background-repeat','no-repeat','important');
+    document.body.style.setProperty('background-attachment','fixed','important');
+    document.documentElement.style.setProperty('--teca-glass',t.surface);
+    document.documentElement.style.setProperty('--teca-ink',t.text);
+    document.documentElement.style.setProperty('--teca-muted',t.muted);
+    localStorage.setItem(KEY,name);
+    window.dispatchEvent(new CustomEvent('teca-theme-change',{detail:{theme:name}}));
+  }
+  function build(){
+    const trigger=document.getElementById('teca-top-appearance');
+    if(!trigger) return;
+    const panel=document.createElement('div');
+    panel.id='teca-top-theme-panel';
+    panel.hidden=true;
+    panel.innerHTML=
+      '<button data-theme="cenario"><span class="teca-theme-dot cenario"></span>🌌 Cenário TECA</button>'+
+      '<button data-theme="amarelo"><span class="teca-theme-dot amarelo"></span>☀️ Amarelo Solar</button>'+
+      '<button data-theme="azul"><span class="teca-theme-dot azul"></span>💧 Azul Céu</button>'+
+      '<button data-theme="menta"><span class="teca-theme-dot menta"></span>🌿 Verde Menta</button>';
+    document.body.appendChild(panel);
+    function position(){
+      const r=trigger.getBoundingClientRect();
+      panel.style.top=(r.bottom+8)+'px';
+      panel.style.left=Math.max(10,Math.min(window.innerWidth-panel.offsetWidth-10,r.right-panel.offsetWidth))+'px';
+    }
+    trigger.addEventListener('click',function(e){
+      e.stopPropagation();
+      panel.hidden=!panel.hidden;
+      trigger.setAttribute('aria-expanded',String(!panel.hidden));
+      if(!panel.hidden) position();
+    });
+    panel.addEventListener('click',function(e){
+      const b=e.target.closest('[data-theme]');
+      if(!b)return;
+      apply(b.dataset.theme);
+      panel.hidden=true;
+      trigger.setAttribute('aria-expanded','false');
+    });
+    document.addEventListener('click',()=>{panel.hidden=true;trigger.setAttribute('aria-expanded','false')});
+    window.addEventListener('resize',()=>{if(!panel.hidden)position()});
+    apply(localStorage.getItem(KEY)||'amarelo');
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build);else build();
+})();
+</script>
+
 </body></html>
