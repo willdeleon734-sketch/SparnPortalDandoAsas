@@ -151,6 +151,22 @@ footer{background:rgba(255,243,184,.56)!important;border-top:1px solid rgba(255,
 @media(max-width:900px){body{background-attachment:scroll!important}.hero{padding:25px!important}}@media(max-width:620px){.teca-brand small{display:none}.teca-brand img,.sparn-header-logo{width:31px!important;height:31px!important}}
 </style>
 
+
+<style id="teca-global-theme">
+:root{
+  --teca-page:#fff1a8;--teca-surface:rgba(255,252,228,.78);--teca-text:#10283a;
+  --teca-muted:#40596a;--teca-accent:#00aeca;--teca-accent2:#e1a528;--teca-header:rgba(255,248,207,.78)
+}
+body{color:var(--teca-text)!important;background:
+radial-gradient(circle at 12% 4%,#fff 0,transparent 25%),
+linear-gradient(135deg,#fff7cf,var(--teca-page) 46%,#f8dc79)!important;background-attachment:fixed!important}
+header{background:var(--teca-header)!important}
+.hero,.module,.project,.links,.notice{background:var(--teca-surface)!important}
+.content,.module-head p,.links span{color:var(--teca-muted)!important}
+.activity{border-left-color:var(--teca-accent)!important}
+#bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
+</style>
+
 </head><body><header class="wrap top"><a class="brand sparn-logo-link" href="index.html"><img alt="TECA — Editais e Projetos Culturais" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></a><a class="back" href="index.html">← Voltar aos cursos</a></header><main>
 <section class="wrap hero"><div><span class="tag">Profissões do Futuro · Curso 06</span><h1>Construa Seu <span class="grad">Trabalho do Futuro.</span></h1><p>Crie um Plano de Carreira 2030 baseado em autoconhecimento, sinais reais do mercado, experiências pequenas e evidências — sem depender de adivinhação.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Plano de 90 dias</span><span>Nível introdutório</span></div></div><img alt="Jovem construindo um mapa de competências, projetos e oportunidades" class="hero-img" src="Assets/trabalho-do-futuro.png"/></section>
 <div class="progress-box"><div class="wrap progress-inner"><span class="progress-label"><b id="done">0</b>/24 aulas</span><span class="bar"><i id="progress"></i></span><span class="progress-label" id="percent">0%</span></div></div>
@@ -392,4 +408,42 @@ const b=[...document.querySelectorAll('.lesson input')],k='sparn-trabalho-futuro
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
  else boot();
 })();
-</script></body></html>
+</script>
+<script id="teca-global-sync">
+(async function(){
+  const FALLBACK={
+    brand:"TECA",
+    subtitle:"Tecnologia • Educação • Cultura • Arte",
+    tagline:"Mais futuro, mais possibilidades.",
+    logo:"Assets/teca-logo-high-tech.png",
+    theme:{pageBackground:"#fff1a8",surface:"rgba(255,252,228,.78)",text:"#10283a",muted:"#40596a",accent:"#00aeca",accent2:"#e1a528",header:"rgba(255,248,207,.78)"}
+  };
+  function apply(c){
+    c=c||FALLBACK; const t=c.theme||FALLBACK.theme;
+    const r=document.documentElement;
+    r.style.setProperty("--teca-page",t.pageBackground||FALLBACK.theme.pageBackground);
+    r.style.setProperty("--teca-surface",t.surface||FALLBACK.theme.surface);
+    r.style.setProperty("--teca-text",t.text||FALLBACK.theme.text);
+    r.style.setProperty("--teca-muted",t.muted||FALLBACK.theme.muted);
+    r.style.setProperty("--teca-accent",t.accent||FALLBACK.theme.accent);
+    r.style.setProperty("--teca-accent2",t.accent2||FALLBACK.theme.accent2);
+    r.style.setProperty("--teca-header",t.header||FALLBACK.theme.header);
+
+    document.querySelectorAll(".brand b").forEach(e=>e.textContent=c.brand||FALLBACK.brand);
+    document.querySelectorAll(".brand small").forEach(e=>e.textContent=c.subtitle||FALLBACK.subtitle);
+    document.querySelectorAll(".brand img").forEach(e=>{e.src=c.logo||FALLBACK.logo;e.alt=c.brand||FALLBACK.brand});
+    document.querySelectorAll("footer").forEach(e=>{
+      e.textContent=(c.brand||FALLBACK.brand)+" — "+(c.subtitle||FALLBACK.subtitle)+" · "+(c.tagline||FALLBACK.tagline);
+    });
+  }
+  try{
+    const res=await fetch("index.html?teca_config=1",{cache:"no-store"});
+    const txt=await res.text();
+    const doc=new DOMParser().parseFromString(txt,"text/html");
+    const node=doc.getElementById("teca-global-config");
+    apply(node?JSON.parse(node.textContent):FALLBACK);
+  }catch(e){ apply(FALLBACK); }
+})();
+</script>
+
+</body></html>

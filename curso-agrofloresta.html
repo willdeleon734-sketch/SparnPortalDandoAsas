@@ -38,6 +38,22 @@ footer{background:rgba(255,243,184,.56)!important;border-top:1px solid rgba(255,
 @media(max-width:900px){body{background-attachment:scroll!important}.hero{padding:25px!important}}@media(max-width:620px){.teca-brand small{display:none}.teca-brand img,.sparn-header-logo{width:31px!important;height:31px!important}}
 </style>
 
+
+<style id="teca-global-theme">
+:root{
+  --teca-page:#fff1a8;--teca-surface:rgba(255,252,228,.78);--teca-text:#10283a;
+  --teca-muted:#40596a;--teca-accent:#00aeca;--teca-accent2:#e1a528;--teca-header:rgba(255,248,207,.78)
+}
+body{color:var(--teca-text)!important;background:
+radial-gradient(circle at 12% 4%,#fff 0,transparent 25%),
+linear-gradient(135deg,#fff7cf,var(--teca-page) 46%,#f8dc79)!important;background-attachment:fixed!important}
+header{background:var(--teca-header)!important}
+.hero,.module,.project,.links,.notice{background:var(--teca-surface)!important}
+.content,.module-head p,.links span{color:var(--teca-muted)!important}
+.activity{border-left-color:var(--teca-accent)!important}
+#bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
+</style>
+
 </head><body><header><div class="wrap"><div class="brand sparn-logo-link"><img alt="TECA — Editais e Projetos Culturais" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></div><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
 <main class="wrap"><section class="hero"><div class="editable-img"><img alt="Agrofloresta" src="Assets/agrofloresta.png"/></div><div><div class="tag">AGROFLORESTA + REGENERAÇÃO</div><h1>Agrofloresta</h1><p>Produza alimentos enquanto a floresta cresce: sucessão, estratos, solo vivo, biomassa, desenho, manejo e economia em um sistema produtivo regenerativo.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Projeto de 12 meses</span></div></div></section></main>
 <div class="progressbar"><div class="wrap"><small id="ptxt">0 de 24 aulas concluídas</small><div class="track"><div class="fill" id="fill"></div></div></div></div>
@@ -78,4 +94,42 @@ function setupDev(){
 }
 
 setupDev();
-</script></body></html>
+</script>
+<script id="teca-global-sync">
+(async function(){
+  const FALLBACK={
+    brand:"TECA",
+    subtitle:"Tecnologia • Educação • Cultura • Arte",
+    tagline:"Mais futuro, mais possibilidades.",
+    logo:"Assets/teca-logo-high-tech.png",
+    theme:{pageBackground:"#fff1a8",surface:"rgba(255,252,228,.78)",text:"#10283a",muted:"#40596a",accent:"#00aeca",accent2:"#e1a528",header:"rgba(255,248,207,.78)"}
+  };
+  function apply(c){
+    c=c||FALLBACK; const t=c.theme||FALLBACK.theme;
+    const r=document.documentElement;
+    r.style.setProperty("--teca-page",t.pageBackground||FALLBACK.theme.pageBackground);
+    r.style.setProperty("--teca-surface",t.surface||FALLBACK.theme.surface);
+    r.style.setProperty("--teca-text",t.text||FALLBACK.theme.text);
+    r.style.setProperty("--teca-muted",t.muted||FALLBACK.theme.muted);
+    r.style.setProperty("--teca-accent",t.accent||FALLBACK.theme.accent);
+    r.style.setProperty("--teca-accent2",t.accent2||FALLBACK.theme.accent2);
+    r.style.setProperty("--teca-header",t.header||FALLBACK.theme.header);
+
+    document.querySelectorAll(".brand b").forEach(e=>e.textContent=c.brand||FALLBACK.brand);
+    document.querySelectorAll(".brand small").forEach(e=>e.textContent=c.subtitle||FALLBACK.subtitle);
+    document.querySelectorAll(".brand img").forEach(e=>{e.src=c.logo||FALLBACK.logo;e.alt=c.brand||FALLBACK.brand});
+    document.querySelectorAll("footer").forEach(e=>{
+      e.textContent=(c.brand||FALLBACK.brand)+" — "+(c.subtitle||FALLBACK.subtitle)+" · "+(c.tagline||FALLBACK.tagline);
+    });
+  }
+  try{
+    const res=await fetch("index.html?teca_config=1",{cache:"no-store"});
+    const txt=await res.text();
+    const doc=new DOMParser().parseFromString(txt,"text/html");
+    const node=doc.getElementById("teca-global-config");
+    apply(node?JSON.parse(node.textContent):FALLBACK);
+  }catch(e){ apply(FALLBACK); }
+})();
+</script>
+
+</body></html>

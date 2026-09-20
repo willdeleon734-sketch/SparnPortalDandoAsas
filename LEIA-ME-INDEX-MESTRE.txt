@@ -1,0 +1,30 @@
+INSTITUTO TECA — INDEX MESTRE
+
+Agora os cursos consultam automaticamente o bloco:
+<script id="teca-global-config" type="application/json">
+do index.html.
+
+Para mudar a identidade global:
+1. Abra index.html.
+2. Procure por: TECA GLOBAL
+3. Altere somente os valores do JSON.
+4. Salve, commit e push.
+
+Campos globais:
+- brand
+- subtitle
+- tagline
+- logo
+- theme.pageBackground
+- theme.surface
+- theme.text
+- theme.muted
+- theme.accent
+- theme.accent2
+- theme.header
+
+Os curso-*.html buscam index.html com cache desativado e aplicam esses valores.
+Assim, uma mudança central no JSON do index principal se propaga para os cursos sem editar 42 arquivos novamente.
+
+IMPORTANTE:
+Isso centraliza IDENTIDADE VISUAL/BRANDING. O conteúdo específico de cada aula continua dentro do HTML de cada curso.
