@@ -1,17 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head>
-<script id="teca-theme-early">
-(function(){
-  try{
-    var k="teca_aparencia_v1", v=localStorage.getItem(k);
-    if(["cenario","amarelo","azul","menta"].indexOf(v)<0) v="amarelo";
-    document.documentElement.setAttribute("data-teca-theme",v);
-  }catch(e){
-    document.documentElement.setAttribute("data-teca-theme","amarelo");
-  }
-})();
-</script>
-<link rel="stylesheet" href="teca-aparencia.css?v=2"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mente Milionária de Verdade — Instituto TECA</title>
 <meta name="description" content="Curso de educação financeira sobre hábitos, disciplina, longo prazo, patrimônio e proteção contra atalhos.">
 <style>
@@ -26,26 +14,7 @@ header{height:72px;display:flex;align-items:center;justify-content:space-between
 .final{margin:65px auto;padding:34px;border-radius:25px}.final h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:0 0 12px}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}.checklist span{padding:12px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.28)}.project-workbook{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.project-field{display:flex;flex-direction:column;gap:7px;padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.26)}.project-field span{font-size:.78rem;font-weight:800;color:var(--muted);text-transform:uppercase}textarea{width:100%;min-height:95px;resize:vertical;border:1px solid rgba(16,40,58,.16);border-radius:10px;background:rgba(255,255,255,.58);color:var(--ink);padding:12px;font:inherit}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}button{border:1px solid rgba(16,40,58,.12);border-radius:11px;padding:12px 16px;font-weight:800;cursor:pointer;background:#fff9d9;color:var(--ink)}button.primary{background:linear-gradient(100deg,#00aeca,#64dce6);color:#082633}footer{padding:30px 0;border-top:1px solid var(--line);background:rgba(255,243,184,.56);color:#355363}.foot{display:flex;justify-content:space-between;gap:20px;font-size:.85rem}
 @media(max-width:800px){.intro-grid,.lessons,.checklist,.project-workbook{grid-template-columns:1fr}.module-head{grid-template-columns:1fr}.module-number{font-size:2.6rem}.brand small{display:none}}
 @media print{header,.progress-box,footer,.module,.intro,.hero,.actions{display:none!important}.final{box-shadow:none;border:0;background:#fff;margin:0}body{background:#fff}textarea{background:#fff}}
-</style>
-<style id="teca-global-theme">
-:root{
-  --teca-page:#fff1a8;--teca-surface:rgba(255,252,228,.78);--teca-text:#10283a;
-  --teca-muted:#40596a;--teca-accent:#00aeca;--teca-accent2:#e1a528;--teca-header:rgba(255,248,207,.78)
-}
-body{color:var(--teca-text)!important;background:
-radial-gradient(circle at 12% 4%,#fff 0,transparent 25%),
-linear-gradient(135deg,#fff7cf,var(--teca-page) 46%,#f8dc79)!important;background-attachment:fixed!important}
-header{background:var(--teca-header)!important}
-.hero,.module,.project,.links,.notice{background:var(--teca-surface)!important}
-.content,.module-head p,.links span{color:var(--teca-muted)!important}
-.activity{border-left-color:var(--teca-accent)!important}
-#bar{background:linear-gradient(90deg,var(--teca-accent),#27c7c1,var(--teca-accent2))!important}
-</style>
-
-<style id="teca-course-theme-slave">
-.teca-appearance,.teca-appearance-toggle,#teca-appearance,#teca-appearance-toggle{display:none!important}
-</style>
-</head><body>
+</style></head><body>
 <header><div class="wrap" style="display:flex;align-items:center;justify-content:space-between"><a class="brand" href="index.html"><img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA"><span><b>TECA</b><small>TECNOLOGIA • EDUCAÇÃO • CULTURA • ARTE</small></span></a><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
 <main>
 <section class="wrap hero"><span class="tag">Hábitos Financeiros · Curso 14</span><h1>Mente Milionária <span class="grad">de Verdade.</span></h1><p>Hábitos antes da riqueza. Desenvolva disciplina, paciência, responsabilidade e visão de longo prazo para construir estabilidade, patrimônio e liberdade — sem promessas de enriquecimento rápido.</p><div class="stats"><span>6 módulos</span><span>24 aulas</span><span>Desafio de 90 dias</span><span>Educação financeira</span></div></section>
@@ -69,43 +38,4 @@ function saveProject(){const d={};work.querySelectorAll('textarea').forEach(t=>d
 document.getElementById('save').onclick=saveProject;
 document.getElementById('pdf').onclick=()=>{saveProject();window.print()};
 document.getElementById('clear').onclick=()=>{if(confirm('Limpar todas as respostas deste projeto?')){work.querySelectorAll('textarea').forEach(t=>t.value='');localStorage.removeItem(projectKey);status.textContent='Respostas apagadas.'}};
-</script>
-<script id="teca-global-sync">
-(async function(){
-  const FALLBACK={
-    brand:"TECA",
-    subtitle:"Tecnologia • Educação • Cultura • Arte",
-    tagline:"Mais futuro, mais possibilidades.",
-    logo:"Assets/teca-logo-high-tech.png",
-    theme:{pageBackground:"#fff1a8",surface:"rgba(255,252,228,.78)",text:"#10283a",muted:"#40596a",accent:"#00aeca",accent2:"#e1a528",header:"rgba(255,248,207,.78)"}
-  };
-  function apply(c){
-    c=c||FALLBACK; const t=c.theme||FALLBACK.theme;
-    const r=document.documentElement;
-    r.style.setProperty("--teca-page",t.pageBackground||FALLBACK.theme.pageBackground);
-    r.style.setProperty("--teca-surface",t.surface||FALLBACK.theme.surface);
-    r.style.setProperty("--teca-text",t.text||FALLBACK.theme.text);
-    r.style.setProperty("--teca-muted",t.muted||FALLBACK.theme.muted);
-    r.style.setProperty("--teca-accent",t.accent||FALLBACK.theme.accent);
-    r.style.setProperty("--teca-accent2",t.accent2||FALLBACK.theme.accent2);
-    r.style.setProperty("--teca-header",t.header||FALLBACK.theme.header);
-
-    document.querySelectorAll(".brand b").forEach(e=>e.textContent=c.brand||FALLBACK.brand);
-    document.querySelectorAll(".brand small").forEach(e=>e.textContent=c.subtitle||FALLBACK.subtitle);
-    document.querySelectorAll(".brand img").forEach(e=>{e.src=c.logo||FALLBACK.logo;e.alt=c.brand||FALLBACK.brand});
-    document.querySelectorAll("footer").forEach(e=>{
-      e.textContent=(c.brand||FALLBACK.brand)+" — "+(c.subtitle||FALLBACK.subtitle)+" · "+(c.tagline||FALLBACK.tagline);
-    });
-  }
-  try{
-    const res=await fetch("index.html?teca_config=1",{cache:"no-store"});
-    const txt=await res.text();
-    const doc=new DOMParser().parseFromString(txt,"text/html");
-    const node=doc.getElementById("teca-global-config");
-    apply(node?JSON.parse(node.textContent):FALLBACK);
-  }catch(e){ apply(FALLBACK); }
-})();
-</script>
-
-<script src="teca-aparencia.js?v=2"></script>
-</body></html>
+</script></body></html>
