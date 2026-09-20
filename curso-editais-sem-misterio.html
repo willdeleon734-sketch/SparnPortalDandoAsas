@@ -3,7 +3,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Editais sem Mistério — TECA</title>
+<title>Editais sem Mistério — Instituto TECA</title>
 <meta content="Curso completo para transformar ideias culturais em projetos claros, viáveis e competitivos." name="description"/>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
@@ -17,7 +17,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(5,7,19,.88);backdrop-fil
 @media(max-width:850px){.hero,.layout{grid-template-columns:1fr}.sidebar{position:static}.templates{grid-template-columns:1fr}.nav{height:auto;padding:16px 0}.hero{padding-top:42px}}
 </style>
 <style data-sparn-rule="editor-elastico">
-/* TECA — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
+/* SPARN — CAIXA ELÁSTICA + EDITOR FUNCIONAL */
 .course-cover.visual,
 .sparn-img-editor{
   position:relative!important;
@@ -102,7 +102,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(5,7,19,.88);backdrop-fil
 }
 .sparn-img-panel small{align-self:center!important;color:#b9c7db!important}
 </style><style data-sparn-rule="replace-image-db">
-/* TECA — substituir imagem */
+/* SPARN — substituir imagem */
 .sparn-replace-image{
  position:absolute!important;right:54px!important;top:10px!important;z-index:70!important;
  border:1px solid rgba(255,255,255,.45)!important;background:#08101f!important;color:#fff!important;
@@ -120,7 +120,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(5,7,19,.88);backdrop-fil
  object-fit:initial!important;object-position:initial!important;
 }
 </style><style data-sparn-rule="developer-mode-fix-v2">
-/* TECA DEV FIX v2 */
+/* SPARN DEV FIX v2 */
 .sparn-dev-toggle{position:fixed!important;right:18px!important;bottom:18px!important;z-index:2147483647!important}
 body:not(.sparn-dev-mode) .sparn-edit-image,
 body:not(.sparn-dev-mode) .sparn-replace-image,
@@ -130,24 +130,147 @@ body.sparn-dev-mode .sparn-edit-image,
 body.sparn-dev-mode .sparn-replace-image{display:block!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor.editing .sparn-img-panel{display:flex!important;visibility:visible!important;opacity:1!important}
 body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-save{display:block!important}
-</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="sparn-config.js"></script><script src="sparn-auth.js"></script><script>(async()=>{await SparnAuth.requirePaid()})()</script>
-<style id="sparn-header-logo-fix">
-.brand .sparn-header-logo, .brand.sparn-logo-link .sparn-header-logo {
-  display:block !important; width:48px !important; height:48px !important;
-  object-fit:cover !important; object-position:center !important; border-radius:12px !important;
-  box-shadow:0 0 0 1px rgba(218,169,76,.28),0 8px 24px rgba(0,0,0,.28) !important;
-  flex:0 0 48px !important;
-}
-.brand.sparn-logo-link { display:inline-flex !important; align-items:center !important; text-decoration:none !important; }
-@media (max-width:700px){.brand .sparn-header-logo,.brand.sparn-logo-link .sparn-header-logo{width:42px !important;height:42px !important;flex-basis:42px !important;border-radius:10px !important}}
 </style>
+<style id="teca-symbiosis-v1">
+:root{
+ --teca-cyan:#35e7f2;--teca-blue:#2f8cff;--teca-gold:#ffb547;
+ --teca-deep:#020711;--teca-glass:rgba(8,20,34,.72);
+}
+body{
+ background:
+ radial-gradient(circle at 12% 2%,rgba(53,231,242,.13),transparent 25%),
+ radial-gradient(circle at 88% 8%,rgba(255,181,71,.09),transparent 23%),
+ radial-gradient(circle at 50% 42%,rgba(47,140,255,.07),transparent 34%),
+ linear-gradient(180deg,#020711 0%,#050a15 45%,#020711 100%)!important;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;
+ background-image:linear-gradient(rgba(53,231,242,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(53,231,242,.035) 1px,transparent 1px);
+ background-size:44px 44px;
+ mask-image:linear-gradient(to bottom,black,transparent 78%);
+}
+header{background:rgba(2,7,17,.72)!important;border-bottom:1px solid rgba(53,231,242,.16)!important;
+ box-shadow:0 8px 35px rgba(0,0,0,.18)}
+.nav{min-height:68px}
+.teca-brand{display:flex!important;align-items:center;gap:9px;letter-spacing:0!important}
+.teca-brand img{width:34px!important;height:34px!important;object-fit:contain!important;border-radius:9px;
+ filter:drop-shadow(0 0 10px rgba(53,231,242,.28))}
+.teca-brand span{display:flex;flex-direction:column;line-height:1}
+.teca-brand b{font-family:"Space Grotesk";font-size:.92rem;letter-spacing:.18em}
+.teca-brand small{font-family:"DM Sans";font-size:.42rem;letter-spacing:.09em;color:#7f9cb5;margin-top:5px;white-space:nowrap}
+.back{border:1px solid rgba(53,231,242,.18);padding:8px 12px;border-radius:999px;background:rgba(53,231,242,.04)}
+.hero{position:relative;padding-top:72px}
+.hero:before{content:"TECA // 01";position:absolute;right:0;top:30px;color:rgba(53,231,242,.16);
+ font:700 clamp(2rem,7vw,5.5rem)/1 "Space Grotesk";letter-spacing:.08em;pointer-events:none}
+.eyebrow{color:#aaf9ff!important}
+.gradient{background:linear-gradient(100deg,#35e7f2,#f8fdff 48%,#ffb547)!important;color:transparent!important;background-clip:text!important}
+.stat{border-color:rgba(53,231,242,.15)!important;background:rgba(255,255,255,.025)!important;backdrop-filter:blur(10px)}
+.progress-card,.sidebar,.toolkit,.final{
+ background:linear-gradient(145deg,rgba(10,24,40,.84),rgba(4,10,20,.9))!important;
+ border-color:rgba(53,231,242,.16)!important;backdrop-filter:blur(16px);
+}
+.progress-card{box-shadow:0 28px 80px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.035)!important}
+.fill{background:linear-gradient(90deg,#35e7f2,#2f8cff,#ffb547)!important;box-shadow:0 0 18px rgba(53,231,242,.4)}
+.notice{border-left-color:#ffb547!important;background:linear-gradient(90deg,rgba(255,181,71,.08),rgba(255,181,71,.015))!important}
+.module{filter:drop-shadow(0 18px 35px rgba(0,0,0,.16))}
+.module-head{background:linear-gradient(125deg,rgba(53,231,242,.09),rgba(47,140,255,.05),rgba(255,181,71,.055))!important;
+ border-color:rgba(53,231,242,.14)!important}
+.module-head span,.template b,.sidebar a:hover{color:#35e7f2!important}
+.lesson{background:rgba(6,15,28,.66)!important;border-color:rgba(255,255,255,.075)!important;backdrop-filter:blur(8px);transition:.25s}
+.lesson:hover{border-color:rgba(53,231,242,.18)!important;background:rgba(8,20,35,.78)!important}
+.lesson[open]{box-shadow:inset 3px 0 rgba(53,231,242,.45)}
+.lesson summary:after{color:#35e7f2!important}
+button{background:linear-gradient(110deg,#35e7f2,#67f0d1)!important;box-shadow:0 8px 24px rgba(53,231,242,.12)}
+footer{background:rgba(1,5,12,.72)}
+.teca-course-art{position:relative;margin:0 0 40px!important;border:1px solid rgba(53,231,242,.2)!important;
+ border-radius:26px!important;overflow:hidden!important;background:#030914;
+ box-shadow:0 28px 90px rgba(0,0,0,.42),0 0 45px rgba(53,231,242,.035)!important}
+.teca-course-art:after{content:"INSTITUTO TECA";position:absolute;right:15px;bottom:12px;padding:5px 9px;border-radius:999px;
+ background:rgba(2,7,17,.72);border:1px solid rgba(53,231,242,.2);color:#bffaff;font:700 9px "Space Grotesk";letter-spacing:.13em;pointer-events:none}
+.teca-course-art img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
+@media(max-width:620px){
+ .teca-brand small{display:none}.teca-brand img{width:29px!important;height:29px!important}
+ .hero:before{top:18px}.back{font-size:.74rem}.nav{gap:10px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .progress-card,.module-head,.toolkit,.final{animation:tecaIn .55s ease both}
+ .module:nth-of-type(2n){animation-delay:.04s}
+ @keyframes tecaIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+</style>
+
+
+<style id="teca-pastel-glass-course-01">
+:root{
+ --teca-bg:#f8df85;--teca-ink:#10283a;--teca-muted:#40596a;
+ --teca-cyan:#00aeca;--teca-gold:#d99b18;
+}
+html{background:#f8df85!important}
+body{
+ color:var(--teca-ink)!important;
+ background:
+  radial-gradient(circle at 12% 4%,rgba(255,255,255,.78),transparent 25%),
+  radial-gradient(circle at 86% 14%,rgba(255,249,199,.68),transparent 27%),
+  linear-gradient(135deg,#fff7cf 0%,#ffeaa1 46%,#f8dc79 100%)!important;
+ background-attachment:fixed!important;
+}
+header{
+ background:rgba(255,248,207,.50)!important;
+ border-bottom:1px solid rgba(255,255,255,.72)!important;
+ box-shadow:0 10px 34px rgba(105,77,0,.08)!important;
+ backdrop-filter:blur(18px) saturate(125%);
+ -webkit-backdrop-filter:blur(18px) saturate(125%);
+}
+.teca-brand{display:flex!important;align-items:center;gap:9px!important;letter-spacing:0!important}
+.teca-brand img{width:36px!important;height:36px!important;object-fit:contain!important;border-radius:9px!important}
+.teca-brand span{display:flex;flex-direction:column;line-height:1}
+.teca-brand b{font-family:"Space Grotesk";font-size:.9rem;letter-spacing:.17em;color:#10283a}
+.teca-brand small{font-family:"DM Sans";font-size:.41rem;letter-spacing:.07em;color:#506474;margin-top:5px;white-space:nowrap}
+.back{color:#15394d!important;border:1px solid rgba(255,255,255,.72);background:rgba(255,251,224,.44);padding:8px 12px;border-radius:999px}
+.hero,.progress-card,.notice,.sidebar,.module-head,.lesson,.toolkit,.final,.sources{
+ backdrop-filter:blur(15px) saturate(125%);
+ -webkit-backdrop-filter:blur(15px) saturate(125%);
+}
+.hero{
+ margin-top:30px;padding:36px!important;border-radius:26px!important;
+ background:linear-gradient(145deg,rgba(255,252,228,.62),rgba(255,236,157,.48))!important;
+ border:1px solid rgba(255,255,255,.76)!important;
+ box-shadow:0 20px 58px rgba(116,84,0,.11),inset 0 1px rgba(255,255,255,.84)!important;
+}
+.progress-card,.sidebar,.toolkit,.final,.sources{
+ background:linear-gradient(145deg,rgba(255,252,228,.69),rgba(255,236,157,.52))!important;
+ border:1px solid rgba(255,255,255,.74)!important;
+ box-shadow:0 14px 38px rgba(112,80,0,.09),inset 0 1px rgba(255,255,255,.76)!important;
+}
+.notice{background:rgba(255,248,209,.62)!important;border-color:rgba(218,155,24,.32)!important;color:#3c3524!important}
+.module-head{background:linear-gradient(125deg,rgba(255,250,220,.72),rgba(255,229,139,.55))!important;border-color:rgba(255,255,255,.72)!important}
+.lesson{background:rgba(255,251,225,.64)!important;border-color:rgba(255,255,255,.74)!important;color:#183447!important;box-shadow:0 8px 24px rgba(112,80,0,.055)}
+.lesson:hover{background:rgba(255,253,235,.78)!important;border-color:rgba(0,174,202,.28)!important}
+.lesson[open]{box-shadow:inset 3px 0 rgba(0,174,202,.52),0 8px 24px rgba(112,80,0,.06)!important}
+h1,h2,h3,.lesson summary{color:#10283a!important;text-shadow:none!important}
+.hero p,.module-head p,.content,.sources,.meta{color:#40596a!important;text-shadow:none!important}
+.gradient{background:linear-gradient(100deg,#007f9a,#124a63 52%,#b67a00)!important;color:transparent!important;background-clip:text!important}
+.stat{background:rgba(255,252,231,.58)!important;border-color:rgba(255,255,255,.72)!important;color:#274657!important}
+.fill{background:linear-gradient(90deg,#00aeca,#27c7c1,#e1a528)!important;box-shadow:0 0 14px rgba(0,174,202,.16)}
+figure{background:rgba(255,250,220,.50)!important;border-color:rgba(255,255,255,.72)!important;box-shadow:0 16px 42px rgba(112,80,0,.10)!important}
+figure img,.sparn-img-editor>img{width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important}
+button{box-shadow:0 8px 22px rgba(0,138,164,.12)!important}
+footer{background:rgba(255,243,184,.56)!important;border-top:1px solid rgba(255,255,255,.72)!important;color:#355363!important;backdrop-filter:blur(14px)}
+@media(max-width:900px){body{background-attachment:scroll!important}.hero{padding:25px!important}}
+@media(max-width:620px){.teca-brand small{display:none}.teca-brand img{width:31px!important;height:31px!important}}
+</style>
+
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand sparn-logo-link" href="index.html"><img alt="TECA — Editais e Projetos Culturais" class="sparn-header-logo" src="assets/teca-logo-high-tech.png"/></a><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
+<header><div class="wrap nav"><a class="brand teca-brand" href="index.html" aria-label="Instituto TECA">
+<img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA">
+<span><b>TECA</b><small>Tecnologia • Educação • Cultura • Arte</small></span>
+</a><a class="back" href="index.html">← Voltar aos cursos</a></div></header>
 <main class="wrap">
-<section class="hero"><div><div class="eyebrow">Curso original TECA · Cultura</div><h1>Editais sem <span class="gradient">Mistério</span></h1><p>Aprenda a ler um edital, estruturar uma proposta cultural, montar orçamento e cronograma, comprovar trajetória, realizar a inscrição e preparar a execução responsável do projeto.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">10 horas</span><span class="stat">Avaliação final</span><span class="stat">Projeto aplicado</span></div></div><aside class="progress-card"><strong>Seu progresso</strong><div class="bar"><div class="fill" id="fill"></div></div><small id="progressText">0 de 24 aulas concluídas</small></aside></section>
+<section class="hero"><div><div class="eyebrow">Instituto TECA · Cultura & Produção</div><h1>Editais sem <span class="gradient">Mistério</span></h1><p>Aprenda a ler um edital, estruturar uma proposta cultural, montar orçamento e cronograma, comprovar trajetória, realizar a inscrição e preparar a execução responsável do projeto.</p><div class="stats"><span class="stat">8 módulos</span><span class="stat">24 aulas</span><span class="stat">10 horas</span><span class="stat">Avaliação final</span><span class="stat">Projeto aplicado</span></div></div><aside class="progress-card"><strong>Seu progresso</strong><div class="bar"><div class="fill" id="fill"></div></div><small id="progressText">0 de 24 aulas concluídas</small></aside></section>
 <div class="notice"><b>Importante:</b> editais variam por órgão, território e modalidade. Este curso ensina método e raciocínio. O documento vigente, seus anexos e eventuais retificações sempre prevalecem.</div>
-<figure style="margin:0 0 36px;border:1px solid rgba(67,231,255,.22);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Jovem produtora cultural elaborando um projeto" src="assets/editais-sem-misterio.png" style="display:block"/></figure>
+<figure class="teca-course-art" style="margin:0 0 36px;border:1px solid rgba(67,231,255,.22);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.34)"><img alt="Jovem produtora cultural elaborando um projeto" src="Assets/editais-sem-misterio.png" style="display:block"/></figure>
 <div class="layout">
 <nav class="sidebar"><b>Conteúdo</b><a href="#m1">1. O universo dos editais</a><a href="#m2">2. Leitura estratégica</a><a href="#m3">3. Ideia e coerência</a><a href="#m4">4. Escrita do projeto</a><a href="#m5">5. Plano de execução</a><a href="#m6">6. Orçamento</a><a href="#m7">7. Documentos e inscrição</a><a href="#m8">8. Seleção, execução e contas</a><a href="#kit">Kit de modelos</a><a href="#avaliacao">Avaliação final</a></nav>
 <div>
@@ -198,7 +321,7 @@ body.sparn-dev-mode .sparn-img-editor[data-replace-pending="1"] .sparn-replace-s
 <button id="grade" type="button">Corrigir avaliação</button><div class="result" id="result"></div></section>
 <section class="sources"><b>Referências essenciais:</b> <a href="https://www.gov.br/cultura/pt-br/assuntos/pnab" rel="noopener" target="_blank">PNAB — Ministério da Cultura</a> · <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14903.htm" rel="noopener" target="_blank">Lei nº 14.903/2024</a> · <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14399.htm" rel="noopener" target="_blank">Lei nº 14.399/2022</a> · <a href="https://salic.cultura.gov.br/" rel="noopener" target="_blank">SALIC</a>. Consulte sempre a legislação e o edital aplicáveis à oportunidade escolhida.</section>
 </div></div></main>
-<footer><div class="wrap">TECA — Dando asas às suas ideias.</div></footer>
+<footer><div class="wrap">Instituto TECA — Tecnologia • Educação • Cultura • Arte · Mais futuro, mais possibilidades.</div></footer>
 <script>
 const boxes=[...document.querySelectorAll('[data-lesson]')],key='sparn-editais-progresso';
 function update(){const done=boxes.filter(b=>b.checked).length;document.getElementById('fill').style.width=(done/boxes.length*100)+'%';document.getElementById('progressText').textContent=done+' de '+boxes.length+' aulas concluídas';localStorage.setItem(key,JSON.stringify(boxes.map(b=>b.checked)))}
@@ -421,4 +544,62 @@ document.getElementById('grade').addEventListener('click',()=>{let score=0;docum
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);
  else boot();
 })();
-</script></body></html>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="sparn-config.js"></script>
+<script id="teca-course-text-editor">
+(()=>{
+ const selectors=[
+  ['.eyebrow','course.editais.eyebrow'],['.hero h1','course.editais.title'],['.hero p','course.editais.intro'],
+  ['.notice','course.editais.notice'],['#kit h2','course.editais.kit.title'],['#avaliacao h2','course.editais.quiz.title']
+ ];
+ document.querySelectorAll('.module').forEach((m,i)=>{
+   const n=i+1, h=m.querySelector('.module-head h2'),p=m.querySelector('.module-head p');
+   if(h){h.dataset.contentKey=`course.editais.module.${n}.title`;h.classList.add('teca-text-editable')}
+   if(p){p.dataset.contentKey=`course.editais.module.${n}.intro`;p.classList.add('teca-text-editable')}
+ });
+ document.querySelectorAll('.lesson').forEach((l,i)=>{
+   const n=i+1,s=l.querySelector('summary'),c=l.querySelector('.content');
+   if(s){s.dataset.contentKey=`course.editais.lesson.${n}.title`;s.classList.add('teca-text-editable')}
+   if(c){c.dataset.contentKey=`course.editais.lesson.${n}.content`;c.classList.add('teca-text-editable')}
+ });
+ selectors.forEach(([s,k])=>{const el=document.querySelector(s);if(el){el.dataset.contentKey=k;el.classList.add('teca-text-editable')}});
+ const cfg=window.SPARN_CONFIG||{};
+ if(!window.supabase||!cfg.supabaseUrl||!cfg.supabaseAnonKey)return;
+ const db=window.supabase.createClient(cfg.supabaseUrl,cfg.supabaseAnonKey);
+ const all=[...document.querySelectorAll('[data-content-key]')];
+ (async()=>{try{
+   const keys=all.map(x=>x.dataset.contentKey);
+   const {data,error}=await db.from('site_content').select('content_key,content_value').in('content_key',keys);
+   if(error)throw error;
+   (data||[]).forEach(r=>{const el=all.find(x=>x.dataset.contentKey===r.content_key);if(el)el.innerHTML=r.content_value});
+ }catch(e){console.warn('TECA CMS: conteúdo HTML mantido.',e)}})();
+
+ const style=document.createElement('style');
+ style.textContent=`
+ body.sparn-dev-mode .teca-text-editable{outline:1px dashed rgba(53,231,242,.35);outline-offset:4px;position:relative}
+ .teca-text-edit-btn{display:none;position:fixed;left:18px;bottom:18px;z-index:2147483646;border:1px solid rgba(53,231,242,.5)!important;background:#071827!important;color:#dfffff!important}
+ body.sparn-dev-mode .teca-text-edit-btn{display:block}
+ .teca-text-editable.teca-selected{outline:2px solid #35e7f2!important}
+ `;
+ document.head.appendChild(style);
+ const btn=document.createElement('button');btn.className='teca-text-edit-btn';btn.type='button';btn.textContent='✏ Editar texto';
+ document.body.appendChild(btn);
+ let selected=null;
+ document.addEventListener('click',e=>{
+   if(!document.body.classList.contains('sparn-dev-mode'))return;
+   const el=e.target.closest('.teca-text-editable');if(!el)return;
+   if(selected)selected.classList.remove('teca-selected');selected=el;selected.classList.add('teca-selected');
+ },true);
+ btn.onclick=async()=>{
+   if(!selected){alert('Clique primeiro no texto que deseja editar.');return}
+   const next=prompt('Editar conteúdo:',selected.innerHTML);if(next===null)return;
+   const {data:{user}}=await db.auth.getUser();if(!user){alert('Entre com a conta administradora para salvar online.');return}
+   const {error}=await db.from('site_content').upsert({content_key:selected.dataset.contentKey,content_value:next,updated_by:user.id},{onConflict:'content_key'});
+   if(error){alert('Não foi possível salvar: '+error.message);return}
+   selected.innerHTML=next;alert('✓ Texto salvo online.');
+ };
+})();
+</script>
+
+</body></html>

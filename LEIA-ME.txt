@@ -1,0 +1,9 @@
+INSTITUTO TECA — PACOTE CONSOLIDADO
+
+Conteúdo:
+- index.html geral mais recente disponível
+- 42 HTMLs de cursos atualizados (1 a 42)
+- Assets novos já concluídos dos cursos 34 e 35 (3 imagens por curso)
+- logo e banner TECA usados pelos HTMLs
+
+Observação: os packs visuais dos cursos 36 a 42 ainda não foram gerados; portanto não foram inventados nem incluídos neste ZIP.
