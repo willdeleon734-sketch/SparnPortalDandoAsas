@@ -1,0 +1,10 @@
+INSTITUTO TECA — PORTAL MESTRE V5
+
+- index.html é o pai da identidade, aparência, background e mapa de imagens.
+- botão Aparência agora exige "Salvar aparência"; a escolha salva em teca_aparencia_v1.
+- todos os cursos filhos herdam a escolha salva e o background do index pai.
+- cada curso consulta o mapa courses do teca-global-config para principal/conceito/resultado.
+- tela inicial reorganizada: cursos/áreas mais recentes aparecem acima; antigos abaixo.
+- Rota Europa foi removida do index, menu, mapa e pacote.
+- 27 novos assets dos cursos 34–42 incluídos em Assets/.
+- imagens internas usam width:100%, height:auto, object-fit:contain; sem corte.
