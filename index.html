@@ -1180,6 +1180,98 @@ html[data-teca-theme="cenario"] .teca-pillar-intro p{
 }
 </style>
 
+
+<style id="teca-index-ux-contrast-v17">
+/* INDEX ONLY — UX/contraste: nenhum título morre no branco */
+
+/* Placas principais ganham cor real, não branco lavado */
+.hero > div:first-child,
+#curso > .section-head,
+.teca-pillar-intro{
+  background:linear-gradient(135deg,rgba(255,218,92,.94),rgba(255,232,142,.90))!important;
+  border:1px solid rgba(7,31,49,.18)!important;
+  box-shadow:0 18px 48px rgba(20,45,55,.18)!important;
+  backdrop-filter:blur(10px) saturate(125%)!important;
+  -webkit-backdrop-filter:blur(10px) saturate(125%)!important;
+}
+
+/* Título: gradiente colorido termina em azul/ciano, NUNCA branco */
+.hero h1,
+.hero h1.gradient,
+.hero .gradient,
+#curso .section-head h1,
+#curso .section-head h2,
+#curso .section-head .gradient{
+  background:linear-gradient(100deg,#08263b 0%,#075e78 48%,#008ca8 74%,#7b3f78 100%)!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
+  color:#08263b!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+}
+
+/* Texto auxiliar com contraste AA visual forte */
+.hero p,.hero .lead,.hero .subtitle,
+#curso > .section-head p,
+.teca-pillar-intro p{
+  color:#173d50!important;
+  -webkit-text-fill-color:#173d50!important;
+  opacity:1!important;
+  text-shadow:none!important;
+  font-weight:700!important;
+}
+
+/* Placa dos pilares: azul petróleo, leitura instantânea */
+.teca-pillar-intro{
+  background:linear-gradient(135deg,rgba(8,57,76,.96),rgba(10,91,110,.93))!important;
+  border-color:rgba(67,231,255,.25)!important;
+}
+.teca-pillar-intro h1,
+.teca-pillar-intro h2,
+.teca-pillar-intro h3{
+  color:#fff7d6!important;
+  -webkit-text-fill-color:#fff7d6!important;
+  background:none!important;
+  text-shadow:0 2px 16px rgba(0,0,0,.18)!important;
+}
+.teca-pillar-intro p{
+  color:#dff8ff!important;
+  -webkit-text-fill-color:#dff8ff!important;
+}
+
+/* Cenário: placas escuras; gradiente luminoso sem branco como ponto final */
+html[data-teca-theme="cenario"] .hero > div:first-child,
+html[data-teca-theme="cenario"] #curso > .section-head{
+  background:linear-gradient(135deg,rgba(4,25,40,.90),rgba(8,55,72,.86))!important;
+  border-color:rgba(67,231,255,.28)!important;
+}
+html[data-teca-theme="cenario"] .hero h1,
+html[data-teca-theme="cenario"] .hero h1.gradient,
+html[data-teca-theme="cenario"] .hero .gradient,
+html[data-teca-theme="cenario"] #curso .section-head h1,
+html[data-teca-theme="cenario"] #curso .section-head h2,
+html[data-teca-theme="cenario"] #curso .section-head .gradient{
+  background:linear-gradient(100deg,#69efff 0%,#ffd56a 55%,#ff88ce 100%)!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
+  color:#69efff!important;
+  -webkit-text-fill-color:transparent!important;
+}
+html[data-teca-theme="cenario"] .hero p,
+html[data-teca-theme="cenario"] .hero .lead,
+html[data-teca-theme="cenario"] #curso > .section-head p{
+  color:#e4f7ff!important;
+  -webkit-text-fill-color:#e4f7ff!important;
+}
+
+/* Evita que regras antigas recolorem palavras do título de branco */
+.hero h1 *,.hero .gradient *,
+#curso .section-head h1 *,#curso .section-head h2 *{
+  color:inherit!important;
+  -webkit-text-fill-color:inherit!important;
+}
+</style>
+
 </head>
 <!-- TECA: menu de cursos recuperado sobre a imagem T/E/C/A -->
 <body>
