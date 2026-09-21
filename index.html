@@ -854,6 +854,25 @@ header.nav,.nav,.menu,.courses-menu{z-index:100000!important;overflow:visible!im
 .teca-pillar-section .course-area-head{margin-bottom:18px}
 .teca-pillar-section .course-area-head h2{font-size:clamp(1.5rem,3vw,2.25rem);margin-bottom:6px}
 .teca-pillar-section .course-area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px}
+</style><style>
+/* V8 — home limpa: apenas o menu TECA até o usuário escolher um pilar */
+.teca-pillar-section{display:none!important}
+.teca-pillar-section.teca-pillar-open{
+  display:block!important;
+  margin:20px auto 42px;
+  animation:tecaPillarOpen .32s ease both;
+}
+@keyframes tecaPillarOpen{
+  from{opacity:0;transform:translateY(-8px)}
+  to{opacity:1;transform:none}
+}
+/* A família escolhida abre logo abaixo da própria imagem-menu */
+.teca-pillar-menu{margin-bottom:18px}
+.teca-pillar-section.teca-pillar-open .course-area-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
+  gap:18px
+}
 </style></head>
 <body>
 <header class="wrap nav"><a class="brand sparn-logo-link" href="#topo"><img alt="Instituto TECA" class="sparn-header-logo" src="Assets/teca-logo-high-tech.png"/></a><nav class="menu"><div class="courses-menu"><button aria-expanded="false" class="courses-trigger" type="button">Cursos ▾</button><div class="courses-panel"><details class="course-category"><summary>Artes do Passado &amp; do Futuro</summary><div class="course-category-links">
@@ -1121,4 +1140,38 @@ header.nav,.nav,.menu,.courses-menu{z-index:100000!important;overflow:visible!im
 (()=>{const m=document.querySelector('.courses-menu'),b=m?.querySelector('.courses-trigger');if(!m||!b)return;b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});document.addEventListener('click',e=>{if(!m.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}})})();
 </script>
 <script>document.addEventListener("DOMContentLoaded",async()=>{let paid=false;try{paid=await SparnAuth.access()}catch(e){}if(paid)document.body.classList.add("sparn-paid");document.querySelectorAll(".sparn-course-link").forEach(a=>a.addEventListener("click",async e=>{e.preventDefault();const t=a.dataset.courseHref,u=await SparnAuth.user();if(!u){location.href="login.html?next="+encodeURIComponent(t);return}if(!(await SparnAuth.access())){location.href="pagamento.html";return}location.href=t}))});</script>
-<script src="teca-parent-sync.js?v=5"></script><script>document.addEventListener('click',e=>{const a=e.target.closest('.teca-pillar-hotspot');if(!a)return;const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',a.getAttribute('href'));});</script></body></html>
+<script src="teca-parent-sync.js?v=5"></script><script>document.addEventListener('click',e=>{const a=e.target.closest('.teca-pillar-hotspot');if(!a)return;const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',a.getAttribute('href'));});</script><script>
+(function(){
+  function openPillar(hash, smooth=true){
+    const target=document.querySelector(hash);
+    if(!target || !target.classList.contains("teca-pillar-section")) return;
+    document.querySelectorAll(".teca-pillar-section").forEach(s=>{
+      s.classList.toggle("teca-pillar-open", s===target);
+    });
+    // Move the selected course family directly under the visual menu,
+    // so it opens "inside/under that letter" rather than far down the page.
+    const menu=document.querySelector(".teca-pillar-menu");
+    if(menu) menu.insertAdjacentElement("afterend", target);
+    if(smooth){
+      target.scrollIntoView({behavior:"smooth",block:"start"});
+    }
+  }
+
+  document.addEventListener("click",function(e){
+    const a=e.target.closest(".teca-pillar-hotspot");
+    if(!a) return;
+    const hash=a.getAttribute("href");
+    if(!hash) return;
+    e.preventDefault();
+    openPillar(hash,true);
+    history.replaceState(null,"",hash);
+  });
+
+  // If someone shares a direct #pilar link, open only that family.
+  document.addEventListener("DOMContentLoaded",function(){
+    if(location.hash && location.hash.startsWith("#pilar-")){
+      openPillar(location.hash,false);
+    }
+  });
+})();
+</script></body></html>
