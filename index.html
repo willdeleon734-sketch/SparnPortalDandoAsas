@@ -988,92 +988,53 @@ header.nav,.nav,.menu,.courses-menu{z-index:100000!important;overflow:visible!im
   box-shadow:0 24px 68px rgba(3,17,28,.30)!important;
 }
 </style><style>
-/* V12 — catálogo fundido em cada letra/faixa */
+/* V13 recovery: preserve the entire original index; only course catalog navigation changes */
 #teca-course-bank{display:none!important}
-.course-grid,.course-grid-wrap,.library-head,.course-section,#curso{display:none!important}
 
-/* Cabeçalho mais legível sem matar a imagem */
+/* Legacy catalog/list must never render as a separate page section */
+.course-grid,.course-grid-wrap,.course-section,#curso{display:none!important}
+
+/* Stronger readable header */
 .hero{
-  background:rgba(247,242,214,.94)!important;
-  border:1px solid rgba(255,255,255,.92)!important;
-  box-shadow:0 20px 55px rgba(3,17,28,.25)!important;
-  backdrop-filter:blur(10px) saturate(1.02)!important;
-  -webkit-backdrop-filter:blur(10px) saturate(1.02)!important;
+ background:rgba(247,243,219,.93)!important;
+ border:1px solid rgba(255,255,255,.92)!important;
+ backdrop-filter:blur(11px) saturate(1.05)!important;
+ -webkit-backdrop-filter:blur(11px) saturate(1.05)!important;
+ box-shadow:0 20px 58px rgba(3,17,28,.25)!important
 }
-.hero h1,.hero h2,.hero h3,.hero p,.hero .eyebrow,.hero small,.hero span{
-  color:#061f31!important;
-  text-shadow:0 1px 0 rgba(255,255,255,.9)!important;
+.hero h1,.hero h2,.hero h3,.hero p,.hero span,.hero small,.hero .eyebrow{
+ color:#062238!important;text-shadow:0 1px 0 rgba(255,255,255,.82)!important
 }
-.hero img[src*="teca-banner-principal"]{
-  opacity:1!important;filter:none!important;position:relative!important;z-index:8!important;
-}
+.hero img[src*="teca-banner-principal"]{opacity:1!important;filter:none!important;position:relative!important;z-index:8!important}
 
-/* Menu principal */
-.teca-pillar-menu{display:block!important;max-width:1180px;margin:28px auto 58px;padding:0 16px}
-.teca-pillar-visual{
-  position:relative!important;
-  max-width:720px!important;
-  margin:auto!important;
-  overflow:visible!important;
-  border-radius:28px!important;
-}
-.teca-pillar-visual>img{
-  display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;
-  border-radius:28px!important;
-}
+/* TECA image remains visible */
+.teca-pillar-menu{display:block!important}
+.teca-pillar-visual{position:relative!important;overflow:visible!important}
+.teca-pillar-visual>img{display:block!important;width:100%!important;height:auto!important;opacity:1!important}
 
-/* Hotspots continuam exatamente sobre cada uma das 4 faixas */
-.teca-pillar-hotspot{z-index:12!important}
-
-/* Cada catálogo pertence fisicamente à sua própria letra/faixa */
-.teca-letter-catalog{
-  display:none;
-  position:absolute;
-  left:calc(100% + 14px);
-  width:min(460px,48vw);
-  max-height:25%;
-  overflow:auto;
-  z-index:30;
-  padding:13px;
-  border-radius:18px;
-  background:rgba(6,25,39,.94);
-  border:1px solid rgba(255,255,255,.28);
-  box-shadow:0 18px 48px rgba(0,0,0,.34);
-  backdrop-filter:blur(16px);
+/* Catalog opens from the selected letter itself, overlaying/expanding from that band */
+.teca-inline-catalog{
+ display:none;position:absolute;left:8%;right:8%;height:24%;
+ z-index:25;padding:12px 14px;overflow:auto;
+ background:rgba(5,23,37,.95);border:1px solid rgba(255,255,255,.32);
+ border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.34);
+ backdrop-filter:blur(16px)
 }
-.teca-letter-catalog-tecnologia{top:0}
-.teca-letter-catalog-educacao{top:25%}
-.teca-letter-catalog-cultura{top:50%}
-.teca-letter-catalog-arte{top:75%}
-.teca-letter-catalog.is-open{display:block;animation:tecaLetterOpen .22s ease both}
-
-.teca-letter-catalog h3{
-  color:#fff;margin:0 0 10px;font-size:1.05rem;letter-spacing:.03em
+.teca-inline-tecnologia{top:0.5%}.teca-inline-educacao{top:25.5%}
+.teca-inline-cultura{top:50.5%}.teca-inline-arte{top:75.5%}
+.teca-inline-catalog.open{display:block}
+.teca-inline-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.teca-inline-list a{
+ display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:9px;
+ color:#fff!important;text-decoration:none!important;background:rgba(255,255,255,.08);
+ border:1px solid rgba(255,255,255,.08);font-size:.86rem;line-height:1.15
 }
-.teca-letter-list{display:flex;flex-direction:column;gap:6px}
-.teca-letter-list a{
-  display:flex;align-items:center;gap:9px;
-  padding:8px 10px;border-radius:10px;
-  color:#fff!important;text-decoration:none!important;
-  background:rgba(255,255,255,.075);
-  border:1px solid rgba(255,255,255,.09);
-  font-size:.9rem;line-height:1.18
-}
-.teca-letter-list a:hover{background:rgba(255,255,255,.16)}
-.teca-letter-num{opacity:.68;font-weight:900;min-width:30px}
-
-/* Em telas menores o catálogo abre logo abaixo DA FAIXA escolhida,
-   sem recriar o catálogo geral antigo. */
-@media(max-width:1050px){
-  .teca-pillar-visual{max-width:680px!important}
-  .teca-letter-catalog{
-    left:5%;width:90%;max-height:23.5%;
-    border-radius:16px;
-  }
-}
-@keyframes tecaLetterOpen{
-  from{opacity:0;transform:translateX(-8px)}
-  to{opacity:1;transform:none}
+.teca-inline-list a:hover{background:rgba(255,255,255,.16)}
+.teca-inline-catalog h3{color:#fff;margin:0 0 8px;font-size:1rem}
+.teca-inline-num{font-weight:900;opacity:.65;min-width:28px}
+@media(max-width:700px){
+ .teca-inline-list{grid-template-columns:1fr}
+ .teca-inline-catalog{left:3%;right:3%;padding:9px;overflow:auto}
 }
 </style></head>
 <body>
@@ -1084,7 +1045,7 @@ header.nav,.nav,.menu,.courses-menu{z-index:100000!important;overflow:visible!im
 <div class="course-visual"><img alt="Instituto TECA" class="official-logo" src="Assets/teca-logo-high-tech.png"/><h3>Dando asas às suas ideias</h3><p>Cursos, oportunidades e caminhos para avançar.</p></div>
 </section>
 <section class="wrap" id="curso"><div class="section-head"><span class="eyebrow">Cursos originais</span><h2>Conhecimento para transformar <span class="gradient">planos em ação.</span></h2><p>Formações do Instituto TECA organizadas por área, com conteúdo aplicado, exercícios, projetos e ferramentas para construir novos caminhos.</p></div>
-<section class="teca-pillar-menu"><div class="teca-pillar-intro"><h2>Os 4 pilares do Instituto TECA</h2><p>Clique em uma faixa para explorar os cursos.</p></div><div class="teca-pillar-visual"><img alt="Tecnologia, Educação, Cultura e Arte" src="Assets/teca-menu-quatro-pilares.png"/><a aria-label="Ver cursos de Tecnologia" class="teca-pillar-hotspot" href="#pilar-tecnologia" style="top:0%"></a><a aria-label="Ver cursos de Educação" class="teca-pillar-hotspot" href="#pilar-educacao" style="top:25%"></a><a aria-label="Ver cursos de Cultura" class="teca-pillar-hotspot" href="#pilar-cultura" style="top:50%"></a><a aria-label="Ver cursos de Arte" class="teca-pillar-hotspot" href="#pilar-arte" style="top:75%"></a><div class="teca-letter-catalog teca-letter-catalog-tecnologia" data-pillar="tecnologia" id="catalogo-tecnologia"></div><div class="teca-letter-catalog teca-letter-catalog-educacao" data-pillar="educacao" id="catalogo-educacao"></div><div class="teca-letter-catalog teca-letter-catalog-cultura" data-pillar="cultura" id="catalogo-cultura"></div><div class="teca-letter-catalog teca-letter-catalog-arte" data-pillar="arte" id="catalogo-arte"></div></div></section>
+<section class="teca-pillar-menu"><div class="teca-pillar-intro"><h2>Os 4 pilares do Instituto TECA</h2><p>Clique em uma faixa para explorar os cursos.</p></div><div class="teca-pillar-visual"><img alt="Tecnologia, Educação, Cultura e Arte" src="Assets/teca-menu-quatro-pilares.png"/><a aria-label="Ver cursos de Tecnologia" class="teca-pillar-hotspot" href="#pilar-tecnologia" style="top:0%"></a><a aria-label="Ver cursos de Educação" class="teca-pillar-hotspot" href="#pilar-educacao" style="top:25%"></a><a aria-label="Ver cursos de Cultura" class="teca-pillar-hotspot" href="#pilar-cultura" style="top:50%"></a><a aria-label="Ver cursos de Arte" class="teca-pillar-hotspot" href="#pilar-arte" style="top:75%"></a><div class="teca-inline-catalog teca-inline-tecnologia" id="catalogo-tecnologia"></div><div class="teca-inline-catalog teca-inline-educacao" id="catalogo-educacao"></div><div class="teca-inline-catalog teca-inline-cultura" id="catalogo-cultura"></div><div class="teca-inline-catalog teca-inline-arte" id="catalogo-arte"></div></div></section>
 </section>
 <section class="news" id="novidades"><div class="wrap"><div class="section-head"><span class="eyebrow">O que chegou agora</span><h2>Mais caminhos dentro do <span class="gradient">mesmo mapa.</span></h2></div><div class="news-grid">
 <article class="news-card"><span class="icon">🌱</span><h3>Mente Milionária de Verdade</h3><p>Troque a fantasia do enriquecimento rápido por hábitos consistentes, decisões conscientes e construção paciente de liberdade.</p></article>
@@ -1344,74 +1305,42 @@ header.nav,.nav,.menu,.courses-menu{z-index:100000!important;overflow:visible!im
 <div class="course-info"><div class="chips"><span class="chip">Curso original</span><span class="chip new">Artes do Passado &amp; do Futuro</span><span class="chip">Projeto autoral</span></div><h3>Descubra Sua Voz</h3><p>Respiração, apoio, afinação, timbre, interpretação e prática para conhecer e desenvolver sua própria voz.</p><div class="modules"><span class="module">🎤 Técnica vocal</span><span class="module">🫁 Respiração e apoio</span><span class="module">🎶 Afinação e timbre</span><span class="module">✨ Interpretação</span></div><a class="open sparn-course-link" data-course-href="curso-canto-tecnica-vocal.html" href="curso-canto-tecnica-vocal.html">Abrir curso completo →</a></div>
 </details></div></section></div><script>
 (function(){
-  const names={
-    tecnologia:"Tecnologia",
-    educacao:"Educação",
-    cultura:"Cultura",
-    arte:"Arte"
-  };
-
-  function getTitle(card,link){
-    const selectors=[".course-title","h3","h2",".title"];
-    for(const s of selectors){
-      const el=card.querySelector(s);
-      if(el && el.textContent.trim()) return el.textContent.trim();
-    }
-    return link.textContent.trim() || "Abrir curso";
-  }
-
-  function buildCatalog(key){
-    const source=document.querySelector("#teca-course-bank #pilar-"+key);
-    const box=document.getElementById("catalogo-"+key);
-    if(!source||!box||box.dataset.ready==="1") return;
-
-    const title=document.createElement("h3");
-    title.textContent=names[key];
-    const list=document.createElement("div");
-    list.className="teca-letter-list";
-
-    source.querySelectorAll("details.course-card").forEach(card=>{
-      const link=card.querySelector("[data-course-href]") || card.querySelector("a[href^='curso-']");
-      if(!link)return;
-      const href=link.getAttribute("data-course-href") || link.getAttribute("href");
-      const numEl=card.querySelector(".number");
-
-      const a=document.createElement("a");
-      a.href=href;
-
-      const n=document.createElement("span");
-      n.className="teca-letter-num";
-      n.textContent=numEl ? numEl.textContent.trim() : "";
-
-      const t=document.createElement("span");
-      t.textContent=getTitle(card,link);
-
-      a.append(n,t);
-      list.appendChild(a);
-    });
-
-    box.append(title,list);
-    box.dataset.ready="1";
-  }
-
-  function togglePillar(key){
-    ["tecnologia","educacao","cultura","arte"].forEach(k=>{
-      buildCatalog(k);
-      const box=document.getElementById("catalogo-"+k);
-      const hot=document.querySelector('.teca-pillar-hotspot[href="#pilar-'+k+'"]');
-      const active=k===key && !box.classList.contains("is-open");
-      box.classList.toggle("is-open",active);
-      if(hot) hot.classList.toggle("is-active",active);
-    });
-  }
-
-  document.addEventListener("click",function(e){
-    const hot=e.target.closest(".teca-pillar-hotspot");
-    if(!hot)return;
-    e.preventDefault();
-    const hash=hot.getAttribute("href")||"";
-    const key=hash.replace("#pilar-","");
-    if(names[key]) togglePillar(key);
-  });
+ const names={tecnologia:"Tecnologia",educacao:"Educação",cultura:"Cultura",arte:"Arte"};
+ function title(card,link){
+   for(const q of [".course-title","h3","h2",".title"]){
+     const e=card.querySelector(q); if(e&&e.textContent.trim())return e.textContent.trim();
+   }
+   return link.textContent.trim()||"Abrir curso";
+ }
+ function build(key){
+   const src=document.querySelector("#teca-course-bank #pilar-"+key);
+   const box=document.getElementById("catalogo-"+key);
+   if(!src||!box||box.dataset.ready)return;
+   const h=document.createElement("h3");h.textContent=names[key];
+   const list=document.createElement("div");list.className="teca-inline-list";
+   src.querySelectorAll("details.course-card").forEach(card=>{
+     const l=card.querySelector("[data-course-href]")||card.querySelector("a[href^='curso-']");
+     if(!l)return;
+     const a=document.createElement("a");
+     a.href=l.getAttribute("data-course-href")||l.getAttribute("href");
+     const n=document.createElement("span");n.className="teca-inline-num";
+     n.textContent=(card.querySelector(".number")||{}).textContent||"";
+     const t=document.createElement("span");t.textContent=title(card,l);
+     a.append(n,t);list.append(a);
+   });
+   box.append(h,list);box.dataset.ready="1";
+ }
+ document.addEventListener("click",e=>{
+   const hot=e.target.closest(".teca-pillar-hotspot");if(!hot)return;
+   e.preventDefault();
+   const key=(hot.getAttribute("href")||"").replace("#pilar-","");
+   if(!names[key])return;
+   build(key);
+   const target=document.getElementById("catalogo-"+key);
+   const willOpen=!target.classList.contains("open");
+   document.querySelectorAll(".teca-inline-catalog").forEach(x=>x.classList.remove("open"));
+   document.querySelectorAll(".teca-pillar-hotspot").forEach(x=>x.classList.remove("is-active"));
+   if(willOpen){target.classList.add("open");hot.classList.add("is-active")}
+ });
 })();
 </script></body></html>
