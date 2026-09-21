@@ -1097,6 +1097,89 @@ header.nav,.nav{background:rgba(255,249,218,.86)!important;border-bottom:1px sol
 .hero>div:first-child{position:relative!important;z-index:3!important;max-width:680px!important}.hero h1,.hero h2,.hero h3,.hero p,.hero .eyebrow,.hero .micro{color:#08263a!important;text-shadow:0 1px 0 rgba(255,255,255,.80)!important}.hero .gradient{background:linear-gradient(100deg,#007f9a,#173d55 55%,#9b356f)!important;color:transparent!important;background-clip:text!important;-webkit-background-clip:text!important}.hero .secondary{background:rgba(255,255,255,.66)!important;color:#0b3044!important;border-color:rgba(10,48,68,.16)!important}
 @media(max-width:700px){.teca-pillar-menu{padding:0 10px!important}.teca-pillar-stack{border-radius:20px!important}.teca-pillar-drawer{padding:13px 10px!important}.teca-course-row{grid-template-columns:38px 1fr auto!important;padding:10px!important}.teca-drawer-head{align-items:flex-start!important;flex-direction:column!important;gap:2px!important}#curso>.section-head{padding:20px!important}}
 </style>
+
+<style id="teca-index-contrast-only-v16">
+/* V16 — SOMENTE INDEX: contraste forte, sem alterar cursos nem menu */
+body{
+  --teca-index-ink:#071f31;
+  --teca-index-muted:#24475b;
+}
+
+/* Blocos claros do INDEX: texto sempre escuro e legível */
+body > main .section-head,
+#curso > .section-head,
+.teca-pillar-intro{
+  background:rgba(255,239,174,.86)!important;
+  border:1px solid rgba(7,31,49,.16)!important;
+  box-shadow:0 18px 46px rgba(0,0,0,.18)!important;
+  backdrop-filter:blur(12px) saturate(120%)!important;
+  -webkit-backdrop-filter:blur(12px) saturate(120%)!important;
+}
+
+body > main .section-head h1,
+body > main .section-head h2,
+body > main .section-head h3,
+#curso > .section-head h1,
+#curso > .section-head h2,
+#curso > .section-head h3,
+.teca-pillar-intro h1,
+.teca-pillar-intro h2,
+.teca-pillar-intro h3{
+  color:var(--teca-index-ink)!important;
+  -webkit-text-fill-color:var(--teca-index-ink)!important;
+  background:none!important;
+  text-shadow:none!important;
+}
+
+body > main .section-head p,
+#curso > .section-head p,
+.teca-pillar-intro p{
+  color:var(--teca-index-muted)!important;
+  -webkit-text-fill-color:var(--teca-index-muted)!important;
+  opacity:1!important;
+  text-shadow:none!important;
+  font-weight:700!important;
+}
+
+/* O título em gradiente não pode deixar palavras brancas sobre vidro claro */
+body > main .section-head .gradient,
+#curso > .section-head .gradient{
+  color:var(--teca-index-ink)!important;
+  -webkit-text-fill-color:var(--teca-index-ink)!important;
+  background:none!important;
+}
+
+/* No tema cenário, mantém painel escuro e letras claras */
+html[data-teca-theme="cenario"] body > main .section-head,
+html[data-teca-theme="cenario"] #curso > .section-head,
+html[data-teca-theme="cenario"] .teca-pillar-intro{
+  background:rgba(5,24,38,.82)!important;
+  border-color:rgba(126,238,255,.24)!important;
+}
+
+html[data-teca-theme="cenario"] body > main .section-head h1,
+html[data-teca-theme="cenario"] body > main .section-head h2,
+html[data-teca-theme="cenario"] body > main .section-head h3,
+html[data-teca-theme="cenario"] #curso > .section-head h1,
+html[data-teca-theme="cenario"] #curso > .section-head h2,
+html[data-teca-theme="cenario"] #curso > .section-head h3,
+html[data-teca-theme="cenario"] .teca-pillar-intro h1,
+html[data-teca-theme="cenario"] .teca-pillar-intro h2,
+html[data-teca-theme="cenario"] .teca-pillar-intro h3,
+html[data-teca-theme="cenario"] body > main .section-head .gradient,
+html[data-teca-theme="cenario"] #curso > .section-head .gradient{
+  color:#f7fbff!important;
+  -webkit-text-fill-color:#f7fbff!important;
+}
+
+html[data-teca-theme="cenario"] body > main .section-head p,
+html[data-teca-theme="cenario"] #curso > .section-head p,
+html[data-teca-theme="cenario"] .teca-pillar-intro p{
+  color:#d7e7ef!important;
+  -webkit-text-fill-color:#d7e7ef!important;
+}
+</style>
+
 </head>
 <!-- TECA: menu de cursos recuperado sobre a imagem T/E/C/A -->
 <body>
