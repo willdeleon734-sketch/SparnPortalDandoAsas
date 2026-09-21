@@ -363,33 +363,61 @@ header .brand,.teca-brand{display:flex!important;align-items:center!important;ga
         "label": "🌌 Cenário TECA",
         "background": "#071523",
         "image": "Assets/teca-background-universal.png",
-        "surface": "rgba(8,25,40,.70)",
+        "surface": "rgba(7,24,38,.72)",
+        "surfaceStrong": "rgba(5,20,33,.88)",
+        "card": "rgba(10,34,51,.78)",
         "text": "#f7fbff",
-        "muted": "#d7e7ef"
+        "muted": "#c8dce7",
+        "border": "rgba(126,238,255,.24)",
+        "shadow": "0 18px 50px rgba(0,0,0,.30)",
+        "accent": "#43e7ff",
+        "accent2": "#f0bd57",
+        "isDark": true
       },
       "amarelo": {
         "label": "☀️ Amarelo Solar",
         "background": "#f8df85",
         "image": "",
-        "surface": "rgba(255,249,215,.72)",
+        "surface": "rgba(255,239,160,.58)",
+        "surfaceStrong": "rgba(255,235,137,.78)",
+        "card": "rgba(255,245,190,.66)",
         "text": "#10283a",
-        "muted": "#40596a"
+        "muted": "#355263",
+        "border": "rgba(83,68,18,.16)",
+        "shadow": "0 16px 42px rgba(83,62,0,.12)",
+        "accent": "#008fa9",
+        "accent2": "#9b356f",
+        "isDark": false
       },
       "azul": {
         "label": "💧 Azul Céu",
         "background": "#dff4fb",
         "image": "",
-        "surface": "rgba(246,253,255,.78)",
+        "surface": "rgba(207,239,249,.60)",
+        "surfaceStrong": "rgba(191,232,246,.80)",
+        "card": "rgba(225,247,252,.70)",
         "text": "#10283a",
-        "muted": "#40596a"
+        "muted": "#365365",
+        "border": "rgba(20,105,135,.17)",
+        "shadow": "0 16px 42px rgba(13,79,104,.12)",
+        "accent": "#007f9a",
+        "accent2": "#5d58a6",
+        "isDark": false
       },
       "menta": {
         "label": "🌿 Verde Menta",
         "background": "#ddf5df",
         "image": "",
-        "surface": "rgba(249,255,241,.80)",
-        "text": "#10283a",
-        "muted": "#40596a"
+        "surface": "rgba(207,241,211,.62)",
+        "surfaceStrong": "rgba(190,232,197,.80)",
+        "card": "rgba(226,247,226,.70)",
+        "text": "#102d31",
+        "muted": "#365b57",
+        "border": "rgba(35,112,91,.17)",
+        "shadow": "0 16px 42px rgba(26,92,70,.11)",
+        "accent": "#087e78",
+        "accent2": "#9a6b21",
+        "isDark": false
       }
     }
   },
@@ -721,10 +749,20 @@ header .brand,.teca-brand{display:flex!important;align-items:center!important;ga
     "educacao",
     "cultura",
     "arte"
-  ]
+  ],
+  "courseAppearance": {
+    "panelOpacity": 0.72,
+    "strongPanelOpacity": 0.88,
+    "blur": "16px",
+    "radius": "22px",
+    "moduleRadius": "16px",
+    "backgroundStrength": 1,
+    "imageRule": "contain",
+    "preserveOriginalMediaRatio": true
+  }
 }
 </script>
-<link href="teca-aparencia.css?v=1" rel="stylesheet"/>
+<link href="teca-aparencia.css?v=6" rel="stylesheet"/>
 <style id="teca-foreground-fix-v3">
 /* MENUS SEMPRE EM PRIMEIRO PLANO */
 header.nav, header, .nav, nav.menu, .menu, .courses-menu{
@@ -1299,7 +1337,7 @@ header.nav,.nav{background:rgba(255,249,218,.86)!important;border-bottom:1px sol
 (()=>{const m=document.querySelector('.courses-menu'),b=m?.querySelector('.courses-trigger');if(!m||!b)return;b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});document.addEventListener('click',e=>{if(!m.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}})})();
 </script>
 <script>document.addEventListener("DOMContentLoaded",async()=>{let paid=false;try{paid=await SparnAuth.access()}catch(e){}if(paid)document.body.classList.add("sparn-paid");document.querySelectorAll(".sparn-course-link").forEach(a=>a.addEventListener("click",async e=>{e.preventDefault();const t=a.dataset.courseHref,u=await SparnAuth.user();if(!u){location.href="login.html?next="+encodeURIComponent(t);return}if(!(await SparnAuth.access())){location.href="pagamento.html";return}location.href=t}))});</script>
-<script src="teca-parent-sync.js?v=5"></script><script id="teca-four-bands-controller-v14">
+<script src="teca-parent-sync.js?v=6"></script><script id="teca-four-bands-controller-v14">
 (function(){
  const bands=[...document.querySelectorAll(".teca-pillar-band")];
  const drawers=[...document.querySelectorAll(".teca-pillar-drawer")];

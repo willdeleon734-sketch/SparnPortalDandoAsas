@@ -1,15 +1,133 @@
+/* TECA V6 — camada visual global dos cursos, controlada pelo index pai */
+:root{
+  --teca-bg:#f8df85;
+  --teca-bg-image:none;
+  --teca-surface:rgba(255,239,160,.58);
+  --teca-surface-strong:rgba(255,235,137,.78);
+  --teca-card:rgba(255,245,190,.66);
+  --teca-text:#10283a;
+  --teca-ink:#10283a;
+  --teca-muted:#355263;
+  --teca-border:rgba(83,68,18,.16);
+  --teca-shadow:0 16px 42px rgba(83,62,0,.12);
+  --teca-accent:#008fa9;
+  --teca-accent-2:#9b356f;
+  --teca-blur:16px;
+  --teca-radius:22px;
+  --teca-module-radius:16px;
+}
 
-/* TECA V5 — seletor salvo pelo index pai */
+html,body{min-height:100%}
+body{
+  color:var(--teca-text)!important;
+  background-color:var(--teca-bg)!important;
+  transition:background-color .25s ease,color .25s ease;
+}
+
+/* Superfícies globais: substituem cores antigas sem mexer na estrutura. */
+header,.nav,.topbar,.navbar,
+main .panel,main .card,main .course-card,main .module,main .lesson,main .aula,
+main .content-card,main .content-box,main .box,main .block,main .bloco,
+main .section-card,main .quiz,main .exercise,main .atividade,main .summary,
+main .teca-course-media,footer,.footer,.footer-inner{
+  color:var(--teca-text)!important;
+  border-color:var(--teca-border)!important;
+  box-shadow:var(--teca-shadow)!important;
+}
+
+header,.nav,.topbar,.navbar,footer,.footer,.footer-inner{
+  background:var(--teca-surface-strong)!important;
+  backdrop-filter:blur(var(--teca-blur)) saturate(115%)!important;
+  -webkit-backdrop-filter:blur(var(--teca-blur)) saturate(115%)!important;
+}
+
+main .panel,main .card,main .course-card,main .content-card,main .content-box,
+main .box,main .block,main .bloco,main .section-card,main .quiz,main .exercise,
+main .atividade,main .summary{
+  background:var(--teca-card)!important;
+  backdrop-filter:blur(var(--teca-blur)) saturate(112%)!important;
+  -webkit-backdrop-filter:blur(var(--teca-blur)) saturate(112%)!important;
+  border-radius:var(--teca-radius)!important;
+}
+
+main .module,main .lesson,main .aula{
+  background:var(--teca-surface)!important;
+  border:1px solid var(--teca-border)!important;
+  border-radius:var(--teca-module-radius)!important;
+}
+
+/* Texto: prioridade sobre cinzas fixos herdados dos cursos antigos. */
+body h1,body h2,body h3,body h4,body h5,body h6,
+body .title,body .course-title,body .section-title,body .module-title,
+body label,body strong{
+  color:var(--teca-text)!important;
+}
+body p,body li,body .subtitle,body .description,body .course-description,
+body .meta,body .muted,body small{
+  color:var(--teca-muted)!important;
+}
+body a{color:var(--teca-accent)!important}
+body button,body .btn,body .button,body [role="button"]{
+  border-color:var(--teca-border)!important;
+}
+body input,body textarea,body select{
+  color:var(--teca-text)!important;
+  background:var(--teca-surface)!important;
+  border-color:var(--teca-border)!important;
+}
+body input::placeholder,body textarea::placeholder{color:var(--teca-muted)!important;opacity:.82}
+
+/* Tema Cenário: vidro escuro e texto claro, sem placas brancas. */
+html[data-teca-mode="dark"] body:before,
+html[data-teca-mode="dark"] body:after{opacity:.10!important}
+html[data-teca-mode="dark"] .hero,
+html[data-teca-mode="dark"] main section,
+html[data-teca-mode="dark"] main .section,
+html[data-teca-mode="dark"] main .section-head{
+  color:var(--teca-text)!important;
+}
+html[data-teca-mode="dark"] .course-cover strong{
+  color:#fff!important;
+  background:rgba(4,18,30,.68)!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.55)!important;
+}
+
+/* Imagens continuam puras, inteiras e proporcionais. */
+.teca-course-media{margin:22px auto 30px;width:100%;overflow:visible}
+.teca-course-media img,
+[data-teca-course-image],
+.sparn-img-editor>img,
+.course-cover.visual>img.cover-full-image{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  aspect-ratio:auto!important;
+}
+.sparn-img-editor:not([data-editor-state="edited"])>img{transform:none!important}
+
+/* Seletor */
 #teca-top-theme-panel{
   position:fixed;z-index:2147483001;min-width:260px;padding:12px;
-  border-radius:18px;background:rgba(8,24,38,.96);box-shadow:0 22px 60px rgba(0,0,0,.32);
-  backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.2)
+  border-radius:18px;background:var(--teca-surface-strong)!important;
+  color:var(--teca-text)!important;box-shadow:var(--teca-shadow)!important;
+  backdrop-filter:blur(18px);border:1px solid var(--teca-border)!important
 }
 #teca-top-theme-panel[hidden]{display:none!important}
 .teca-theme-choices{display:grid;gap:7px}
-#teca-top-theme-panel button{width:100%;text-align:left;padding:11px 13px;border:1px solid rgba(255,255,255,.18);border-radius:12px;cursor:pointer}
-.teca-theme-actions{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.16)}
+#teca-top-theme-panel button{
+  width:100%;text-align:left;padding:11px 13px;border:1px solid var(--teca-border)!important;
+  border-radius:12px;cursor:pointer;background:var(--teca-surface)!important;color:var(--teca-text)!important
+}
+.teca-theme-actions{margin-top:10px;padding-top:10px;border-top:1px solid var(--teca-border)!important}
 #teca-theme-save{font-weight:900;text-align:center!important}
-.teca-course-media{margin:22px auto 30px;width:100%;overflow:visible}
-.teca-course-media img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;aspect-ratio:auto;border-radius:22px}
-.teca-order-note{font-size:.82rem;font-weight:800;opacity:.72}
+.teca-order-note{font-size:.82rem;font-weight:800;opacity:.78}
+
+@media(max-width:760px){
+  body{background-attachment:scroll!important}
+  main .panel,main .card,main .course-card,main .content-card,main .content-box,
+  main .box,main .block,main .bloco{border-radius:18px!important}
+}
