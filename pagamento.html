@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<title>Acesso Beta — Instituto TECA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="sparn-config.js?v=teca-20260920"></script>
+<script src="sparn-auth.js?v=teca-20260920"></script>
+<style>
+:root{--bg:#07111f;--panel:#0e1b2c;--line:#233650;--txt:#f4f8ff;--muted:#a9bbcf;--cyan:#34d8ff;--ok:#65e6a5;--warn:#ffd36a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#12355b 0,#07111f 38%);color:var(--txt);font:16px/1.55 Inter,system-ui,sans-serif;min-height:100vh}
+.wrap{width:min(1080px,92%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{display:inline-flex;align-items:center;text-decoration:none}.brand img{display:block;width:48px;height:48px;object-fit:contain;border-radius:12px}
+a{color:inherit}.hero{padding:48px 0;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.card,.intro{background:rgba(14,27,44,.92);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,34px);box-shadow:0 20px 60px #0005;backdrop-filter:blur(14px)}
+.eyebrow{color:var(--cyan);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem}
+h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:.98;margin:.25em 0}.muted{color:var(--muted)}
+.price{font-size:3rem;font-weight:900;margin-top:8px}.price small{font-size:1rem;color:var(--muted)}
+.old-price{display:none;color:var(--muted);text-decoration:line-through;font-weight:800;margin-top:16px}
+.discount{display:none;color:var(--ok);font-weight:900;margin-top:2px}
+label{display:block;font-weight:800;margin:16px 0 6px}
+input{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:#071421;color:#fff;font-size:1rem}
+button,.btn{border:0;border-radius:14px;padding:13px 18px;font-weight:900;cursor:pointer;background:linear-gradient(135deg,var(--cyan),#7e9cff);color:#04101d}
+button:disabled{opacity:.55;cursor:not-allowed}.btn.alt{background:#15253a;color:#fff;border:1px solid var(--line)}
+.coupon{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}.coupon-msg{min-height:25px;margin:8px 0 14px;font-weight:800}
+.status{padding:12px 14px;border-radius:14px;background:#0a1625;border:1px solid var(--line);margin:14px 0}.ok{color:var(--ok)}.warn{color:var(--warn)}
+#pixArea img{background:#fff;padding:10px}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.top{gap:12px;flex-wrap:wrap}.coupon{grid-template-columns:1fr}.price{font-size:2.5rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="index.html"><img src="Assets/teca-logo-high-tech.png" alt="Instituto TECA"></a>
+<a href="perfil-aluno.html">Meu perfil</a>
+</header>
+<main class="hero">
+<section class="intro">
+<span class="eyebrow">Acesso Beta</span>
+<h1>Todos os caminhos abertos.</h1>
+<p class="muted">Libere o Acesso Beta do Instituto TECA. Se você recebeu um cupom, aplique antes de gerar o PIX.</p>
+<div class="old-price" id="oldPrice">R$ 11,11</div>
+<div class="price" id="finalPrice">R$ 11,11 <small>Acesso Beta</small></div>
+<div class="discount" id="discountLabel"></div>
+</section>
+<section class="card">
+<h2>Pagamento via PIX</h2>
+<p class="muted">O valor e os cupons são validados pelo servidor antes da cobrança.</p>
+<div class="coupon">
+<div><label for="coupon">Cupom de desconto</label><input id="coupon" autocomplete="off" maxlength="24" placeholder="Digite seu cupom"></div>
+<button id="applyCoupon" type="button">Aplicar</button>
+</div>
+<div class="coupon-msg muted" id="couponMsg">Sem cupom, o Acesso Beta custa R$ 11,11.</div>
+<div id="pixArea"><button id="createPix" type="button">Gerar meu PIX</button></div>
+<div class="status" id="payStatus">Aguardando geração do pagamento.</div>
+<button class="btn alt" id="check" type="button">Já paguei — verificar</button>
+</section>
+</main>
+</div>
+<script>
+let timer, appliedCoupon="";
+const BASE=11.11;
+function money(v){return Number(v).toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
+async function verify(){if(await SparnAuth.access()){payStatus.innerHTML='<b class="ok">✓ Acesso liberado!</b>';clearInterval(timer);setTimeout(()=>location.href="perfil-aluno.html",900);return true}return false}
+async function token(){const c=await SparnAuth.init();const s=await c.auth.getSession();return s.data.session?.access_token||""}
+async function checkout(payload){
+ const cfg=window.SPARN_CONFIG;if(!cfg.createPixEndpoint||cfg.createPixEndpoint.startsWith("COLE_"))throw new Error("Endpoint create-pix não configurado.");
+ const t=await token();if(!t)throw new Error("Sua sessão expirou. Entre novamente.");
+ const r=await fetch(cfg.createPixEndpoint,{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+t},body:JSON.stringify(payload)});
+ const d=await r.json();if(!r.ok)throw new Error(d.error||"Não foi possível processar a solicitação.");return d;
+}
+function renderPrice(d){
+ const amount=Number(d.amount??BASE);finalPrice.innerHTML=money(amount)+' <small>Acesso Beta</small>';
+ if(Number(d.discount_percent)>0){oldPrice.style.display="block";discountLabel.style.display="block";discountLabel.textContent=Number(d.discount_percent)===100?"100% de desconto — acesso direto.":d.discount_percent+"% de desconto aplicado."}
+ else{oldPrice.style.display="none";discountLabel.style.display="none"}
+}
+applyCoupon.onclick=async()=>{
+ const code=coupon.value.trim().toUpperCase();if(!code){couponMsg.textContent="Digite um cupom.";return}
+ couponMsg.textContent="Validando cupom…";applyCoupon.disabled=true;
+ try{
+  const d=await checkout({product:"acesso-beta",coupon:code,validate_coupon:true});appliedCoupon=code;renderPrice(d);
+  couponMsg.innerHTML='<b class="ok">✓ '+(d.message||"Cupom aplicado.")+'</b>';
+  if(d.access_granted){createPix.disabled=true;createPix.textContent="Acesso liberado";await verify()}
+  else{createPix.disabled=false;createPix.textContent=Number(d.discount_percent)>0?"Gerar PIX com desconto":"Gerar meu PIX"}
+ }catch(e){appliedCoupon="";renderPrice({amount:BASE,discount_percent:0});couponMsg.innerHTML='<span class="warn">'+e.message+'</span>'}
+ finally{applyCoupon.disabled=false}
+};
+coupon.addEventListener("input",()=>{if(coupon.value.trim().toUpperCase()!==appliedCoupon){appliedCoupon="";renderPrice({amount:BASE,discount_percent:0});couponMsg.textContent="Aplique o cupom antes de gerar o PIX.";createPix.disabled=false;createPix.textContent="Gerar meu PIX"}});
+(async()=>{const u=await SparnAuth.user();if(!u)location.href="login.html?next=pagamento.html";else verify()})();
+createPix.onclick=async()=>{
+ payStatus.textContent="Gerando PIX…";createPix.disabled=true;
+ try{
+  const d=await checkout({product:"acesso-beta",coupon:appliedCoupon||null});
+  if(d.access_granted){await verify();return}
+  renderPrice(d);
+  pixArea.innerHTML=(d.qr_code_base64?'<img alt="QR Code PIX" style="display:block;width:min(280px,100%);margin:12px auto;border-radius:18px" src="data:image/png;base64,'+d.qr_code_base64+'">':'')+'<label>PIX Copia e Cola</label><input id="pixCode" readonly value="'+(d.qr_code||'')+'"><p><button id="copyPix" type="button">Copiar código PIX</button></p>';
+  document.getElementById("copyPix").onclick=()=>navigator.clipboard.writeText(document.getElementById("pixCode").value);
+  payStatus.textContent="PIX de "+money(d.amount)+" criado. Aguardando confirmação automática…";timer=setInterval(verify,3000);
+ }catch(e){payStatus.textContent=e.message;createPix.disabled=false}
+};
+check.onclick=verify;
+</script>
+</body></html>
